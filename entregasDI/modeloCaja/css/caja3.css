@@ -1,0 +1,14 @@
+ul{
+    list-style:none;
+    border:solid 1px black;
+    padding:5px;
+    margin: auto;
+    width: 50%;
+}
+li{
+    display: inline;
+    background-color:rgb(215,230,254);
+    border: solid 1px black;
+    padding:5px;
+    margin: auto;
+}

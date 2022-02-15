@@ -1,0 +1,116 @@
+body {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+#titulo {
+  font-family: "Lucida Console";
+}
+
+#texto-serif {
+  font-family: serif;
+}
+
+#texto-sansserif {
+  font-family: sans-serif;
+}
+
+#texto-cursive {
+  font-family: cursive;
+}
+
+#texto-fantasy {
+  font-family: fantasy;
+}
+
+#texto-monospace {
+  font-family: monospace;
+}
+
+#texto-cursiva {
+  font-style: italic;
+}
+
+#texto-oblique {
+  font-style: oblique;
+}
+
+#mayusculas-versales {
+  font-variant: normal;
+}
+
+#mayusculas-versalitas {
+  font-variant: small-caps;
+}
+
+#texto-negrita-bold {
+  font-weight: bold;
+}
+
+#texto-negrita-bolder {
+  font-weight: bolder;
+}
+
+#texto-negrita-valor {
+  font-weight: 900;
+}
+
+#tamaño-xxsmall {
+  font-size: xx-small;
+}
+
+#tamaño-xsmall {
+  font-size: x-small;
+}
+
+#tamaño-small {
+  font-size: small;
+}
+
+#tamaño-medium {
+  font-size: medium;
+}
+
+#tamaño-large {
+  font-size: large;
+}
+
+#tamaño-xlarge {
+  font-size: x-large;
+}
+
+#tamaño-xxlarge {
+  font-size: xx-large;
+}
+
+#tamaño-valor {
+  font-size: 96px;
+}
+
+#notacion-abreviada {
+  font: italic bold small-caps 24px Arial, Helvetica, Georgia;
+}
+
+#fuente-botones {
+  font: caption;
+}
+
+#fuente-iconos {
+  font: icon;
+}
+
+#fuente-menus {
+  font: menu;
+}
+
+#fuente-cuadros-dialogo {
+  font: message-box;
+}
+
+#fuente-etiquetas-pequeñas {
+  font: small-caption;
+}
+
+#fuente-barra-estado {
+  font: status-bar;
+}

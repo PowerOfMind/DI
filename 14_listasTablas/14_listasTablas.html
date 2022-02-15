@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Listas y tablas en CSS</title>
+<link rel="stylesheet" type="text/css" href="14_listasTablas.css">
+
+</head>
+<body>
+
+</body>
+	<a id="menu_principal"></a>
+	<a href="#apartado1" tabindex="1" title="Tipos de marcadores">1. Tipos de marcadores para listas</a><br />
+	<a href="#apartado2" tabindex="2" title="Insertar una imagen como marcador">2. Marcador gráfico</a><br />
+	<a href="#apartado3" tabindex="3" title="Controlar la posición de los elementos">3. Posición de los elementos de la lista</a><br />
+	<a href="#apartado4" tabindex="4" title="Declarar de forma abreviada">4. Declaración abreviada de una lista</a><br />
+	<a href="#apartado5" tabindex="5" title="Espacio entre celdas">5. Espacio entre las celdas de las tablas</a><br />
+	<a href="#apartado6" tabindex="6" title="Bordes de las tablas">6. Bordes de las tablas</a><br />
+	<a href="#apartado7" tabindex="7" title="Celdas vacías en las tablas">7. Celdas vacías en las tablas</a><br />
+	<a href="#apartado8" tabindex="8" title="Posición de la leyenda en las tablas">8. Posición de la leyenda en las tablas</a><br />
+
+
+	<a id="apartado1"></a>
+	<h1>1. Tipos de marcadores</h1>
+	<p>Solo con html5, es el navegador quien determina la forma de los marcadores y las numeraciones para las etiquetas <code>&lt;ul&gt;</code> y <code>&lt;ol&gt;</code>, respectivamente.</p>
+	<p>Con CSS, podemos determinar la apariencia del marcador o el estilo de numeración de la lista.</p>
+
+	<p>La sintaxis es:<br />
+	<table>
+		<tr>
+			<td><code>list-style-type:</code></td>
+			<td>- <code>disc;</code> muestra un disco completo (igual que la etiqueta <code>&lt;ul&gt;</code><br />
+			- <code>circle;</code> muestra un círculo vacío (igual que la etiqueta <code>&lt;ul&gt;</code><br />
+			- <code>square; </code> muestra un cuadrado (igual que la etiqueta <code>&lt;ul&gt;</code><br />
+			- <code>decimal;</code> muestra 1, 2, 3, etc...<br />
+			- <code>decimal-leading-zero;</code> muestra 01, 02, 03, etc...<br />
+			- <code>upper-roman;</code> muestra I, II, III, etc...<br />
+			- <code>lower-roman;</code> muestra i, ii, iii, etc...<br />
+			- <code>upper-alpha;</code> muestra A, B, C, etc...<br />
+			- <code>lower-alpha;</code> muestra a, b, c, etc...<br />
+			</td>
+		</tr>
+	</table>
+
+	<p>Se puede ver un ejemplo <a href="ejemplosListasTablas/ejemplo1.html" tabindex="9" target="_blank" title="Ejemplo de marcadores de listas">aquí</a>.</p>
+
+	<hr>
+	<a id="apartado2"></a>
+	<p><a href="#menu_principal" tabindex="10" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+
+	<h1>2. Marcador gráfico</h1>
+	<p>CSS permite reemplazar los marcadores por una imagen.</p>
+	<p>La sintaxis es:<br />
+	<table>
+		<tr>
+			<td><code>list-style-image:</code></td>
+			<td>- <code>url(marcador_personalizado.gif);</code><br />
+			- <code>none;</code><br />
+			</td>
+		</tr>
+	</table>
+	<p>Hay que tener en cuenta que...</br />
+	- El valor <code>url(....);</code> indica la ruta en la que se encuentra la imagen a utilizar como marcador (puede ser relativa o absoluta);<br />
+	- Las imágenes pueden tener los formatos gif, jpeg o png.</p>
+	<p>Puedes ver un ejemplo <a href="ejemplosListasTablas/ejemplo2.html" tabindex="11" target="_blank" title="Ejemplo de marcador  gráfico">aquí</a>.</p>
+
+	<hr>
+	<a id="apartado3"></a>
+	<p><a href="#menu_principal" tabindex="12" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+
+	<h1>3. Posición de los elementos de la lista</h1>
+	<p>Es posible determinar la posición de las segunda línea (y las siguientes) de un elemento de la lista respecto al marcador o a la numeración.</p>
+	<p>La sintaxis es:<br />
+	<table>
+		<tr>
+			<td></td>
+			<td>- <code>list-style-position:</code><br />
+			- <code>outside;</code> (valor por defecto) coincide con la presentación clásica de las listas con todas las líneas de elementos mostrando un pequeño desplazamiento respecto al marcador o al número;<br />
+			- <code>inside;</code> presenta un desplazamiento solo para la primera línea del elemento de la lista, mientras que las demás líneas de elementos se alinean con el marcador.
+			</td>
+		</tr>
+	</table>
+	<p>Puedes ver un ejemplo <a href="ejemplosListasTablas/ejemplo3.html" tabindex="13" target="_blank" title="Ejemplo de posición de los elementos">aquí</a>.</p>
+
+	<hr>
+	<a id="apartado4"></a>
+	<p><a href="#menu_principal" tabindex="14" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+
+	<h1>4. Declaración abreviada de una lista</h1>
+	<p>Es posible retomar en una única declaración de estilo todos los valores anteriores: <code>list-style-type, list-style-image, list-style-position.</code>
+	<p>La sintaxis es:<br />
+	<code>list-style: url(check.gif) circle inside;</code></p>
+	<p>Hay que tener en cuenta que...<br />
+	- Los valores se agrupan, separados por un espacio;<br />
+	- Se puede indicar un marcador mediante una imagen y un marcador de tipo gráfico. De esta forma, si el navegador no encuentra la imagen, mostrará el marcador indicado (en el ejemplo, un círculo);<br />
+	- Ningún valor es obligatorio;<br />
+	- Es posible definir solo un valor.</p>
+
+
+	<hr>
+	<a id="apartado5"></a>
+	<p><a href="#menu_principal" tabindex="15" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	<h1>5. Espacio entre las celdas de las tablas</h1>
+	<p>Es posible especificar el espaciamiento entre cada celda de una tabla.</p>
+
+	<p>La sintaxis es:<br />
+	<table>
+		<tr>
+			<td><code>border-spacing:</code></td>
+			<td>- valor numérico en px;<br />
+			- valor numérico en pt;<br />
+			- porcentaje;<br />
+			</td>
+		</tr>
+	</table>
+
+	<p>Puedes ver un ejemplo <a href="ejemplosListasTablas/ejemplo4.html" tabindex="16" target="_blank" title="Ejemplo de espacio entre las celdas">aquí</a>.</p>
+
+	<p>Puedes ver un ejemplo sin la propiedad <code>border-spacing</code> <a href="ejemplosListasTablas/ejemplo4.html" tabindex="17" target="_blank" title="Ejemplo de espacio entre las celdas">aquí</a>.</p>
+
+	<p>Puedes ver un ejemplo con la propiedad <code>border-spacing: 0px;</code> <a href="ejemplosListasTablas/ejemplo4.html" tabindex="18" target="_blank" title="Ejemplo de espacio entre las celdas">aquí</a>.</p>
+
+	<hr>
+	<a id="apartado6"></a>
+	<p><a href="#menu_principal" tabindex="19" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	<h1>6. Bordes de las tablas</h1>
+	<p>Por defecto, el navegador muestra el borde que compone el contorno de la tabla y los bordes que componen el contorno de las celdas.</p>
+	<p>Para evitarlo, la sintaxis es:</p>
+	<table>
+		<tr>
+			<td><code>border-collapse:</code></td>
+			<td>- <code>collapse;</code><br />
+			- <code>separate;</code>
+			</td>
+		</tr>
+	</table>
+	<p>Puedes ver un ejemplo </code> <a href="ejemplosListasTablas/ejemplo5.html" tabindex="20" target="_blank" title="Bordes de las celdas">aquí</a>.</p>
+
+	<hr>
+	<a id="apartado7"></a>
+	<p><a href="#menu_principal" tabindex="21" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	<h1>7. Celdas vacías en las tablas</h1>
+	<p>Es posible controlar el comportamiento del navegador cuando se encuentra con una celda vacía.</p>
+	<p>La sintaxis es:<br />
+	<table>
+		<tr>
+			<td><code>empty-cells:</code></td>
+			<td>- <code>show;</code> muestra la celda vacía, siendo visibles los bordes y el fondo;<br />
+			- <code>hide;</code> no muestra la celda vacía, ni los bordes, ni el fondo.
+			</td>
+		</tr>
+	</table>
+
+	<p>Puedes ver un ejemplo </code> <a href="ejemplosListasTablas/ejemplo6.html" tabindex="22" target="_blank" title="Celdas vacías">aquí</a>.</p>
+
+	<hr>
+	<a id="apartado8"></a>
+	<p><a href="#menu_principal" tabindex="23" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	<h1>8. Posición de la leyenda en las tablas</h1>
+	<p>Para determinar la posición de la leyenda de la tabla, se utiliza CSS.</p>
+	<p>La sintaxis es:<br />
+	<table>
+		<tr>
+			<td><code>caption-side:</code></td>
+			<td>- <code>top;</code> sitúa la leyenda por encima de la tabla (valor por defecto);<br />
+			- <code>bottom;</code> sitúa la leyenda por debajo de la tabla.
+			</td>
+		</tr>
+	</table>
+
+
+	<p>Se puede ver un ejemplo <a href="ejemplosListasTablas/ejemplo7.html" tabindex="" title="Ejemplo de marcadores de listas">aquí</a>.</p>
+
+
+</html>

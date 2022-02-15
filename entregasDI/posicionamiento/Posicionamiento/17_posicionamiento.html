@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Posicionamiento
+</title>
+
+<link rel="stylesheet" type="text/css" href="17_posicionamiento.css">
+
+</head>
+<body>
+
+
+	<a id="menu_principal"></a>
+	<a href="#apartado1" tabindex="1" title="Posicionamiento de los elementos">1. Posicionamiento</a><br />
+	<a href="#apartado2" tabindex="2" title="Propiedad flotar">2. Flotar</a><br />
+	<a href="#apartado3" tabindex="3" title="Propiedad despejar">3. Despejar</a><br />
+	<a href="#apartado4" tabindex="4" title="Propiedad superposición">4. Superposición</a><br />
+	<a href="#apartado5" tabindex="5" title="Propiedad desbordamiento">5. Desbordamiento</a><br />
+	<a href="#apartado6" tabindex="6" title="Propiedad recorte">6. Recorte</a><br />
+	<a href="#apartado7" tabindex="7" title="Propiedad visualización">7. Visualización</a><br />
+	<a href="#apartado8" tabindex="8" title="Propiedad visibilidad">8. Visibilidad</a><br />
+	<a href="#apartado9" tabindex="9" title="Cursor del ratón">9. Cursor del ratón</a><br />
+	<a href="#apartado10" tabindex="10" title="Numeración automática">10. Numeración automática</a><br />
+	<a href="#apartado11" tabindex="11" title="Columnas">11.  Columnas</a><br />
+	
+	<a id="apartado1"></a>
+	<h1>1. Posicionamiento</h1>
+	<p>Por posicionamiento, se entiende la disposición (o <i>layout</i>) de los elementos en la página.</p>
+	<p>Un elemento puede posicionarse de cuatro formas distintas.</p>
+	<hr>
+	<h2>1.1. Posicionamiento estático (<i>static</i>)</h2>
+	<p>También llamado estricto (<i>strict</i>) es el posicionamiento normal del elemento según la forma habitual de proceder del navegador. En este caso, el posicionamiento del elemento depende directamente de la posición que ocupa cada elemento en el código sin permitirnos modificarla. Es posicionamiento por defecto en el que los elementos en línea se colocan unos a continuación de otros; y los elementos en bloque se colocan unos debajo de otros y separados por un espacio.</p>
+	<p>La sintaxis es:<br />
+	<table class="tablaTeoria">
+		<tr>
+			<td class="celdaTeoria"><code>position:</code></td>
+			<td class="celdaTeoria2"><code>static;</code><br />
+			</td>
+		</tr>
+	</table>
+	<p><b>Hay que tener en cuenta que...</b><br />
+	- En este tipo de posicionamiento, el diseñador no tiene el control. Es decir, como los elementos se apilan según el flujo del código, el elemento no puede posicionarse ni reposicionarse. Además, no puede modificarse su visibilidad y no puede utilizarse JavaScript para cambiar su posición.<br />
+	- Solo se puede influir en el elemento variando el tamaño con los valores <code>width</code> y <code>height</code> que afectan a los elementos en bloque, pero aún así se mantiene la disposición del elemento.<br />
+	- También se puede influir con la propiedad <code>margin</code> que modifica el aspecto y los espacios entre elementos.<br />
+	- Aplicando valores negativos a los márgenes los elementos o capas sucesivos ocupan el hueco dejado.</p>
+	
+	<h2>1.2. Posicionamiento relativo (<i>relative</i>)</h2>
+	<p>Se entiende como tal el posicionamiento de un elemento respecto a su posición normal o estática. En este caso, el elemento permanece en el flujo de datos aunque, en cierta medida, está desplazado respecto a su posición normal.</p>
+	<p>La posición del elemento se define mediante las coordenadas "x" e "y", entendiendo que:<br />
+	- <b><code>x</code></b> o <b>eje horizontal</b> es la distancia del elemento respecto al borde izquierdo de la ventana del navegador o del elemento padre. De esta forma, <code>left</code> determina la distancia entre la parte izquierda del elemento y el borde izquierdo de la página y <code>right</code> indica la distancia entre la parte derecha del elemento y el borde derecho de la página; e<br />
+	- <b><code>y</code></b> o <b>eje vertical</b> es la distancia del elemento respecto al borde superior de la ventana del navegador o del elemento padre. De esta forma, <code>top</code> determina la distancia entre el borde superior del elemento y el borde superior de la página y <code>bottom</code> determina la distancia entre el borde inferior del elemento y borde inferior de la página.</p>
+		
+	<p>La sintaxis es:<br />
+	<table class="tablaTeoria">
+		<tr>
+			<td class="celdaTeoria"><code>position:</code><br />
+			<code>left:</code><br />
+			<code>top:</code><br />
+			<code>right:</code><br />
+			<code>bottom:</code><br />
+			</td>
+			<td class="celdaTeoria2">- <code>relative;</code><br />
+			- valor o porcentaje;<br />
+			- valor o porcentaje;<br />
+			- valor o porcentaje;<br />
+			- valor o porcentaje;<br />
+			</td>
+		</tr>
+	</table>
+	
+	<p><b>Hay que tener en cuenta que...</b><br />
+	- Las propiedades <code>left; top; right </code> y <code>bottom;</code> se suelen declarar en la práctica "dos a dos"; es decir, una sola especificación para el eje horizontal (<code>left;</code> o <code>right;</code>) y una especificación para el eje vertical (<code>top;</code> o <code>bottom;</code>).<br />
+	- El punto de origen siempre es el vértice superior izquierdo (ya sea del navegador o del elemento padre).<br />
+	- El hueco que ocupa el elemento por código en su posición original no lo ocupa la siguiente capa o elemento, es decir, el espacio permanece.<br />
+	- Los valores <code>left; top; right</code> o <code>bottom</code> pueden ser negativos.</p>	
+	
+	<p>Se puede ver un ejemplo de posicionamiento estático y relativo <a href="ejemplosPosicionamiento/ejemplo01.html" tabindex="12" target="_blank" title="Ejemplo de posicionamiento estático y relativo">aquí</a>.</p>
+	
+	<h2>1.3. Posicionamiento absoluto (<i>absolute</i>)</h2>
+	<p>Este tipo de posicionamiento permite colocar un elemento respecto a un origen de coordenadas. Para ello, crea un elemento <b>independiente</b> del resto del documento. Los elementos definidos mediante el posicionamiento absoluto se retiran del flujo normal del código y se posicionan en el lugar exacto definido por el diseñador. El elemento no deja espacio en ningún sitio, pues se sitúa por encima de los demás y en el último lugar del flujo del código.</p>
+	<p>Por defecto, el origen de coordenadas lo marca el vértice superior izquierdo del <code>body</code>, es decir, de su contenedor. Sin embargo, el posicionamiento absoluto modifica las dimensiones del mismo pues hace que los elementos en bloque se comporten como elementos en línea.</p>
+	<p>El origen de coordenadas siempre es el vértice superior izquierdo del contenedor, siempre y cuando este sea un contenedor válido. Un contenedor es válido siempre que no tenga un posicionamiento estático. En caso contrario, el elemento "salta" al siguiente contenedor y así hasta el <code>body</code> que es el último contenedor válido.</p>
+	<p>La sintaxis es:<br />
+	<table class="tablaTeoria">
+		<tr>
+			<td class="celdaTeoria"><code>position:</code><br />
+			<code>left:</code><br />
+			<code>top:</code><br />
+			<code>right:</code><br />
+			<code>bottom:</code><br />
+			</td>
+			<td class="celdaTeoria2">- <code>absolute;</code><br />
+			- valor o porcentaje;<br />
+			- valor o porcentaje;<br />
+			- valor o porcentaje;<br />
+			- valor o porcentaje;<br />
+			</td>
+		</tr>
+	</table>
+	<p>La posición del elemento se define mediante las coordenadas "x" e "y", entendiendo que:<br />
+	- <b><code>x</code></b> o <b>eje horizontal</b> es la distancia del elemento respecto al borde izquierdo de la ventana del navegador o del elemento padre. De esta forma, <code>left</code> determina la distancia entre la parte izquierda del elemento y el borde izquierdo de la página y <code>right</code> indica la distancia entre la parte derecha del elemento y el borde derecho de la página; e<br />
+	- <b><code>y</code></b> o <b>eje vertical</b> es la distancia del elemento respecto al borde superior de la ventana del navegador o del elemento padre. De esta forma, <code>top</code> determina la distancia entre el borde superior del elemento y el borde superior de la página y <code>bottom</code> determina la distancia entre el borde inferior del elemento y borde inferior de la página.</p>
+	<p><b>Hay que tener en cuenta que...</b><br />
+	- El posicionamiento absoluto tien el riesgo de no mostrar correctamente la página en resoluciones de pantalla diferentes a la utilizada durante el diseño, puesto que los elementos definidos con <code>absolute</code> pueden superponerse sobre los elementos del flujo normal de la página.<br />
+	- Recordar que los navegadores agregan, por defecto, un margen al cuerpo de la página Html y que dicho margen varía de un navegador a otro. Por ello, en caso de posicionamiento absoluto, conviene especificar los márgenes de la etiqueta <code>body</code>.</p>
+	
+	<p>Se puede ver un ejemplo de posicionamiento absoluto <a href="ejemplosPosicionamiento/ejemplo02.html" tabindex="13" target="_blank" title="Ejemplo de posicionamiento absoluto">aquí</a>.</p>
+	
+	<h2>1.4. Posicionamiento fijo (<i>fixed</i>)</h2>
+	<p>Este tipo de posicionamiento también crea un elemento independiente, es decir, lo saca del flujo del código y se puede definir una posición exacta. A diferencia del posicionamiento absoluto, en este caso el elemento se mantiene fijo aunque el documento se desplace por la pantalla y el origne de coordenadas siempre es el mismo: el borde del área de navegación.</p>
+	<p>Son las famosas ventanitas que se mantienen constantes en el navegador a pesar de hacer scroll.</p>
+	<p>La sintaxis es:<br />
+	<table class="tablaTeoria">
+		<tr>
+			<td class="celdaTeoria"><code>position:</code><br />
+			<code>left:</code><br />
+			<code>top:</code><br />
+			<code>right:</code><br />
+			<code>bottom:</code><br />
+			</td>
+			<td class="celdaTeoria2">- <code>fixed;</code><br />
+			- valor o porcentaje;<br />
+			- valor o porcentaje;<br />
+			- valor o porcentaje;<br />
+			- valor o porcentaje;<br />
+			</td>
+		</tr>
+	</table>
+	
+	<p>Se puede ver un ejemplo de posicionamiento fijo <a href="ejemplosPosicionamiento/ejemplo03.html" tabindex="14" target="_blank" title="Ejemplo de posicionamiento fijo">aquí</a>.</p>
+	
+	
+	<a id="apartado2"></a>
+	<p><a href="#menu_principal" tabindex="15" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	
+	<h1>2. Flotar</h1>
+	<p>La propiedad <code>float</code> permite retirar un elemento de tipo caja del flujo normal para situarlo lo más a la izquierda o lo más a la derecha posible dentro de su elemento padre. La propiedad hace que un elemento flote, es decir, lo saca de la línea de código.</p>
+	<p>La sintaxis es:<br />
+	<table class="tablaTeoria">
+		<tr>
+			<td class="celdaTeoria"><code>float:</code></td>
+			<td class="celdaTeoria2">- <code>right;</code><br />
+			- <code>left;</code><br />
+			- <code>none;</code><br />
+			</td>
+		</tr>
+	</table>
+	<p><b>Hay que tener en cuenta que....</b><br />
+	- Al aplicar <code>float</code>, el elemento se sitúa justo por encima de los elementos estáticos, es decir, flota por encima de elllos de tal forma que los elementos estáticos "se meten" por debajo del elemento que "flota" pero los contenidos no chocan.<br />
+	- La distancia entre ambos contenidos es el margen del elemento que flota.<br />
+	- Los elementos flotan a la izquierda o a la derecha hasta el límite del elemento contenedor y se apilan hasta que no hay más espacio y pasan a la siguiente línea.<br />
+	- El valor <code>right</code> alinea a la derecha el elemento indicado, empujando a los demás elementos hacia la izquierda.<br />
+	- El valor <code>left</code> alinea a la izquierda el elemento indicado, empujando a los demás elementos hacia la derecha.<br />
+	- El valor <code>none</code> deja la gestión al navegador.<br />
+	- La propiedad <code>float</code> no puede aplicarse en caso de posicionamiento absoluto.<br />
+	- El elemento que se quiere que flote tiene que ir en el código al principio de donde queremos que flote.</p>
+	
+	<p>Se puede ver un ejemplo de la propiedad <code>float</code> <a href="ejemplosPosicionamiento/ejemplo04.html" tabindex="16" target="_blank" title="Ejemplo de propiedad float">aquí</a>.</p>
+	
+	
+	<a id="apartado3"></a>
+	<p><a href="#menu_principal" tabindex="17" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	
+	<h1>3. Despejar</h1>
+	<p>La propiedad <code>clear</code>, asociada a <code>float</code>, permite anular el efecto introducido por <code>float</code>. 
+	<p>La sintaxis es:<br />
+	<table class="tablaTeoria">
+		<tr>
+			<td class="celdaTeoria"><code>clear:</code></td>
+			<td class="celdaTeoria2">- <code>right;</code><br />
+			- <code>left;</code><br />
+			- <code>both;</code><br />
+			- <code>none;</code><br />
+			</td>
+		</tr>
+	</table>
+	<p><b>Hay que tener en cuenta que....</b><br />
+	- El valor <code>right</code> anula los elementos flotantes a la derecha.<br />
+	- El valor <code>left</code> anula los elementos flotantes a la izquierda.<br />
+	- El valor <code>both</code> anula los elementos flotantes a ambos lados.<br />
+	- El valor <code>none</code> anula los elementos flotantes.<br />
+	</p>
+	
+	
+	<p>Se puede ver un ejemplo de la propiedad <code>clear</code> <a href="ejemplosPosicionamiento/ejemplo05.html" tabindex="18" target="_blank" title="Ejemplo de propiedad clear">aquí</a>.</p>
+	
+	
+	
+	<a id="apartado4"></a>
+	<p><a href="#menu_principal" tabindex="19" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	
+	<h1>4. Superposición</h1>
+	<p>La propiedad <code>z-index</code> agrega un eje de profundidad que permite posicionar los elementos por encima o debajo de otros.</p>
+	<p>De forma natural, el que queda por encima es el que está más atrás en el código. Con <code>z-index</code> se puede disponer el orden en las tres dimensiones en las que se mueven los elementos.</p>
+	<p>La sintaxis es:<br />
+	<table class="tablaTeoria">
+		<tr>
+			<td class="celdaTeoria"><code>z-index:</code></td>
+			<td class="celdaTeoria2">- un número entero (positivo);			
+			</td>
+		</tr>
+	</table>
+	<p><b>Hay que tener en cuenta que....</b><br />
+	- Si un elemento tiene la propiedad <code>z-index: 2;</code> aparecerá por delante de otro elemento que tenga la propiedad <code>z-index: 0;</code><br />
+	- Esta propiedad sólo funciona con un posicionamiento absoluto de los elementos.</p>
+	
+	<p>Se puede ver un ejemplo de la propiedad <code>z-index</code> <a href="ejemplosPosicionamiento/ejemplo06.html" tabindex="20" target="_blank" title="Ejemplo de propiedad z-index">aquí</a>.</p>
+	
+	<a id="apartado5"></a>
+	<p><a href="#menu_principal" tabindex="21" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	
+	<h1>5. Desbordamiento</h1>
+	<p>La propiedad <code>overflow</code> determina lo que debe hacer el navegador cuando un elemento es más grande que el elemento padre que lo contiene.</p>
+	<p>La sintaxis es:<br />
+	<table class="tablaTeoria">
+		<tr>
+			<td class="celdaTeoria"><code>overflow:</code></td>
+			<td class="celdaTeoria2">- <code>hidden;</code><br />
+			- <code>scroll;</code><br />
+			- <code>visible;</code><br />
+			- <code>auto;</code><br />
+			</td>
+		</tr>
+	</table>
+	<p><b>Hay que tener en cuenta que....</b><br />
+	- Con el valor <code>hidden</code> la parte que desborda se oculta, sin posibilidad de verla ni acceder a ella.<br />
+	- Con el valor <code>scroll</code> la parte que desborda se oculta, aunque queda accesible mediante barras de desplazamiento.<br />
+	- Con el valor <code>visible</code> la parte que desborda se muestra, ignorando las especificaciones del elemento padre que lo contiene.<br />
+	- Con el valor <code>auto</code> se deja la gestión al navegador.</p>
+	
+	<p>Se puede ver un ejemplo de la propiedad <code>overflow</code> <a href="ejemplosPosicionamiento/ejemplo07.html" tabindex="22" target="_blank" title="Ejemplo de propiedad overflow">aquí</a>.</p>
+	
+	<a id="apartado6"></a>
+	<p><a href="#menu_principal" tabindex="23" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	
+	<h1>6. Recorte</h1>
+	<p>La propiedad <code>clip</code> determina la parte visible del elemento, generalmente una imagen. De esta forma, la imagen entera se incluye en el documento pero solo una parte rectangular de la misma estará visible.</p>
+	<p>La sintaxis es:<br />
+	<table class="tablaTeoria">
+		<tr>
+			<td class="celdaTeoria"><code>clip:</code></td>
+			<td class="celdaTeoria2">- <code>rect</code>(sup_izquierda sup_derecha inf_derecha inf_izquierda);</td>
+		</tr>
+	</table>
+	<p><b>Hay que tener en cuenta que....</b><br />
+	- Las coordenadas del rectángulo recortado vienen dadas por las esquinas superior izquierda, superior derecha, inferior derecha e inferior izquierda respecto de la imagen inicial.<br />
+	- Se recomienda incluir el elemento a recortar dentro de una etiqueta <code>&lt;div&gt;</code> o <code>&lt;span&gt;</code>.<br />
+	- Esta propiedad solo funciona con un posicionamiento absoluto del elemento.<br />
+	- De momento, solo está implementada la forma rectangular.</p>
+	
+	<p>Se puede ver un ejemplo de la propiedad <code>recorte</code> <a href="ejemplosPosicionamiento/ejemplo08.html" tabindex="24" target="_blank" title="Ejemplo de propiedad recorte">aquí</a>.</p>
+	
+	<a id="apartado7"></a>
+	<p><a href="#menu_principal" tabindex="25" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	
+	<h1>7. Visualización</h1>
+	<p>La propiedad <code>display</code> permite controlar la visualización de los elementos en la página.</p>
+	<p>La sintaxis es:<br />
+	<table class="tablaTeoria">
+		<tr>
+			<td class="celdaTeoria"><code>display:</code></td>
+			<td class="celdaTeoria2">- <code>block;</code><br />
+			- <code>inline;</code><br />
+			- <code>none;</code><br />
+			</td>
+		</tr>
+	</table>
+	<p><b>Hay que tener en cuenta que...</b><br />
+	- <code>display</code>permite redefinir el comportamiento de los elementos con <code>block</code> e <code>inline</code>.<br />
+	- Con el valor <code>none</code> define un elemento que no se va a mostrar. De esta forma, el elemento se retira del documento y de la visualización de la página.</p>
+	
+	<p>Se puede ver un ejemplo de la propiedad <code>display</code> <a href="ejemplosPosicionamiento/ejemplo09.html" tabindex="26" target="_blank" title="Ejemplo de propiedad display sin aplicar">aquí (sin <code>display</code>)</a> y <a href="ejemplosPosicionamiento/ejemplo10.html" tabindex="27" target="_blank" title="Ejemplo de propiedad display aplicado">aquí</a> (aplicando <code>display</code>.</p>
+	
+	
+	<a id="apartado8"></a>
+	<p><a href="#menu_principal" tabindex="28" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	
+	<h1>8. Visibilidad</h1>
+	<p>Esta propiedad determina si un elemento está visible u oculto.</p>
+	<p>La sintaxis es:<br />
+	<table class="tablaTeoria">
+		<tr>
+			<td class="celdaTeoria"><code>visibility:</code></td>
+			<td class="celdaTeoria2">- <code>visible;</code> muestra el elemento.<br />
+			- <code>hidden;</code> oculta el elemento.<br />
+			</td>
+		</tr>
+	</table>
+	<p><b>Hay que tener en cuenta que...</b><br />
+	- A diferencia de <code>display</code>, con el valor <code>hidden</code> de la propiedad <code>visibility</code>, el elemento permanece  en el código y conserva su posición, aunque no se vea.</p>
+	<p>Se puede ver un ejemplo de la propiedad <code>visibility</code> <a href="ejemplosPosicionamiento/ejemplo11.html" tabindex="29" target="_blank" title="Ejemplo de propiedad visibility">aquí</a>.</p>
+	
+	<a id="apartado9"></a>
+	<p><a href="#menu_principal" tabindex="30" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	
+	<h1>9. Cursor del ratón</h1>
+	<p>La propiedad <code>cursor</code> permite modificar cómo se visualiza el cursor del ratón.</p>
+	<p>La sintaxis es:</p>
+	<table class="tablaTeoria">
+		<tr>
+			<td class="celdaTeoria"><code>cursor:</code></td>
+			<td class="celdaTeoria2">- palabra clave.
+		</tr>
+	</table>
+	<p><b>Las palabras clave son:</b><br />
+	- <code>pointer;</code> el cursor presenta un dedo que indica un enlace;<br />
+	- <code>move;</code> el cursor indica un objeto que se puede desplazar;<br />
+	- <code>e-resize;</code> cursor apuntando hacia el este;<br />
+	- <code>ne-resize;</code> cursor apuntando hacia el noreste;<br />
+	- <code>nw-resize;</code> cursor apuntando hacia el noroeste;<br />
+	- <code>n-resize;</code> cursor apuntando hacia el norte;<br />
+	- <code>se-resize;</code> cursor apuntando hacia el sureste;<br />
+	- <code>sw-resize;</code> cursor apuntando hacia el suroeste;<br />
+	- <code>s-resize;</code> cursor apuntando hacia el sur;<br />
+	- <code>w-resize;</code> cursor apuntando hacia el oeste;<br />
+	- <code>text;</code> el cursor indica que es posible seleccionar el texto;<br />
+	- <code>wait;</code> el cursor indica una progresión, por ejemplo, con un reloj de arena, pero depende del navegador;<br />
+	- <code>help;</code> el cursor indica una ayuda; generalmente con un signo de interrogación;<br />
+	- <code>default;</code> el cursor por defecto del sistema operativo;<br />
+	- <code>crosshair;</code> el cursor muestra una cruz;<br />
+	- <code>progress;</code> el cursor muestra una flecha con un reloj de arena;<br />
+	- <code>not-allowed;</code> el cursor muestra una señal de prohibido;<br />
+	- <code>no-drop;</code> el cursor muestra una mano con un dedo desplegado y una señal de prohibido;<br />
+	- <code>col-resize;</code> cursor compuesto de dos trazos verticales con una flecha a cada lado;<br />
+	- <code>row-resize;</code> cursor compuesto de dos trazos horizontales con una flecha a cada lado;<br />
+	- <code>auto;</code> el navegador determina la forma del curso según el contexto;<br />
+	- <code>url;</code> especifica un archivo donde se encuentra la imagen que se desea usar como cursos. El archivo de imagen debe tener el formato <code>cur</code> (cursor) o <code>ani</code> de cursos animaod.</p>
+	
+	<p>Se puede ver un ejemplo de la propiedad <code>cursor</code> <a href="ejemplosPosicionamiento/ejemplo12.html" tabindex="31" target="_blank" title="Ejemplo de propiedad cursor">aquí</a>.</p>
+	
+	<a id="apartado10"></a>
+	<p><a href="#menu_principal" tabindex="32" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	
+	<h1>10. Numeración automática</h1>
+	<p>CSS ha introducido la noción de contadores (<code>counter</code>) con los que es posible gestionar, por ejemplo una numeración automática de secciones o subsecciones.</p>
+	<p>La sintaxis es:<br />
+	<table class="tablaTeoria">
+		<tr>
+			<td class="celdaTeoria"><code>counter-reset:</code><br />
+			<code>counter-increment:</code></td>
+			<td class="celdaTeoria2">- nombre del contador;<br />
+			- valor de incremento;<br />
+			</td>
+		</tr>
+	</table>
+	<p><b>Hay que tener en cuenta que....</b><br />
+	- La propiedad <code>counter-reset</code> crea o inicializa el contador indicado;<br />
+	- La propiedad <code>counter-increment</code> incrementa el contador indicado;<br />
+	- El paso de incremento por defecto es 1, pero es posible especificar otro valor.</p>
+	
+	<p>Se puede ver un ejemplo de numeración automática <a href="ejemplosPosicionamiento/ejemplo13.html" tabindex="33" target="_blank" title="Ejemplo de numeración automática">aquí</a>.</p>
+	
+	<a id="apartado11"></a>
+	<p><a href="#menu_principal" tabindex="34" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	<h1>11. Columnas</h1>
+	<p>Con CSS se puede dividir el texto en columnas.</p>
+	<p>La sintaxis es:<br />
+	<table class="tablaTeoria">
+		<tr>
+			<td class="celdaTeoria"><code>column-count:</code><br />
+			<code>column-width:</code><br />
+			<code>column-span:</code><br />
+			<code>column-fill:</code><br />
+			<code>column-gap:</code><br />
+			<code>columns:</code><br />
+			</td>
+			
+			<td class="celdaTeoria2">- número de columnas;<br />
+			- <code>auto</code>, px o porcentaje;<br />
+			- <code>all;</code> o <code>none;</code><br />
+			- <code>auto;</code> o <code>balance;</code><br />
+			- px o porcentaje;<br />
+			- permite declarar los valores de <code>colum-count</code> y <code>column-width</code> al mismo tiempo;
+			</td>
+		</tr>
+	</table>
+	
+	<p><b>Hay que tener en cuenta que...</b><br />
+	- <code>column-count:</code> especifica el número de columnas que el navegador tiene que generar.<br />
+	- <code>column-width:</code> declara el ancho de las columnas, siendo <code>auto</code> el valor por defecto.<br />
+	- <code>column-span:</code> se aplica a elementos dentro de la caja para determinar si el elemento se ubica en una o varias columnas; sus valores son <code>all</code> (todas las columnas) y <code>none</code> por defecto.<br />
+	- <code>column-gap:</code> define el tamaño del espacio entre columnas (la calle) en píxeles o porcentaje.</p>
+	
+	
+	<p>Se puede ver un ejemplo <a href="ejemplosPosicionamiento/ejemplo14.html" tabindex="35" target="_blank" title="Ejemplo de columnas">aquí</a>.</p>
+	
+		
+	<p>La división entre columnas es un espacio vacío por defecto, pero se puede generar una línea para ayudar al usuario a visualizar la división.</p>
+	
+	
+	
+	<p>La sintaxis es:<br />
+	<table class="tablaTeoria">
+		<tr>
+			<td class="celdaTeoria"><code>column-rule-style:</code><br />
+			<code>column-rule-color:</code><br />
+			<code>column-rule-width:</code><br />
+			<code>column-rule:</code></td>
+			<td class="celdaTeoria2">- define el estilo de la línea con los valores <code> dotted, dashed, solid, double, groove, ridge, inset</code> y <code> outset</code><br />
+			- define el color de la línea;<br />
+			- define el ancho de la línea;<br />
+			- permite definir todos los valores de la línea al mismo tiempo;<br />
+			</td>
+		</tr>
+	</table>
+	
+	<p>Se puede ver un ejemplo <a href="ejemplosPosicionamiento/ejemplo15.html" tabindex="36" target="_blank" title="Ejemplo de columnas separadas con línea">aquí</a>.</p>
+
+	
+	<p><a href="#menu_principal" tabindex="37" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	
+	
+	
+	
+</body>	
+	
+</html>

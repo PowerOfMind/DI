@@ -1,0 +1,10 @@
+body{
+    margin: 50px;
+}
+p{
+    border: solid 1px black;
+    padding-top:50px;
+    padding-left:50px;
+    padding-right:50px;
+    padding-bottom:0px;
+}

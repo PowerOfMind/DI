@@ -1,0 +1,10 @@
+table, td {
+    
+    width:15%;
+  }
+  td {
+    background-color: #96D4D4;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid black;
+  }

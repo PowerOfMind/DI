@@ -1,0 +1,11 @@
+nav{
+    background-color:rgb(215,230,254);
+    width: 100%;
+}
+ul{
+    list-style:none;
+    border:solid 1px black;
+}
+li{
+    display: inline;
+}

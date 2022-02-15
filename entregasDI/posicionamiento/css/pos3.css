@@ -1,0 +1,14 @@
+.relativa{
+    border-top: 10px orange solid;
+    border-right: 15px orange solid;
+    border-bottom: 10px orange solid;
+    border-left: 0px;
+    width: 400px;
+    height:200px;
+    position: fixed;
+    margin-top: 50%;
+    margin-left: 0px; 
+    padding: 15px;
+    background-color: black;
+    color: white;
+}

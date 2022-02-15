@@ -1,0 +1,36 @@
+.uno {
+    
+}
+
+.dos {
+  list-style-position: inside;
+}
+
+.tres {
+  list-style-image: url(../check.gif);
+}
+
+.cuatro {
+  list-style-image: url(../check.gif);
+  list-style-position: inside;
+}
+
+ol {
+    list-style-type: none;
+    counter-reset: item;
+    margin: 0;
+    padding: 0;
+  }
+  
+  ol > li {
+    display: table;
+    counter-increment: item;
+  }
+  
+  
+  li ol > li {
+    margin: 0;
+    list-style: none;
+  }
+  
+ 

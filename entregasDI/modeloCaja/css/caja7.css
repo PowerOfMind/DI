@@ -1,0 +1,8 @@
+h1{
+    border-width:thick;
+    border-style: solid;
+    border-top-color:rgb(230, 50, 60);
+    border-bottom-color:rgb(230, 50, 60);
+    border-left-color:rgb(125, 165, 205);
+    border-right-color:rgb(125, 165, 205);
+}

@@ -1,0 +1,13 @@
+table, td {
+    border: 1px solid black;
+    width:15%;
+    border-collapse: collapse;
+  }
+  td {
+    padding: 5px;
+    text-align: center;
+    border-color: black;
+  }
+  #caption{
+    caption-side:bottom;
+  }

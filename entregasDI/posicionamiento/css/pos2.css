@@ -1,0 +1,8 @@
+.relativa{
+    border: thick solid red;
+    width: 180px;
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 50px;
+    padding: 15px;
+}

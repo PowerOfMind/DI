@@ -1,0 +1,13 @@
+.normal{
+    border: thick solid red;
+    width: 180px;
+    padding: 15px;
+}
+.relativa{
+    border: thick solid darkgreen;
+    width: 180px;
+    position: relative;
+    margin-top: 30px;
+    margin-left: 60px;
+    padding: 15px;
+}

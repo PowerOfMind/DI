@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<!-- saved from url=(0123)https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1#menu_principal -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<title>Formularios</title>
+	<style>
+	span { margin-right: 25px;
+		 }
+	
+	</style>
+	<script type="text/javascript">
+	function mostrar(seleccion){
+	document.getElementById("valor").innerHTML = seleccion;
+	}
+	
+	</script>
+</head>
+<body>
+
+
+	<a id="menu_principal"></a>
+	<a href="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1#apartado1" tabindex="1" title="¿Qué es un formulario?">1. Introducción</a><br>
+	<a href="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1#apartado2" tabindex="2" title="Empezamos a crear el formulario">2. Declarar el formulario</a><br>
+	<a href="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1#apartado3" tabindex="3" title="Empezamos con el campo de texto">3. Campo de texto</a><br>
+	<a href="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1#apartado4" tabindex="4" title="Un campo de texto un poco más grande">4. Área de texto</a><br>
+	<a href="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1#apartado5" tabindex="5" title="Listas desplegables">5. Lista desplegable</a><br>
+	<a href="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1#apartado6" tabindex="6" title="Botones radio">6. Botones de selección única (radio)</a><br>
+	<a href="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1#apartado7" tabindex="7" title="Botones checkbox">7. Botones de selección múltiple (checkbox)</a><br>
+	<a href="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1#apartado8" tabindex="8" title="Como enviar el formulario">8. Botón de envío</a><br>
+	<a href="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1#apartado9" tabindex="9" title="Como limpiar el formulario">9. Botón de anulación</a><br>
+	<a href="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1#apartado10" tabindex="10" title="El botón de acción">10. Botón de acción</a><br>
+	<a href="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1#apartado11" tabindex="11" title="Ocultando campos">11. Campos ocultos</a><br>
+	<a href="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1#apartado12" tabindex="12" title="Transferir archivos">12. Campos de transferencia de archivos</a><br>
+	<a href="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1#apartado13" tabindex="13" title="Ocultando la contraseña">13. Campos de contraseña</a><br>
+	<a href="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1#apartado14" tabindex="14" title="Organizando el formulario">14. Organización del formulario</a><br>
+	<a href="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1#apartado15" tabindex="15" title="Etiquetando el formulario">15. Etiquetado de los campos del formulario</a><br>
+	<a href="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1#apartado16" tabindex="16" title="Ofreciendo sugerencias al usuario">16. Campo de texto con lista de sugerencias</a><br>
+	<a href="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1#apartado17" tabindex="17" title="Introducir el mail">17. Campo de texto para la dirección de e-mail</a><br>
+	<a href="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1#apartado18" tabindex="18" title="Introducir una url">18. Campo de texto url</a><br>
+	<a href="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1#apartado19" tabindex="19" title="Como introducir sólo números">19. Campo de texto con contador</a><br>
+	<a href="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1#apartado20" tabindex="20" title="Como introducir fechas">20. Campo de texto con formato de fecha</a><br>
+	<a href="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1#apartado21" tabindex="21" title="Como ofrecer búsquedas al usuario">21. Campo de texto de búsqueda</a><br>
+	<a href="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1#apartado22" tabindex="22" title="Como elegir un color">22. Campo de texto de color</a><br>
+	<a href="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1#apartado23" tabindex="23" title="Como utilizar cursores">23. Cursores</a><br>
+	
+	<h1>1. Introducción a los formularios</h1>
+	<p>Los formularios permiten desarrollar aplicaciones web, de tal forma que se convierten en la única herramienta que permite recibir la información directamente del usuario final estructurada y según las necesidades del diseñador.</p>
+	<p>La primera preocupación de los desarrolladores de aplicaciones web es recuperar datos válidos, como, por ejemplo, un código postal o una dirección de email.</p>
+	<p>Con Html5 es posible validar dichos datos incluso cuando el usuario ha desactivado el código JavaScript del navegador.</p>
+	<p>El propósito último de los formularios es el procesamiento automático de los datos, siendo posible su gestión en lado del servidor mediante lenguajes de programación de gestión de bases de datos como, por ejemplo, PHP o MySQL.</p>
+	
+	<a id="apartado2"></a>
+	<p><a href="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1#menu_principal" tabindex="24" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	
+	<h1>2. Declarar el formulario</h1>
+	<p>Para declarar el formulario se utiliza la etiqueta <code>&lt;form&gt;</code> que contiene todos los elementos del formulario.</p>
+	<p>Por sí misma, no muestra nada en el navegador.</p>
+	<p>Es compatible con todos los navegadores.</p>
+	<p>Debe cerrarse obligatoriamente. En caso contrario, el navegador no mostrará ningún campo del formulario.</p>
+	<p>Los atributos de <code>&lt;form&gt;</code> son:<br>
+	<code><b>name</b></code> que permite asignar un nombre al formulario.<br>
+	<code><b>action</b></code> que, cuando el usuario le da al botón de enviar, le dice la navegador la acción que debe llevar a cabo. Esta acción puede ser:<br>
+	- Llamada a un programa de procesamiento de datos alojado en el servidor. Por ejemplo: <code>action="http://www.servidor/procesamiento.php"</code><br>
+	- Llamada a una dirección de e-mail para simplemente recuperar dichos datos utilizando el protocolo <code>mailto</code>. Por ejemplo: <code> action="mailto:mi_correo@servidor.es"</code><br>
+	- Llamada al procesamiento de los datos del formulario de forma interna (del lado cliente) mediante JavaScript, en cuyo caso el atributo <code>action</code> está vacío. Por ejemplo: <code>action=""</code><br>
+	<b>OJO:</b> la presencia del atributo <code>action</code> es obligatoria.<br>
+	<code><b>enctype</b></code> especifica en que formato informático <i>(mime type)</i> se transmitirán los datos del formulario. Puede ser:<br>
+	- Por defecto, <code>application/x-www-form-urlencoded</code><br>
+	- Para enviar archivos, este campo debe valer <code>multipart/form-data</code><br>
+	- Para el envío de datos a una dirección de correo electrónico mediante el protocolo mailto, el valor será <code>text/plain</code><br>
+	<code><b>method</b></code> indica cómo se va a realizar la transmisión de datos de un formulario. Puede ser:<br>
+	- <code>GET </code> que realiza la transferencia de los datos en caracteres ASCII, pero dichos datos no pueden exceder los 100 caracteres.<br>
+	- <code>POST </code> que gestiona los datos en caracteres no ASCII y tiene una capacidad de caracteres ilimitada. En la práctica, se ha impuesto por motivos de facilidad y eficacia.</p>
+	<p><b>OJO:</b> cuando los datos del formulario se procesan de forma interna (es decir, cuando <code>action=""</code> los atributos <code>method</code> y <code>enctype</code> son inútiles por que no se hace llamada al servidor.</p>
+	<p>Por lo tanto, ejemplo de declaración del formulario:<br>
+	</p><form name="formulario1" action="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1">
+	Aquí debería haber un formulario.
+	</form>
+	
+	<a id="apartado3"></a>
+	<p><a href="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1#menu_principal" tabindex="25" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	
+	<h1>3. Campo de texto</h1>
+	<p>Un campo de texto permite introducir datos tanto alfabéticos como numéricos. Para ello, se utiliza la etiqueta &lt;input&gt;</p>
+	<p>Por ejemplo: un campo de texto para introducir el nombre.</p>
+	<hr>
+	<form name="formulario1" action="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1">
+	Nombre: <input type="text">
+	</form>
+	<hr>
+	<p>La etiqueta &lt;input&gt; es compatible con todos los navegadores y no tiene etiqueta de cierre.</p>
+	<p>Sus atributos son:<br>
+	<code><b>name</b></code> que define un nombre único para este elemento y que se utiliza para recoger el contenido del campo de texto cuando se envía el formulario.<br>
+	<code><b>size</b></code> que define el número de caracteres visibles del campo de texto y, por tanto, la longitud de la zona de texto. No obstante, el usuario puede introducir tantos caracteres como quiera, aunque sobrepasen la zona visible. Por defecto, su valor es 20.<br> Por ejemplo:<br>
+	</p><hr>
+	<form name="campoNombre" action="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1">
+	<b>Nombre: </b><input type="text" size="50">
+	</form>
+	<hr>
+	<code><b>maxlength</b></code> que determina el número máximo de caracteres que el usuario puede introducir en el campo de texto. Por ejemplo:<br>
+	<hr>
+	<form name="campoNombre2" action="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1">
+	<b>Nombre: </b><input type="text" size="50" maxlength="5">
+	</form>
+	<hr>
+	<code><b>value</b></code> que define el valor por defecto del campo de texto y aparece en su interior cuando se carga la página. Por ejemplo:<br>
+	<hr>
+	<form name="campoNombre3" action="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1">
+	<b>Nombre: </b><input type="text" size="50" value="¡Escriba aquí su nombre!">
+	</form>
+	<hr>
+	<code><b>placeholder</b></code> que permite incluir una sugerencia acerca del valor que se debe introducir en el campo de texto. Aparece de color gris en el campo de formulario tras cargar la página y desaparece cuando el usuario sitúa el foco en dicho elemento. Por ejemplo:<br>
+	<hr>
+	<form name="campoNombre4" action="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1">
+	<b>Nombre: </b><input type="text" size="50" placeholder="Su nombre">
+	</form>
+	<hr>
+	Aparte de comportarse de forma diferente que <code>value</code>, el problema es que con la propiedad <code>value</code>, si no se modifica el campo de texto, el valor de dicho atributo es el que se envía por defecto.<br>
+	<code><b>readonly</b></code> que indica que el usuario no puede modificar el valor por defecto del campo de texto. Por ejemplo:<br>
+	<hr>
+	<form name="campoNombre5" action="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1">
+	<b>Nombre: </b><input type="text" size="50" value="Aquí no irá su nombre" readonly="">
+	</form>
+	<hr>
+	<code><b>autofocus</b></code> que sitúa el foco sobre el elemento una vez cargada la página, ahorrando algunas líneas de JS. Por ejemplo:<br>
+	<hr>
+	<form name="campoNombre6" action="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1">
+	<b>Nombre: </b><input type="text" size="50" placeholder="Prueba de autofocus" autofocus="">
+	</form>
+	<hr>
+	<code><b>required</b></code> que convierte un elemento en obligatorio a la hora de enviar el formulario. Por ejemplo:<br>
+	<hr>
+	<form name="campoNombre7" action="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1">
+	<b>E-mail: </b><input type="text" size="50" placeholder="E-mail obligatorio" required="">
+	<input type="submit" value="Enviar">
+	</form>
+	<hr>
+	<code><b>pattern</b></code> que define una expresión regular de JS que se usará para realizar la validación del valor del campo. Por ejemplo:<br>
+	<hr>
+	<form name="campoNombre8" action="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1">
+	<b>Código Postal: </b><input type="text" size="20" placeholder="Introduzca su código postal" maxlength="5" required="" pattern="[0-9]{5}">
+	<input type="submit" value="Enviar">
+	</form>
+	<hr>
+	<code><b>height</b></code> que determina en píxeles o en porcentaje la altura del campo de texto. Puede ser reemplazado por la propiedad CSS <code>height</code>.
+	<code><b>width</b></code> que determina en píxeles o en porcentaje la anchura del campo de texto. Puede ser reemplazado por la propiedad CSS <code>height</code>.<p></p>
+	
+	<a id="apartado4"></a>
+	<p><a href="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1#menu_principal" tabindex="26" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	
+	<h1>4. Área de texto</h1>
+	<p>Hay ocasiones en las que es necesario prever algo más de espacio para recoger las opiniones del usuario. Es lo que sucede al ofrecer un lugar donde dejar <mark>comentarios</mark>. Para ello, se utiliza la etiqueta &lt;textarea&gt;</p>.
+	<p>Compatible con todos los navegadores, necesita una etiqueta de cierre y se puede definir su tamaño en filas y columnas.</p>
+	<p>Por ejemplo:</p>
+	<hr>
+	<form name="areaTexto1" action="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1">
+	<p>Comentarios:</p>
+	<textarea rows="4" cols="30"></textarea>	
+	</form>
+	<hr>
+	<p>Los atributos de &lt;textarea&gt; son:<br>
+	<code><b>name</b></code> define un nombre para el elemento.<br>
+	<code><b>cols</b></code> determina el número de caracteres visibles en anchura para el área de texto. Puede reemplazarse por la propiedad CSS <code>width</code>.<br>
+	<code><b>rows</b></code> determina el número de filas visibles en altura para el área de texto. Puede reemplazarse por la propiedad CSS <code>height</code>.<br>
+	<code><b>readonly</b></code><br>
+	<code><b>autofocus</b></code><br>
+	<code><b>maxlength</b></code><br>
+	<code><b>required</b></code><br>
+	<code><b>placeholder</b></code><br>
+	<code><b>wrap</b></code> especifica la forma en que se gestionan los saltos automáticos de línea en el texto a la hora de enviar el contenido. Por defecto, <code>wrap="soft"</code> no inserta ningún carácter de salto de línea a la hora de transmitir la información. Para insertar un carácter de salto de línea junto con el texto, se utiliza <code>wrap="hard"</code>.	</p>
+	
+	<a id="apartado5"></a>
+	<p><a href="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1#menu_principal" tabindex="27" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	<h1>5. Lista desplegable</h1>
+	<p>Este tipo de lista proporciona distintas opciones al usuario para que escoga una. Para ello, se utiliza la etiqueta <code>&lt;option&gt;</code> para cada uno de los elementos de la lista contenidos entre las etiquetas <code>&lt;select&gt;</code>.</p>
+	<p>Ambas etiquetas son compatibles con todos los navegadores y precisan etiqueta de cierre.</p>
+	<p>Por ejemplo:</p>
+	<hr>
+	<form name="listaDesplegable" action="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1">
+		<p>Su navegador preferido es:
+		<select>
+			<option value="1">Internet Explorer</option>
+			<option value="2">Mozilla Firefox</option>
+			<option value="3">Google Chrome</option>
+			<option value="4">Opera</option>
+			<option value="5">Safari</option>		
+		</select>
+		</p>
+	<input type="submit" value="Enviar">
+	</form>
+	<hr>
+	<p>Los atributos son:<br>
+	<code><b>name</b></code><br>
+	<code><b>value</b></code> que, en principio, es el texto del elemento seleccionado, situado tras la etiqueta <code>&lt;option&gt;</code>, y que se trasnmite al enviar el formulario. No obtante, es posible especificar otro valor, generalmente numérico, para facilitar el procesamiento de los datos.<br>
+	<code><b>autofocus</b></code><br>
+	<code><b>size</b></code> por defecto el atributo <code>size="1"</code>, muy práctico a la hora de ganar espacio en la disposición de la página. No obstante, se puede variar dicho valor para definir el número de elementos que serán visibles. Por ejemplo:<br>
+	</p><hr>
+		<form name="listaDesplegable2" action="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1">
+		<p>Su navegador preferido es:
+		<select size="3">
+			<option value="1">Internet Explorer</option>
+			<option value="2">Mozilla Firefox</option>
+			<option value="3">Google Chrome</option>
+			<option value="4">Opera</option>
+			<option value="5">Safari</option>		
+		</select>
+		</p>
+	<input type="submit" value="Enviar">
+	</form>
+	<hr>
+	<code><b>multiple</b></code> que permite seleccionar varios elementos a la vez siempre que le usuario mantenga pulsada la tecla Control. En tal caso, es aconsejable advertir al usuario. Por ejemplo:<br> 
+	<hr>
+		<form name="listaDesplegable3" action="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1">
+		<p>Su navegador preferido es (escoja más de uno pulsando la letra Ctrl:
+		<select multiple="">
+			<option value="1">Internet Explorer</option>
+			<option value="2">Mozilla Firefox</option>
+			<option value="3">Google Chrome</option>
+			<option value="4">Opera</option>
+			<option value="5">Safari</option>		
+		</select>
+		</p>
+	<input type="submit" value="Enviar">
+	</form>
+	<hr>
+	<code><b>selected</b></code> que permite determinar qué elemento de la lista aparece por defecto en primer lugar. Por ejemplo:<br>
+	<hr>
+		<form name="listaDesplegable3" action="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1">
+		<p>Su navegador preferido es:
+		<select>
+			<option value="1">Internet Explorer</option>
+			<option value="2">Mozilla Firefox</option>
+			<option value="3">Google Chrome</option>
+			<option value="4" selected="">Opera</option>
+			<option value="5">Safari</option>		
+		</select>
+		</p>
+	<input type="submit" value="Enviar">
+	</form>
+	<hr>	
+	<p></p>
+	
+	<a id="apartado6"></a>
+	<p><a href="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1#menu_principal" tabindex="28" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	<h1>6. Botones de selección única (radio)</h1>
+	<p>Hay ocasiones en que el usuario debe escoger sólo una opción. Para ello, se utilizan los llamados <i>botones radio</i>.</p>
+	<p>Por ejemplo:</p>
+	<hr>
+	<form name="botonesRadio1" action="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1">
+	Sexo:<br>
+	<input type="radio" name="sexo">Masculino
+	<input type="radio" name="sexo">Femenino	
+	</form>
+	<hr>
+	<p>La etiqueta <code>&lt;input&gt;</code> es compatible con todos los navegadores y no tiene etiqueta de cierre.</p>
+	<p>Sus atributos son:<br>
+	<code><b>name</b></code> es obligatorio y debe tener el mismo valor para los dos botones.<br>
+	<code><b>autofocus</b></code><br>
+	<code><b>checked</b></code> permite preseleccionar un botón radio.<br>
+	<code><b>value</b></code> permite atribuir un valor a cada botón para su procesamiento posterior.</p>
+	<p>Un ejemplo completo:<br>
+	</p><hr>
+	<form name="botonesRadio2" action="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1">
+	Sexo:<br>
+	<input type="radio" name="sexo" value="1">Masculino
+	<input type="radio" name="sexo" value="2" checked="">Femenino	
+	</form>
+	<hr>
+	
+	<a id="apartado7"></a>
+	<p><a href="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1#menu_principal" tabindex="29" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	<h1>7. Botones de selección múltiple (checkbox)</h1>
+	<p>Son similares a los botones radio, pero permiten seleccionar varias opciones.</p>
+	<p>Por ejemplo:</p>
+	<hr>
+	<form name="botonesChek" action="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1">
+	Elija los ingredientes de su pizza:<br>
+	<input type="checkbox" name="n1">Mozzarella<br>
+	<input type="checkbox" name="n2">Jamón<br>
+	<input type="checkbox" name="n3">Bacon<br>
+	<input type="checkbox" name="n4">Champiñones<br>
+	<input type="checkbox" name="n5">Anchoas<br>
+	<input type="checkbox" name="n6">Salsa picante<br>
+	<input type="checkbox" name="n7">Piña
+	</form>
+	<hr>
+
+	<p>Sus atributos son:<br>
+	<code><b>name</b></code> que es obligatorio, aunque permite utilizar nombre idénticos o no. En caso de querer utilizarlos en un script conviene poner nombres diferentes.<br>
+	<code><b>autofocus</b></code><br>
+	<code><b>checked</b></code> permite preseleccionar un botón checkbox.<br>
+	<code><b>value</b></code> permite atribuir un valor a cada botón para su procesamiento posterior.</p>
+	<p>Un ejemplo completo:</p>
+	<hr>
+	<form name="botonesChek1" action="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1">
+	Elija los ingredientes de su pizza:<br>
+	<input type="checkbox" name="n1" value="1">Mozzarella<br>
+	<input type="checkbox" name="n2" value="2">Jamón<br>
+	<input type="checkbox" name="n3" value="3">Bacon<br>
+	<input type="checkbox" name="n4" value="4">Champiñones<br>
+	<input type="checkbox" name="n5" value="5">Anchoas<br>
+	<input type="checkbox" name="n6" value="6">Salsa picante<br>
+	<input type="checkbox" name="n7" value="7" checked="">Piña
+	</form>
+	<hr>
+	
+	<a id="apartado8"></a>
+	<p><a href="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1#menu_principal" tabindex="30" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	<h1>8. Botón de envío</h1>
+	<p>Para crear un botón de envío del formulario se utiliza la etiqueta <code>&lt;input&gt;</code>.
+	</p><p>Por ejemplo:</p>
+	<form name="botonEnvio1" action="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1">
+	<input type="submit">
+	</form>
+	
+	<p>Etiqueta compatible con todos los navegadores, no tiene etiqueta de cierre y se muestra de diferente forma en cada navegador.</p>
+	<p>Es posible modificar  el contenido del botón mediante el atributo <code>value</code>. Por ejemplo:</p>
+	<hr>
+	<form name="botonEnvio2" action="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1">
+	<input type="submit" value="Enviar el formulario">
+	</form>
+	<hr>
+	<p>También se puede reemplazar el botón de envío por una imagen. El código para ello es el siguiente:</p>
+	<hr>
+	<form name="botonEnvio3" action="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1">
+	Nombre: <input type="text"><br>
+	E-mail: <input type="text"><br>
+	<input type="image" src="./submit.gif" alt="Enviar" width="50" height="50">
+	</form>
+	<hr>
+	
+	<a id="apartado9"></a>
+	<p><a href="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1#menu_principal" tabindex="31" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	<h1>9. Botón de anulación</h1>
+	<p>Es posible ofrecer al usuario la opción de limpiar o resetear los campos del formulario antes de ser enviados. Por ejemplo:</p>
+	<hr>
+	<form name="botonAnulacion" action="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1">
+	Nombre: <input type="text"><br>
+	Primer apellido: <input type="text"><br>
+	<input type="submit">
+	<input type="reset">
+	</form>
+	<hr>
+	
+	<p>La etiqueta es compatible con todos los navegadores, no tiene etiqueta de cierre y es posible personalizarla con el atributo <code>value</code>. Por ejemplo:</p>
+	<hr>
+	<form name="botonAnulacion2" action="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1">
+	Nombre: <input type="text"><br>
+	Primer apellido: <input type="text"><br>
+	<input type="submit" value="Enviar formulario">
+	<input type="reset" value="Limpiar todos los campos">
+	</form>
+	<hr>
+	
+	<a id="apartado10"></a>
+	<p><a href="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1#menu_principal" tabindex="32" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	<h1>10. Botón de acción</h1>
+	<p>La etiqueta <code>&lt;button&gt;</code> permite ejecutar, al hacer clic sobre el botón, una acción específica definida por el diseñador del sitio web. Generalmente, se ejecuta algún código de JS, aunque ofrece la opción de ser utilizada para enviar o restablecer el formulario, es decir, <code>submit</code> y <code>reset</code>.</p>
+	<p>Compatible con todos los navegadores, tiene etiqueta de cierre y su contenido se declara entre ambas etiquetas y no con el atributo <code>value</code>.</p>
+	<p>Sus atributos son:<br>
+	<code><b>name</b></code><br>
+	<code><b>type</b></code> que admite tres argumentos:<br>
+	-<code> button</code> utilizado para iniciar un script y valor por defecto en la mayoría de navegadores,<br>
+	-<code> submit</code> para enviar el formulario, y<br>
+	-<code> reset</code> para reiniciar el formulario.<br>
+	En cualquier caso, se recomienda siempre especificar el valor de este atributo.<br>
+	<code><b>disabled</b></code> que permite desactivar el botón cuando se carga la página. En este caso, aparece sombreado en gris y se habilita (enabled) mediante un script que se ejecuta tras una acción del usuario, por ejemplo, después de aceptar las condiciones de uso.<br>
+	<code><b>autofocus</b></code></p>
+	<p>Por ejemplo:</p>
+	<hr>
+	<button type="button" onclick="alert(&#39;Acción JavaScript&#39;)">Haga click aquí</button>
+	<hr>
+	<p>Otra opción es asignar un imagen a la etiqueta. Por ejemplo:</p>
+	<hr>
+	<button type="submit"><img src="./ok.png" alt="Enviar" width="15" height="15">Enviar</button>
+	<hr>
+	
+	<a id="apartado11"></a>
+	<p><a href="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1#menu_principal" tabindex="33" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	<h1>11. Campos ocultos</h1>
+	<p>Hay ocasiones en las que será interesante almacenar determinados datos (de formularios anteriores, datos en brutos, datos provenientes de algún script) que no sean visibles para el usuario. Para ello, se utiliza el siguiente código.</p>
+	<input type="hidden" name="campoOculto" value="3.1416">
+	
+	<a id="apartado12"></a>
+	<p><a href="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1#menu_principal" tabindex="34" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	<h1>12. Campos de transferencia de archivos</h1>
+	<p>Hay ocasiones en las que el usuario deberá enviar algún tipo de archivo. Para ello, se utiliza la etiqueta <code>&lt;input&gt;</code> y el atributo <code>type="file"</code>.</p>
+	<p>Por ejemplo:</p>
+	<hr>
+	<form name="transferencia" action="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1" method="post" enctype="multipart/form-data">
+	<input type="file">
+	<input type="submit">
+	</form>
+	<hr>
+	<p>Etiqueta compatible con todos los navegadores, no tiene etiqueta de cierre y cuenta con todos los atributos de la etiqueta input, a los que hay que añadir <code>maxlength</code> que, en este caso, permite fijar el tamaño máximo del archivo.</p>
+	<p>El atributo <code>accept</code> permite limitar la transferencia a ciertos tipos de archivos concretos: texto (txt), Word (doc), Excel (xls), pdf, de imagen (jpeg, gif, png)... También es posible utilizar el asterisco como comodín en la descripción de los archivos. Es decir: <code>type="audio/*"</code>, <code>type="video/*"</code> o <code>type="image/*"</code>.</p>
+	<p>Por ejemplo:</p>	
+	<hr>
+	<form name="transferencia1" action="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1" method="post" enctype="multipart/form-data">
+	<input type="file" accept=".jpg,.png">
+	<input type="submit">
+	</form>
+	<hr>
+	
+	<a id="apartado13"></a>
+	<p><a href="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1#menu_principal" tabindex="35" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	<h1>13. Campos de contraseña</h1>
+	<p>Para ocultar la contraseña a los ojos de aquellos que pudieran estar mirando la pantalla, se puede codificar sustituyendo en la visualización los caracteres por puntos o asteriscos.</p>
+	<p><b><mark>OJO:</mark></b> Esta opción no protege en ningún caso los datos, pues se transmiten sin cifrar.</p>
+	<p>Etiqueta compatible en todos los navegadores, no tiene etiqueta de cierre y puede llevar todos los atributos del campo de texto, incluido <code>autofocus</code>.</p>
+	<p>Por ejemplo:</p>	
+	<hr>
+	<form action="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1">
+	Contraseña: <input type="password">
+	</form>
+	<hr>
+	
+	<a id="apartado14"></a>
+	<p><a href="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1#menu_principal" tabindex="36" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	<h1>14. Organización del formulario</h1>
+	<p>En formulario largos y complejos es posible agrupar los elementos de forma lógica mediante las siguientes etiquetas:<br>
+	-<code>&lt;fieldset&gt;.....&lt;/fieldset&gt;</code> engloba los campos de formulario que se deseen y los muestra en pantalla rodeados por un marco.<br>
+	-<code>&lt;legend&gt;.....&lt;/legend&gt;</code>, situada justo despues de &lt;fieldset&gt;, añade una leyenda relacionada con los campos que se hayan agrupado.</p>
+	<p>Por ejemplo:</p>
+	<hr>
+	<form name="menu" action="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1">
+	<fieldset>
+	<legend>Primeros platos</legend>
+	<input type="checkbox" name="n1">Sopa de cocido<br>
+	<input type="checkbox" name="n2">Lentejas<br>
+	<input type="checkbox" name="n3">Ensalada<br>
+	<input type="checkbox" name="n4">Entrantes<br>
+	</fieldset>
+	<fieldset>
+	<legend>Segundos platos</legend>
+	<input type="checkbox" name="n5">Cocido completo<br>
+	<input type="checkbox" name="n6">Chuletón<br>
+	<input type="checkbox" name="n7">Albóndigas<br>
+	<input type="checkbox" name="n8">Lenguado<br>
+	</fieldset>
+	
+	<fieldset>
+	<legend>Postres</legend>
+	<input type="checkbox" name="n9">Flan<br>
+	<input type="checkbox" name="n10">Natillas<br>
+	<input type="checkbox" name="n11">Arroz con leche<br>
+	<input type="checkbox" name="n12">Helado<br>
+	</fieldset>
+	<fieldset>
+	<legend>Bebidas</legend>
+	<input type="checkbox" name="n13">Vino<br>
+	<input type="checkbox" name="n14">Agua<br>
+	<input type="checkbox" name="n15">Coca cola<br>
+	<input type="checkbox" name="n16">Naranja<br>
+	</fieldset>
+	<input type="submit"> <input type="reset">	
+	</form>
+	<hr>
+	
+	<a id="apartado15"></a>
+	<p><a href="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1#menu_principal" tabindex="37" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	<h1>15. Etiquetado de los campos del formulario</h1>
+	<p>La etiqueta &lt;label&gt; permite asociar el título a un campo de formulario concreto. De esta forma, se mejora la ergonomía, pues permite activar un elemento pinchando sobre el botó o sobre el título indistintamente. Pero también se mejora la accesibilidad a las personas invidentes.</p>
+	<p>Los pasos a seguir son:<br>
+	1. Primero, el texto asignado a un elemento de formulario debe situarse entre las etiquetas &lt;label&gt;, es decir<br>
+	<code>&lt;label&gt;nombre del elemento&lt;/label&gt;<br>
+	&lt;input type="text"&gt;</code><br>
+	2. En segundo lugar, hay que asociar la etiqueta <code>label</code> al control del formulario correspondiente. Para ello, el elemento del formulario debe definirse mediante un identificador de tipo <code>id</code>. Es decir,<br>
+	<code>&lt;label&gt;nombre del elemento&lt;/label&gt;<br>
+	&lt;input type="text" id="f1"&gt;</code><br>
+	3.Por último, dentro de la etiqueta <code>label</code>, se utiliza el atributo <code>for</code> para asociar la etiqueta al campo identificado anteriormente. Es decir,<br>
+	<code>&lt;label for="f1"&gt;nombre del elemento&lt;/label&gt;<br>
+	&lt;input type="text" id="f1"&gt;</code></p>
+	<p>Por ejemplo:</p>
+	<hr>
+	<form name="etiquetado" action="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1">
+	<fieldset>
+	<legend>Forma de pago</legend>
+	<label for="cash1">Visa</label>
+	<input type="radio" name="cash" id="cash1"><br>
+	<label for="cash2">American Express</label>
+	<input type="radio" name="cash" id="cash2"><br>
+	<label for="cash3">Mastercard
+	<input type="radio" name="cash" id="cash3"><br>
+	</label></fieldset>	
+	</form>
+	<hr>
+	
+	<a id="apartado16"></a>
+	<p><a href="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1#menu_principal" tabindex="38" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	<h1>16. Campo de texto con lista de sugerencias</h1>
+	<p>La etiqueta <code>&lt;datalist&gt;</code>, agregada a un campo de texto, abre una lista de sugerencias para introducir el dato sobre el que se ha situado el foco.</p>
+	<p>La etiqueta <code>&lt;datalist&gt;</code> contiene una lista de etiquetas <code>&lt;option&gt;</code> con las sugerencias. Estas etiquetas deben poseer un atributo <code>value</code> cuyo valor son dichas sugerencias.</p>
+	<p>La etiqueta <code>&lt;datalist&gt;</code> está ligada a un campo de formulario mediante un identificador <code>id</code> que se asocia con el atributo <code>list</code> de aquél.</p>
+	<p>Por ejemplo:</p>
+	<hr>
+	<form name="sugerencias" action="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1">
+	Escoja una fruta:
+	<input type="text" list="frutas">
+	<datalist id="frutas">
+	<option value="Naranja"></option>
+	<option value="Manzana"></option>
+	<option value="Pera"></option>
+	<option value="Ciruela"></option>
+	<option value="Fresa"></option>
+	<option value="Melón"></option>
+	<option value="Sandía"></option>
+	<option value="Pomelo"></option>
+	<option value="Plátano"></option>
+	<option value="Melocotón"></option>
+	</datalist>
+	</form>
+	<hr>
+	
+	<a id="apartado17"></a>
+	<p><a href="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1#menu_principal" tabindex="39" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	<h1>17. Campo de texto para la dirección de e-mail</h1>
+	<p>Html5 proporciona una etiqueta concreta para introducir y validar las direcciones de correo electrónico sin necesidad de JS.</p>
+	<p>La etiqueta es <code>&lt;input type="email"&gt;</code></p>
+	<p>Por ejemplo:</p>
+	<hr>
+	<form name="email" action="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1">
+	E-mail: <input type="email" name="mail" required="">
+	<input type="submit" value="OK">	
+	</form>
+	<hr>
+	
+	<a id="apartado18"></a>
+	<p><a href="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1#menu_principal" tabindex="40" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	<h1>18. Campo de texto url</h1>
+	<p>Implementada en Explorer 10 y las versiones recientes de Opera, Chrome y Firefox, la etiqueta <code>&lt;input type="url"&gt;</code> permite introducir direcciones web realizando una validación directa en el propio navegador (sin JS).</p>
+	<p>Por ejemplo:</p>
+	<hr>
+	<form name="web" action="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1" method="get">
+	Url de su sitio web: <input type="url" name="web" required="">
+	<input type="submit" value="OK">	
+	</form>
+	<hr>
+	
+	<a id="apartado19"></a>
+	<p><a href="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1#menu_principal" tabindex="41" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	<h1>18. Campo de texto con contador</h1>
+	<p>Uno de los elementos nuevos  introducidos en Html5 son los contadores numéricos.</p>
+	<p>Para ello, se utiliza la etiqueta <code>&lt;input type="number"&gt;</code> con los siguientes atributos:<br>
+	- <code><b>min</b></code> indica el valor mínimo del contador;<br>
+	- <code><b>max</b></code> indica el valor máximo del contador;<br>
+	- <code><b>value</b></code> indica el valor inicial del contador;<br>
+	- <code><b>step</b></code> indica el incremento del contador cada vez que se utilizan las flechas hacia arriba o hacia abajo del campo de texto.</p>
+	<p>Por ejemplo:</p>
+	<hr>
+	<form name="contador" action="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1">
+	<label for="contador1">Número de artículos (grupos de 2):</label><br>
+	<input type="number" name="contador1" min="2" max="10" step="2" value="2" id="contador1">
+	</form>
+	<hr>
+	<p>Este contador está implementado en Chrome 7.0+, Safari 5.0+, Firefox y Opera 9.0+.</p>
+		
+	<a id="apartado20"></a>
+	<p><a href="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1#menu_principal" tabindex="42" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	<h1>20. Campo de texto con formato de fecha</h1>
+	<p>Hasta ahora, para gestionar calendarios era imprescindible elaborar complicados scripts. No obstante, Html5 proporciona etiquetas sencillas que permiten facilitar dicha tarea.</p>
+	<p>Lamentablemente, solo Opera 10+ y Chrome 20.0+ implementan esta funcionalidad de forma completa.</p>
+	<p>Para obtener un calendario, basta con el siguiente código:</p>
+	<hr>
+	<form name="calendario" action="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1">
+	<label for="llegada">Fecha de llegada:</label>
+	<input type="date" name="llegada" id="llegada"><br>
+	<label for="salida">Fecha de salida:</label>
+	<input type="date" name="salida" id="salida">
+	</form>
+	<hr>
+	<p>La etiqueta &lt;input&gt; con formato de fecha se declina en los siguientes formatos:<br>
+	- <code><b>&lt;input type="date"&gt;</b></code> que permite seleccionar año, mes y día.<br>
+	- <code><b>&lt;input type="month"&gt;</b></code> que permite seleccionar mes y año. Útil para introducir fechas de expiración de una tarjeta de crédito, por ejemplo. El código sería así:<br>
+	</p><hr>
+	<form name="calendario2" action="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1">
+	<label for="caducidad">Fecha de caducidad:</label>
+	<input type="month" name="caducidad" id="caducidad">
+	</form>
+	<hr>
+	- <code><b>&lt;input type="week"&gt;</b></code> que permite seleccionar una semana concreta. Por ejemplo:<br>
+	<hr>
+	<form name="calendario3" action="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1">
+	<label for="semana">Semana reservada:</label>
+	<input type="week" name="semana" id="semana">
+	</form>
+	<hr>
+	Esta funcionalidad solo está bien interpretada por Chrome y Opera.<p></p>
+	
+	<p>Html5 proporciona también una herramienta para el formato horario, mediante la etiqueta <code>&lt;input type="time"&gt;</code>.</p>
+	<p>Cuenta con los siguientes atributos:<br>
+	- <code><b>min</b></code> permite fijar una hora de inicio para el contador;<br>
+	- <code><b>max</b></code> permite fijar una hora de fin para el contador;<br>
+	- <code><b>step</b></code> permite fijar el avance predeterminado del contador.</p>
+	<p>Por ejemplo:</p>
+	<hr>
+	<form name="contadorMinutos" action="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1">
+	<label for="entrega">Entrega de la pizza a las:</label>
+	<input type="time" name="entrega" id="entrega" min="11:00" max="23:00" step="900" value="11:00">	
+	</form>
+	<hr>
+	<p>Por último, se pueden combinar el calendario con el contador horario usando las etiquetas <code>&lt;input type="datetime"&gt;</code> y <code>&lt;input type="datetime-local"&gt;</code></p>
+	<p>Por ejemplo:</p>
+	<hr>
+	<form name="fechaHora" action="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1">
+	<label for="reserva">Día y hora de llegada:</label>
+	<input type="datetime-local" id="reserva" name="fechaHora" step="900">	
+	</form>
+	<hr>
+	
+	<a id="apartado21"></a>
+	<p><a href="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1#menu_principal" tabindex="43" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	<h1>21. Campo de texto de búsqueda</h1>
+	<p>Para ofrecer al usuario la posibilidad de buscar contenido concreto de nuestro sitio web, Html5 proporciona la etiqueta <code>&lt;input type="search"&gt;</code> que crea un campo de texto para ello.</p>
+	<p>Esta etiqueta no está implementada en todos los navegadores y precisa de un script posterior que demande en el servidor la búsqueda solicitada por el usuario. El atributo value contiene el DOMString que representa el valor contenido en el campo de búsqueda. Puedes recuperarlo usando la propiedad HTMLInputElement.value en JavaScript.</p>
+	<hr>
+	<form name="buscar" action="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1">
+	<label for="busqueda">Buscar:</label>
+	<input type="search" id="busqueda" name="buscado">
+	<input type="submit" value="Go">
+	<hr>
+	
+	<a id="apartado22"></a>
+	<p><a href="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1#menu_principal" tabindex="44" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	<h1>22. Campo de texto de color</h1>
+	<p>Html5 ofrece la opción de disponer un campo de texto destinado a recibir la codificación de un color en formato hexadecimal. Al recibir el foco, en dicho campo de texto se abre una paleta de colores que permite seleccionar uno de ellos y enviar su valor al servidor.</p>
+	<p>Actualmente, lo reconocen Chrome 20.0+ y Opera 10.0+.</p>
+	<p>La etiqueta es <code>&lt;input type="color"&gt;</code></p>
+	<p>Por ejemplo:</p>	
+	<hr>
+	
+	<label for="colorFav">Su color favorito es: </label>
+	<input type="color" id="colorFav">
+	</form>
+	
+	
+	<a id="apartado23"></a>
+	<p><a href="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1#menu_principal" tabindex="45" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	<h1>23. Cursores</h1>
+	<p>Se entiende por cursores herramientas intuitivas de fácil manejo que permiten fijar un valor concreto en muchas aplicaciones, generalmente de procesamiento numérico.</p>
+	<p>Operativos en casi todos los navegadores, se introducen mediante la etiqueta <code>&lt;input type="range"&gt;</code></p>
+	<p>Por ejemplo:</p>
+	<hr>
+	<form name="cursor" action="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1">
+	<label for="cursor" name="cursor">Cantidad solicitada</label>
+	<input type="range" name="cursor" id="cursor">
+	</form>
+	<hr>
+	<p>Esta etiqueta tiene los siguientes atributos:<br>
+	- <code><b>min</b></code> indica el valor mínimo del contador;<br>
+	- <code><b>max</b></code> indica el valor máximo del contador;<br>
+	- <code><b>value</b></code> indica el valor inicial del contador;<br>
+	- <code><b>step</b></code> indica el paso de avance del contador cada vez que se clicka con el ratón en la flecha para aumentar o disminuir.</p>
+	<p>Por ejemplo:</p>
+	<hr>
+	<form name="cursor2" action="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1">
+	<label for="cursor2" name="cursor2">Cantidad solicitada</label><br>
+	<input type="range" name="cursor2" id="cursor2" min="1" max="5" value="3" step="1" style="margin-top: 10px; width: 155px;" onchange="mostrar(this.value)">
+	<div style="margin-top: -2px">
+	<span style="margin-left: 2px;">1</span>
+	<span>2</span>
+	<span>3</span>
+	<span>4</span>
+	<span>5</span>
+	</div>
+	<p>Ha escogido el número... <span id="valor">3</span></p>
+	</form>
+	<hr>
+		
+	<p><a href="https://aulavirtual.cesjuanpabloii.es/pluginfile.php/7888/mod_resource/content/1/09_formularios.html?embed=1#menu_principal" tabindex="46" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	
+	
+</body></html>

@@ -1,0 +1,25 @@
+.hidden {
+  overflow: hidden;
+  border: 1px solid black;
+  width: 600px;
+  height: 100px;
+}
+.scroll {
+  height: 100px;
+  width: 600px;
+  overflow: scroll;
+  border: 1px solid black;
+}
+.visible {
+  width: 600px;
+  height: 100px;
+  overflow: visible;
+  border: 1px solid black;
+}
+.auto {
+    float: right;
+  width: 600px;
+  height: 100px;
+  overflow: auto;
+  border: 1px solid black;
+}

@@ -1,0 +1,19 @@
+Desarrollar una página web con dos archivos separados (HTML y CSS3) con las siguientes tipografías:
+
+1. Título en Lucida Console
+
+2.  Texto en serif; Texto en sans-serif; Texto en cursive; Texto en fantasy; Texto en monospace
+
+3.  Texto en cursiva; Texto en oblique
+
+4. Mayúsculas versales y mayúsculas versalitas
+
+5. Texto en negrita utilizando bold; Texto en negrita utilizando bolder y Texto en negrita con valor 900
+
+6. Tamaño xx-small; Tamaño x-small; Tamaño small; Tamaño medium; Tamaño large; Tamaño x-large; Tamaño xx-large y Tamaño 96
+
+7. Disponer la frase "notación abreviada" con la declaración abreviada en CSS y que corresponde a los siguientes parámetros: cursiva, negrita, versalitas, 24 puntos de cuerpo y Arial, con opciones por si el ordenador del usuario no dispone de la fuente Arial.
+
+8. Aplicar las fuentes del sistema en las siguientes frases: Fuente asociada a los botones; 
+Fuente asociada a la etiqueta de los iconos; Fuente asociada a los menús; Fuente asociada a 
+los cuadros de diálogo; Fuente asociada a las etiquetas más pequeñas y Fuente asociada a la barra de estado.

@@ -1,0 +1,249 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Estilo para el header */
+
+#cabeceralogo {
+  width: 96%;
+  height: 150px;
+  padding: 0% 2%;
+  background-color: #0f76a0;
+}
+
+#cabeceralogo > div {
+  /* todos los div que pertenecen a cabeceralogo */
+  width: 960px;
+  margin: 0px auto;
+  padding-top: 45px;
+}
+
+#cabeceralogo h1 {
+  color: white;
+  font: bold 54px Arial, sans-serif;
+}
+
+/* Estilo para el área de navegación */
+
+#menuprincipal {
+  width: 96%;
+  height: 50px;
+  padding: 0% 2%;
+  background-color: #9fc8d9;
+  border-top: 1px solid #094660;
+  border-bottom: 1px solid #094660;
+}
+
+#menuprincipal > div {
+  /* todos los div que pertenecen a menuprincipal */
+  width: 960px;
+  margin: 0px auto;
+}
+
+/* Estilo para las opciones del menú */
+
+#menuprincipal li {
+  display: inline-block;
+  height: 35px;
+  padding: 15px 10px 0px 10px;
+  margin-right: 5px;
+}
+
+#menuprincipal li:hover {
+  background-color: #6facc6;
+}
+
+#menuprincipal a {
+  text-decoration: none;
+  font: bold 18px Arial, sans-serif;
+  color: #333333;
+}
+
+/* Estilos para el menu desplegable */
+
+#listamenu > li {
+  position: relative;
+  display: inline-block;
+  height: 35px;
+  padding: 15px 10px 0px 10px;
+  margin-right: 5px;
+}
+
+#listamenu li > ul {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0px;
+
+  background-color: #9fc8d9;
+  box-shadow: 3px 3px 5px rgba(100, 100, 100, 0.7);
+  border-radius: 0px 0px 5px 5px;
+
+  list-style: none;
+  z-index: 1000;
+}
+
+#listamenu li > ul > li {
+  width: 120px;
+  height: 35px;
+  padding-top: 15px;
+  padding-left: 10px;
+}
+
+#listamenu li:hover ul {
+  display: block;
+}
+
+#listamenu a {
+  font: bold 18px Arial, sans-serif;
+  color: #333333;
+  text-decoration: none;
+}
+
+#listamenu li:hover {
+  background-color: #6facc6;
+}
+
+/* Estilos para el contenido principal */
+
+main {
+  width: 96%;
+  padding: 2%;
+  background-image: url(../images/fondo.png);
+}
+
+main > div {
+  /* todos los div que pertenecen a main */
+  width: 960px;
+  margin: 0px auto;
+}
+
+/* Estilos para el contenido principal */
+
+#articulosprincipales {
+  width: 620px;
+  padding-top: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  float: left;
+}
+
+#infoadicional {
+  float: right;
+  width: 280px;
+  padding: 20px;
+  background-color: #e7f1f5;
+  border-radius: 10px;
+}
+
+#infoadicional h1 {
+  font: bold 18px Arial, sans-serif;
+  color: #333333;
+  margin-bottom: 15px;
+}
+
+.recuperar {
+  clear: both;
+}
+
+/* Posición y estilos para el elemento time */
+
+article {
+  position: relative;
+  padding: 0px 40px 20px 40px;
+}
+
+article time {
+  width: 80px;
+  padding: 15px 5px;
+  position: absolute;
+  display: block;
+  top: -5px;
+  left: -70px;
+  background-color: #094660;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px rgba(100, 100, 100, 0.7);
+}
+
+.numerodia {
+  color: #ffffff;
+  text-align: center;
+  font: bold 36px Verdana, sans-serif;
+}
+
+.nombredia {
+  color: #ffffff;
+  text-align: center;
+  font: 12px Verdana, sans-serif;
+}
+
+/* Estilos para los artículos */
+
+article h1 {
+  margin-bottom: 5px;
+  font: 30px Georgia, sans-serif;
+}
+
+article p {
+  font: 18px Georgia, sans-serif;
+}
+
+figure {
+  margin: 10px 0px;
+}
+
+figure img {
+  border: 1px solid;
+  padding: 5px;
+}
+
+/* Estilo del pie de página */
+
+#pielogo {
+  background-color: #0f76a0;
+  width: 96%;
+  padding: 2%;
+}
+
+#pielogo > div {
+  /* todos los div que pertenecen a pielogo */
+  width: 960px;
+  margin: 0px auto;
+  padding: 20px;
+  background-color: #9fc8d9;
+  border-radius: 10px;
+}
+
+.seccionpie {
+  float: left;
+  width: 270px;
+  padding: 25px;
+}
+
+.seccionpie h1 {
+  font: bold 20px Arial, sans-serif;
+}
+
+.seccionpie p {
+  margin-top: 5px;
+}
+
+.seccionpie a {
+  text-decoration: none;
+  font: bold 16px Arial, sans-serif;
+  color: #666666;
+}
+
+.seccionpie a:hover {
+  background-color: #6facc6;
+  border-radius: 5px;
+}
+
+/* Calculando el tamaño de las secciones con porcentajes */
+
+.seccionpie {
+  float: left;
+  width: 27.33%;
+  padding: 3%;
+}

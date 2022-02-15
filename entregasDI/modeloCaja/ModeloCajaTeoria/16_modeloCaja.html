@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Propiedades de caja</title>
+
+<link rel="stylesheet" type="text/css" href="16_modeloCaja.css">
+
+</head>
+<body>
+
+
+	<a id="menu_principal"></a>
+	<a href="#apartado1" tabindex="1" title="Concepto de modelo de caja o bloque">1. Concepto de modelo de caja o bloque </a><br />
+	<a href="#apartado2" tabindex="2" title="Elemento en bloque o en línea">2. Elemento en bloque o en línea</a><br />
+	<a href="#apartado3" tabindex="3" title="Anchura y altura">3. Anchura y altura</a><br />
+	<a href="#apartado4" tabindex="4" title="Márgenes externos">4. Márgenes externos</a><br />
+	<a href="#apartado5" tabindex="5" title="Márgenes externos">5. Márgenes internos</a><br />
+	<a href="#apartado6" tabindex="6" title="Color del borde">6. Color del borde</a><br />
+	<a href="#apartado7" tabindex="7" title="Grosor del borde">7. Grosor del borde</a><br />
+	<a href="#apartado8" tabindex="8" title="Estilo del borde">8. Estilo del borde</a><br />
+	<a href="#apartado9" tabindex="9" title="Escritura abreviada del borde">9. Escritura abreviada del borde</a><br />
+	
+	
+	<a id="apartado1"></a>
+	<h1>1. Concepto de modelo de caja o bloque</h1>
+	<p>El elemento caja, contenedor o bloque (<i>block</i>) se define, según el W3C, como una zona rectangular constituida por:<br />
+	- un contenido;<br />
+	- un margen interior (<i>padding</i>);<br />
+	- un borde (<i>border</i>);<br />
+	- y un margen exterior (<i>margin</i>);</p>
+	
+	<p>El contenido puede ser, por ejemplo:<br />
+	- el texto de un párrafo;<br />
+	- dicho texto está rodeado de un espacio que llega hasta los bordes de la caja y que se llama <i>padding</i>;<br />
+	- a continuación del <i>padding</i> se encuentran los bordes del cuadro (opcionales);<br />
+	- y, por último, está el espacio que envuelve todo el conjunto (<i>margin</i>).</p>
+	<p>Con CSS, se puede controlar de forma independiente....<br />
+	- los cuatro márgenes exteriores en cualquier sentido;<br />
+	- los cuatro bordes (dimensión, estilo, color);<br />
+	- los cuatro márgenes interiores en cualquier sentido;<br />
+	- las dimensiones (anchura y altura) del contenido.</p>
+	<p>Con una caja de las siguientes propiedades:<br />
+	- anchura del contenido igual a 200px;<br />
+	- <i>padding</i> de 20px;<br />
+	- borde de 10px;<br />
+	- <i>margin</i> de 20 px;<br />
+	La caja de ancho mide 300px, pues...<br />
+	de izquierda a derecha:<br />
+	- 20px de margen exterior +<br />
+	- 10px de borde +<br />
+	- 20px de padding +<br />
+	- 200px del contenido + <br />
+	- 20px de padding +<br />
+	- 10px de borde +<br />
+	- 20px de margen exterior.</p>
+	
+	<p>Se puede ver un ejemplo del modelo de caja en CSS <a href="ejemplosModeloCaja/ejemplo1.html" tabindex="10" target="_blank" title="Ejemplo de modelo de caja">aquí</a>.</p>
+	
+	<p>Hay que tener en cuenta que...</p>
+	- Internet Explorer 9 con el doctype de Html5 (<code>&lt;!DOCTYPE html&gt;</code>) muestra el modelo de caj expuesto según las especificaciones del W3C.<br />
+	- Pero sin dicho doctype o con un doctype erróneo, Explorer 9 ejecuta el modo de compatibilidad hacia atrás (<i>quirks mode</i>) y, como las versiones anteriores de Explorer, retoma el modelo de caja de Microsoft. En dicho modelo, Explorer considera que el <i>padding</i> y los bordes forman parte de la zona interior del contenido. Por lo tanto, en el ejemplo anterior la anchura de la caja será de 240px. La anchura aparente de la caja será igual a la anchura especificada para el contenido, agregando simplemente el valor para los márgenes exteriores. Esto no sucede a partir de Explorer 10.</p>
+	
+	
+	<a id="apartado2"></a>
+	<p><a href="#menu_principal" tabindex="11" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	<h1>2. Elemento en bloque o en línea</h1>
+	<p>Con CSS es posible redefinir el comportamiento de un elemento en línea como elemento en bloque y viceversa.</p>
+	<p>La sintaxis es:<br />
+	<table class="tablaTeoria">
+		<tr>
+			<td class="celdaTeoria"><code>display:</code></td>
+			<td class="celdaTeoria">- <code>inline;</code> en línea;<br />
+			- <code>block;</code> de tipo bloque.<br />
+			</td>
+		</tr>
+	</table>
+	
+	<p>Recordar que las etiquetas semánticas son elementos en línea. Para atribuirles una función de presentación, es preciso definirlas como elementos en bloque.</p>
+	
+	<p>Puedes ver un ejemplo de la propiedad <code>display</code> aplicada a la etiqueta <code>&lt;nav&gt;</code> <a href="ejemplosModeloCaja/ejemplo2.html" tabindex="12" target="_blank" title="Ejemplo de display con elemento bloque">aquí</a>.</p>
+	
+			
+	<p>Puedes ver un ejemplo de la propiedad <code>display</code> aplicada a una lista <a href="ejemplosModeloCaja/ejemplo3.html" tabindex="13" target="_blank" title="Ejemplo de display aplicada a una lista">aquí</a>.</p>
+	
+	<a id="apartado3"></a>
+	<p><a href="#menu_principal" tabindex="14" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	<h1>3. Anchura y altura</h1>
+	<p>Para aplicar anchura y altura al elemento caja, la sintaxis es:<br />
+	<table class="tablaTeoria">
+		<tr>
+			<td class="celdaTeoria"><code>width;</code></td>
+			<td class="celdaTeoria">- <code>auto;</code><br />
+			- valor de longitud;<br />
+			- porcentaje;<br />
+			</td>
+		</tr>
+		<tr>
+			<td class="celdaTeoria"><code>height;</code></td>
+			<td class="celdaTeoria">- <code>auto;</code><br />
+			- valor de longitud;<br />
+			- porcentaje;<br />
+			</td>
+		</tr>
+	</table>
+	
+	<p>Hay que tener en cuenta que...<br />
+	- Los valores <code>width</code> y <code>height</code> especifican la anchura y la altura del contenido <mark>sin padding, sin bordes y sin márgenes exteriores</mark>.<br />
+	- El valor de longitud especifica un valor fijo.<br />
+	- El porcentaje un valor relativo.</p>
+	<p>Existen propiedades que permiten determinar los tamaños mínimo y máximo de un elemento de tipo caja o de un elemento reemplazado dinámicamente mediante JavaScript.</p>
+	<p>La sintaxis es:<br />
+	<table class="tablaTeoria">
+		<tr>
+			<td class="celdaTeoria"><code>max-height:</code></td>
+			<td class="celdaTeoria">- Fija la altura máxima;<br />
+			</td>
+		</tr>
+		<tr>
+			<td class="celdaTeoria"><code>min-height:</code></td>
+			<td class="celdaTeoria">- Fija la altura mínima;<br />
+			</td>
+		</tr>
+		<tr>
+			<td class="celdaTeoria"><code>max-width:</code></td>
+			<td class="celdaTeoria">- Fija la anchura máxima;<br />
+			</td>
+		</tr>
+		<tr>
+			<td class="celdaTeoria"><code>min-width:</code></td>
+			<td class="celdaTeoria">- Fija la anchura mínima;<br />
+			</td>
+		</tr>
+	</table>
+	
+	<p>Hay que tener en cuenta que....<br />
+	- Las propiedades <code>max-height</code>, <code>min-height</code>, <code>max-width</code> y <code>min-width</code> no incluyen márgenes interiores, ni bordes ni márgenes exteriores.<br />
+	- La propiedad <code>max-height</code> se suele utilizar de forma conjunta con <code>min-height</code> para dar al navegador un margen de maniobra a la hora de calcular la altura de los elementos afectados.<br />
+	- De igual forma, sucede con <code>max-width</code> y <code>min-width</code>.</p>
+	
+	<p>Se puede ver un ejemplo <a href="ejemplosModeloCaja/ejemplo4.html" tabindex="15" target="_blank" title="Ejemplo de propiedades máximo y mínimo">aquí</a>.</p>
+	
+	<a id="apartado4"></a>
+	<p><a href="#menu_principal" tabindex="16" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	<h1>4. Márgenes externos</h1>
+	<p>La sintaxis es:<br />
+	<table class="tablaTeoria">
+		<tr>
+			<td class="celdaTeoria"><code>margin:<br />
+			margin-top:<br />
+			margin-right:<br />
+			margin-bottom:<br />
+			margin-left:</code></td>
+			<td class="celdaTeoria">- <code>auto;</code><br />
+			- valor de longitud;<br />
+			- porcentaje;<br />
+			</td>
+		</tr>
+	</table>
+	<p>Hay que tener en cuenta que...<br />
+	- El valor <code>auto</code> deja al navegador la gestión de los márgenes exteriores.<br />
+	- Un valor de longitud define con precisión los márgenes exteriores.<br />
+	- Un porcentaje define la longitud de los márgenes exteriores respecto a un elemento padre.<br />
+	- Las direcciones <code>top</code>, <code>right</code>, <code>bottom</code> y <code>left</code> define los márgenes respecto a los bordes superior, derecho, inferior e izquierdo.<br />
+	- Se puede abreviar la escritura de estas propiedades (<code>margin-top; margin-right; margin-bottom; margin-left</code>) declarando la propiedad <code>margin:</code> seguida de cuatro valores que corresponden a las propiedades distribuidas en el sentido de las agujas del reloj.<br />
+	- Si se informa de un único valor, se aplica a los cuatro lados.<br />
+	- Si se informa de dos valores, el primero se aplica a los lados superior e inferior; el segundo, a derecha e izquierda.<br />
+	- Si se informa de tres valores, el primero se aplica al lado superior; el segundo a los laterales y el tercero al inferior.<br />
+	- Es posible definir valores negativos, generando efectos visuales interesante, pero con el riesgo de que cada navegador lo interprete de forma diferente.</p>
+	
+	<p>Se puede ver un ejemplo <a href="ejemplosModeloCaja/ejemplo5.html" tabindex="17" target="_blank" title="Ejemplo de márgenes exteriores">aquí</a>.</p>
+	
+	<a id="apartado5"></a>
+	<p><a href="#menu_principal" tabindex="18" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	<h1>5. Márgenes internos</h1>
+	<p>La sintaxis es:<br />
+	<table class="tablaTeoria">
+		<tr>
+			<td class="celdaTeoria"><code>padding:<br />
+			padding-top:<br />
+			padding-right:<br />
+			padding-bottom:<br />
+			padding-left:</code></td>
+			<td class="celdaTeoria">- <code>auto;</code><br />
+			- valor de longitud;<br />
+			- porcentaje;<br />
+			</td>
+		</tr>
+	</table>
+	
+	<p>Hay que tener en cuenta que...<br />
+	- El valor <code>auto</code> deja al navegador la gestión de los márgenes interiores.<br />
+	- Un valor de longitud define con precisión los márgenes interiores.<br />
+	- Un porcentaje define la longitud de los márgenes interiores respecto a un elemento padre.<br />
+	- Las direcciones <code>top</code>, <code>right</code>, <code>bottom</code> y <code>left</code> define los márgenes respecto a los bordes superior, derecho, inferior e izquierdo.<br />
+	- Se puede abreviar la escritura de estas propiedades (<code>padding-top; padding-right; padding-bottom; padding-left</code>) declarando la propiedad <code>padding:</code> seguida de cuatro valores que corresponden a las propiedades distribuidas en el sentido de las agujas del reloj.<br />
+	- Si se informa de un único valor, se aplica a los cuatro lados.<br />
+	- Si se informa de dos valores, el primero se aplica a los lados superior e inferior; el segundo, a derecha e izquierda.<br />
+	- Si se informa de tres valores, el primero se aplica al lado superior; el segundo a los laterales y el tercero al inferior.</p>
+	
+	<p>Se puede ver un ejemplo <a href="ejemplosModeloCaja/ejemplo6.html" tabindex="19" target="_blank" title="Ejemplo de márgenes interiores">aquí</a>.</p>
+	
+	
+	<a id="apartado6"></a>
+	<p><a href="#menu_principal" tabindex="20" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	<h1>6. Color del borde</h1>
+	<p>CSS permite definir el color de los cuatro bordes del elemento caja o de cada borde tomado individualmente.</p>
+	<p>La sintaxis es:<br />
+	<table class="tablaTeoria">
+		<tr>
+			<td class="celdaTeoria"><code>border-color:<br />
+			border-top-color:<br />
+			border-right-color:<br />
+			border-bottom-color:<br />
+			border-left-color:</code></td>
+			<td class="celdaTeoria">- nombre del color;<br />
+			- notación hexadecimal #rrggbb;<br />
+			- notación hexadecimal en formato #rgb; <br />			
+			- notación en formato RGB mediante número esteros del 0-255;<br />
+			- notación en formato RGB con porcentajes entre 0% y 100%;<br />
+			- notación en formato RGBa donde "a" está comprendido entre 0 y 1;<br />
+			- notación en formato HSL ;<br />
+			- notación en formato HSLa donde "a" está comprendido entre 0 y 1;<br />
+			- <code>transparent;</code><br />
+			</td>
+		</tr>
+	</table>
+	
+	<p>Hay que tener en cuenta que...<br />
+	- La propiedad <code>border-color</code> define el color único de los cuatro lados del elemento caja.<br />
+	- El color no puede aplicarse si no se ha definido el grosor y el tipo de borde; si no se define, el borde no existe.<br />
+	- Los colores de cada lado del elemento caja pueden definirse individualmente. Las direcciones <code>border-top-color</code>, <code>border-right-color</code>, <code>border-bottom-color</code> y <code>border-left-color</code> definen los colores del borde respecto a los bordes superior, derecho, inferior e izquierdo, respectivamente.<br />
+	- Se puede abreviar la escritura de estas propiedades (<code>border-top-color; border-right-color; border-bottom-color; border-left-color</code>) declarando la propiedad <code>border-color:</code> seguida de cuatro valores que corresponden a las propiedades distribuidas en el sentido de las agujas del reloj.<br />
+	- Si se informa de un único color, se aplica a los cuatro lados.<br />
+	- Si se informa de dos colores, el primero se aplica a los lados superior e inferior; el segundo, a derecha e izquierda.<br />
+	- Si se informa de tres colores, el primero se aplica al lado superior; el segundo a los laterales y el tercero al inferior.
+	- Con el valor <code>transparent</code> el color de los bordes es transparente, aunque el borde existe y tiene presencia.</p>
+	<p>Se puede ver un ejemplo de aplicar colores al borde <a href="ejemplosModeloCaja/ejemplo7.html" tabindex="21" target="_blank" title="Ejemplo de colores">aquí</a>.</p>
+	
+	<a id="apartado7"></a>
+	<p><a href="#menu_principal" tabindex="22" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	<h1>7. Grosor del borde</h1>
+	<p>Es posible definir el grosor de los cuatro bordes de forma simultánea o de cada borde de forma individual.</p>
+	<p>La sintaxis es:<br />
+	<table class="tablaTeoria">
+		<tr>
+			<td class="celdaTeoria"><code>border-width:<br />
+			border-top-width:<br />
+			border-right-width:<br />
+			border-bottom-width:<br />
+			border-left-width:</td>
+			<td class="celdaTeoria">
+			- valor de longitud;<br />
+			- <code>thin;</code><br />
+			- <code>medium;</code><br />
+			- <code>thick;</code><br />
+			</td>
+		</tr>
+	</table>
+	<p>Hay que tener en cuenta que...<br />
+	- El valor <code>thin</code> se traduce en un borde fino;<br />
+	- El valor <code>medium</code> se traduce en un borde medio;<br />
+	- El valor <code>thick</code> se traduce en un borde grueso;<br />
+	- La utilización de palabras clave puede dar lugar a diferentes resultados dependiendo de la interpretación de los distintos navegadores;<br />
+	- El grosor no puede aplicarse si no se ha definido el tipo de borde.<br />
+	- Los grosores de cada lado del elemento caja pueden definirse individualmente. Las direcciones <code>border-top-width</code>, <code>border-right-width</code>, <code>border-bottom-width</code> y <code>border-left-width</code> definen el grosor del borde respecto a los bordes superior, derecho, inferior e izquierdo, respectivamente.<br />
+	- Se puede abreviar la escritura de estas propiedades (<code>border-top-width; border-right-width; border-bottom-width; border-left-width</code>) declarando la propiedad <code>border-width:</code> seguida de cuatro valores que corresponden a las propiedades distribuidas en el sentido de las agujas del reloj.<br />
+	- Si se informa de un único grosor, se aplica a los cuatro lados.<br />
+	- Si se informa de dos grosores, el primero se aplica a los lados superior e inferior; el segundo, a derecha e izquierda.<br />
+	- Si se informa de tres grosores, el primero se aplica al lado superior; el segundo a los laterales y el tercero al inferior.</p>
+		
+	<p>Se puede ver un ejemplo de aplicar grosor al borde <a href="ejemplosModeloCaja/ejemplo8.html" tabindex="23" target="_blank" title="Ejemplo de grosor">aquí</a>.</p>
+	
+	<a id="apartado8"></a>
+	<p><a href="#menu_principal" tabindex="24" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	<h1>8. Estilo del borde</h1>
+	<p>CSS permite aplicar diferentes estilos a los bordes.</p>
+	<p>La sintaxis es:<br />
+	<table class="tablaTeoria">
+		<tr>
+			<td class="celdaTeoria"><code>border-style:<br />
+			border-top-style:<br />
+			border-right-style:<br />
+			border-bottom-style:<br />
+			border-left-style:</td>
+			<td class="celdaTeoria">
+			- <code>solid;</code> un trazo liso;<br />
+			- <code>dashed;</code> guiones;<br />
+			- <code>dotted;</code> pequeños puntos;<br />
+			- <code>double;</code> trazos lisos dobles;<br />
+			- <code>groove;</code> efecto 3D de relieve incrustado en la página (opuesto a <code>ridge</code>);<br />
+			- <code>ridge; </code> efecto 3D de relieve saliendo de la página (opuesto a <code>groove</code>);<br />
+			- <code>inset;</code> bordes entrantes, incrustados en la página (inverso a <code>outset</code>);<br />
+			- <code>outset;</code> bordes salientes, biselados en la página (inverso a <code>inset</code>);<br />
+			- <code> hidden;</code> sin borde (influye sobre el borde adyacente);<br />
+			- <code> none;</code> equivalente a <code>border-width: 0px;</code> o lo que es lo mismo, sin borde.			
+			</td>
+		</tr>
+	</table>
+	<p>Hay que tener en cuenta que...<br />
+	- Para <code>double</code> la longitud definida mediante <code>border-width</code> se corresponde con el tamaño de ambos trazos más el espacio existente entre ellos.<br />
+	- El estilo del borde no puede aplicarse si no se ha definido el grosor del borde.<br />
+	- El estilo de cada lado del elemento caja puede definirse individualmente. Las direcciones <code>border-top-style</code>, <code>border-right-style</code>, <code>border-bottom-style</code> y <code>border-left-style</code> definen el estilo del borde respecto a los bordes superior, derecho, inferior e izquierdo, respectivamente.<br />
+	- Se puede abreviar la escritura de estas propiedades (<code>border-top-style; border-right-style; border-bottom-style; border-left-style</code>) declarando la propiedad <code>border-style:</code> seguida de cuatro valores que corresponden a las propiedades distribuidas en el sentido de las agujas del reloj.<br />
+	- Si se informa de un único estilo, se aplica a los cuatro lados.<br />
+	- Si se informa de dos estilos, el primero se aplica a los lados superior e inferior; el segundo, a derecha e izquierda.<br />
+	- Si se informa de tres estilos, el primero se aplica al lado superior; el segundo a los laterales y el tercero al inferior.<br />
+	- El resultado, en lo que respecta al método abreviado, no está garantizado.
+	</p>
+	<p>Se puede ver un ejemplo de los diferentes estilos <a href="ejemplosModeloCaja/ejemplo9.html" tabindex="25" target="_blank" title="Ejemplo de estilos del borde">aquí</a>.</p>
+	
+	<a id="apartado9"></a>
+	<p><a href="#menu_principal" tabindex="26" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	<h1>9. Escritura abreviada del borde</h1>
+	<p>Se puede indicar las propiedades del borde (<code>border-color</code>, <code>border-style</code> y <code>border-width</code>) de forma abreviada utilizando la propiedad <code>border:</code>.
+	<p>Por ejemplo:</p>
+	<code>border: red double 5px;</code></p>
+	<p>Hay que tener en cuenta que...<br />
+	- Esta fórmula solo es válida si los cuatro bordes son idénticos.<br />
+	- Los valores de las diferentes propiedades se agrupan y se declaran separados por espacios sin importar el orden.<br />
+	- Para asegurar la óptima compatibilidad entre navegadores, es recomendable declarar las tres propiedades.</p>
+	<p>Se puede ver un ejemplo de la declaración abreviada <a href="ejemplosModeloCaja/ejemplo10.html" tabindex="27" target="_blank" title="Ejemplo de declaración abreviada">aquí</a>.</p>
+	
+	<p><a href="#menu_principal" tabindex="28" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	
+	
+</body>	
+	
+</html>

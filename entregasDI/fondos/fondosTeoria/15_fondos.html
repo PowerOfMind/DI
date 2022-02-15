@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Fondos</title>
+
+<link rel="stylesheet" type="text/css" href="cssFondos/15_fondos.css">
+
+
+</head>
+<body>
+
+	<a id="menu_principal"></a>
+	<a href="#apartado1" tabindex="1" class="menu">1. Color de fondo</a><br />
+	<a href="#apartado2" tabindex="2" class="menu">2. Insertar una imagen de fondo</a><br />
+	<a href="#apartado3" tabindex="3" class="menu">3. Repetición de la imagen</a><br />
+	<a href="#apartado4" tabindex="4" class="menu">4. Posicionamiento de la imagen</a><br />
+	<a href="#apartado5" tabindex="5" class="menu">5. Fijar el fondo (una imagen)</a><br />
+	<a href="#apartado6" tabindex="6" class="menu">6. Sintaxis abreviada</a><br />
+
+	<hr>
+	<p><a href="#menu_principal" tabindex="7" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>	
+	<a id="apartado1"></a>
+	<h1>1. Color de fondo</h1>
+	<p>Para aplicar un color de fondo a un elemento la sintaxis es:</p>
+	<table class="tablaTeoria">
+		<tr>
+			<td class="celdaTeoria"><code>background-color:</code></td>
+			<td class="celdaTeoria">- nombre del color;<br />
+			- notación hexadecimal #rrggbb;<br />
+			- notación hexadecimal en formato #rgb; <br />			
+			- notación en formato RGB mediante número esteros del 0-255;<br />
+			- notación en formato RGB con porcentajes entre 0% y 100%;<br />
+			- notación en formato RGBa donde "a" está comprendido entre 0 y 1;<br />
+			- notación en formato HSL ;<br />
+			- notación en formato HSLa donde "a" está comprendido entre 0 y 1;<br />
+			- <code>transparent;</code><br />
+			</td>
+		</tr>
+	</table>
+
+	<p>Puedes ver un ejemplo <a href="ejemplosFondos/ejemplo1.html" target="_blank">aquí</a>.</p>
+	
+	<p>También es posible aplicar un color de fondo a una división.</p>
+	
+	<p>Puedes ver un ejemplo <a href="ejemplosFondos/ejemplo2.html" target="_blank">aquí</a>.</p>
+
+	<hr>
+	<p><a href="#menu_principal" tabindex="8" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>	
+	<a id="apartado2"></a>
+	<h1>1. Insertar una imagen de fondo</h1>
+	<p>La propiedad <code>background-image</code> interta una imagen de fondo, dispuesta de forma clásica, es decir, en mosaico.</p>
+	<p>La sintaxis es:</p>
+	<table class="tablaTeoria">
+		<tr>
+			<td class="celdaTeoria"><code>background-image:</code></td>
+			<td class="celdaTeoria">- <code>url(archivo_imagen);</code><br />
+			- <code>none;</code><br />
+			</td>
+		</tr>
+	</table>
+	
+	<p>Hay que tener en cuenta que...<br />
+	- Se puede utilizar una dirección relativa o absoluta para especificar la ruta (URL) de la imagen; <br />
+	- Las imágenes pueden tener los formatos GIF, JPEG y PNG;<br />
+	- El valor <code>none</code> no muestra ninguna imagen de fondo.</p>
+	
+	<p>Puedes ver un ejemplo <a href="ejemplosFondos/ejemplo3.html" target="_blank">aquí</a>.</p>
+	
+	<hr>
+	<p><a href="#menu_principal" tabindex="9" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>	
+	<a id="apartado3"></a>
+	<h1>3. Repetición de la imagen</h1>
+	<p>Es posible controlar la repetición de la imagen, para evitar su disposición en mosaico.</p>
+	<p>La sintaxis es:</p>
+	<table class="tablaTeoria">
+		<tr>
+			<td class="celdaTeoria"><code>background-repeat:</code></td>
+			<td class="celdaTeoria">- <code>repeat;</code> repite la imagen horizontal  y verticalmente, es decir, en mosaico.<br />
+			- <code>repeat-x;</code> repite la imagen horizontalmente, según el eje x, y forma una línea horizontal en la parte superior del elemento;<br />
+			- <code>repeat-y;</code> repite la imagen verticalmente, según el eje y, y forma una línea vertical en la parte izquierda del elemento;<br />
+			- <code>no-repeat;</code> no repite la imagen.<br />
+			</td>
+		</tr>
+	</table>
+	
+	<p>Hay que tener en cuenta que...<br />
+	- Esta declaración de estilo sólo tiene efecto si la imagen de fondo se ha declarado previamente.<br />
+	- Nada impide definir un color de fondo y, a la vez, una imagen de fondo. El color de fondo se mostrará incluso si el navegador no ha encontrado la imagen de fondo en la ruta indicada. </p>
+	
+	
+	<p>Puedes ver un ejemplo <a href="ejemplosFondos/ejemplo4.html" title="repetir una imagen horizontalmente" target="_blank">aquí</a>.</p>
+	
+	<p>Puedes ver un ejemplo <a href="ejemplosFondos/ejemplo5.html" title="repetir una imagen verticalmente" target="_blank">aquí</a>.</p>
+	
+	<p>Puedes ver un ejemplo <a href="ejemplosFondos/ejemplo6.html" title="ejemplo del valor no-repeat" target="_blank">aquí</a>.</p>
+	
+
+
+	
+	
+	<hr>
+	<p><a href="#menu_principal" tabindex="10" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>	
+	<a id="apartado4"></a>
+	<h1>4. Posicionamiento de la imagen</h1>
+	<p>Es posible colocar con precisión la imagen de fondo de un elemento a nivel de píxel.</p>
+	<p>La sintaxis es:</p>
+	<table class="tablaTeoria">
+		<tr>
+			<td class="celdaTeoria"><code>background-position:</code></td>
+			<td class="celdaTeoria">- un valor de longitud, espacio, valor de longitud;.<br />
+			- porcentaje, espacio, porcentaje;<br />
+			- <code>left;</code> <br />
+			- <code>center;</code> <br />
+			- <code>right;</code> <br />
+			- <code>top;</code> <br />
+			- <code>center;</code> <br />
+			- <code>bottom;</code> <br />
+			</td>
+		</tr>
+	</table>
+	
+	<p>Por ejemplo:</p>
+	<code>background-position: 50px 100px;<br />
+	background-position: 20% 50%;<br />
+	background-position: center center;</code></p>
+	
+	<p>Hay que tener en cuenta que...<br />
+	- Esta declaración solo tiene sentido si primero se ha declarado la imagen de fondo;<br />
+	- Generalmente, solo se utiliza esta declaración cuando la imagen no está repetida;<br />
+	- El primer valor (de longitud o porcentaje) indica la posición respecto al borde izquierdo (eje horizontal) y el segundo valor respecto al borde superior (eje vertical);<br />
+	- Ambos valores deben estar separados por un espacio;<br />	
+	- Los porcentajes respetan el mismo principio, aunque definen la posición en porcentaje respecto al tamaño del elemento padre;<br />
+	- Se puede asignar un único valor. En esta caso, el navegador interpreta que se refiere al  valor horizontal. El valor vertical se definirá de forma automática al valor por defecto que es  <code>center</code> o 50%:<br />
+	- Se pueden combinar valores de longitud y porcentajes. Por ejemplo: <code>background-position: 50px 30%;</code><br/>
+	- Los valores <code>left</code>, <code>center</code> y <code>right</code> determinan la posición horizontal;<br />
+	- Los valores <code>top</code>, <code>center</code> y <code>bottom</code> determinan la posición vertical;<br />
+	- Los valores negativos también están aceptados.</p>
+
+	<p>Puedes ver un ejemplo <a href="ejemplosFondos/ejemplo7.html" title="ejemplo del valor repeat-y con color de fondo" target="_blank">aquí</a>.</p>
+	
+	<hr>
+	<p><a href="#menu_principal" tabindex="11" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>	
+	<a id="apartado5"></a>
+
+	<h1>5. Fijar el fondo (una imagen)</h1>
+	<p>Es posible fijar una imagen de fondo que no se mueva con el resto de la página.</p>
+	<p>La sintaxis es:</p>
+	<table class="tablaTeoria">
+		<tr>
+			<td class="celdaTeoria"><code>background-attachment:</code></td>
+			<td class="celdaTeoria">
+			- <code>scroll;</code> permite a la imagen de fondo deslizarse con el contenido de la página<br />
+			- <code>fixed;</code> deja la imagen de fondo fija mientras que el contenido de la página puede deslizarse.<br />
+			</td>
+		</tr>
+	</table>
+	
+	<p>Puedes ver un ejemplo <a href="ejemplosFondos/ejemplo8.html" title="ejemplo del valor repeat-x con color de fondo y una división" target="_blank">aquí</a>.</p>
+
+		
+	<hr>
+	<p><a href="#menu_principal" tabindex="12" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>	
+	<a id="apartado6"></a>
+	<h1>6. Sintaxis abreviada</h1>
+	<p>La propiedad <code>background</code> permite agrupar las distintas propiedades en una sola línea.</p>
+	<p>Por ejemplo:</p>
+	<code>background: url(xxx.gif) white no-repeat right top fixed;</code>
+	<p>Correspondería a:<br />
+	<code>background-image: url(xxx.gif);
+	background-color: white;
+	background-repeat: no repeat;
+	background-position: right top;
+	background-attachment: fixed;</code></p>
+	
+	<p>Hay que tener en cuenta que...<br/>
+	- Los distintos atributos deben indicarse uno tras otro separados por un espacio;<br />
+	- El orden no tiene importancia;<br />
+	- No es necesario definir todas las propiedades;<br />
+	- Para las propiedades no definidas, el navegador mantendrá los valores por defecto.</p>
+	
+	<p><a href="#menu_principal" tabindex="13" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+</body>
+</html>
