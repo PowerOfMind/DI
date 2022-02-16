@@ -1,0 +1,70 @@
+﻿@font-face { font-family: "mitipografia";
+             src: url('../tipografias/rocker.ttf');
+			 } 
+			 
+.fontface { font: 100px mitipografia, fantasy;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@font-face { font-family: "mitipografia2";
+             src: url('../tipografias/batman.ttf');
+			 } 
+			 
+.fontface2 { font: 100px mitipografia2, fantasy;
+}
+
+@font-face { font-family: "mitipografia3";
+             src: url('../tipografias/caricature.ttf');
+			 } 
+			 
+.fontface3 { font: 100px mitipografia3, fantasy;
+}
+
+@font-face { font-family: "mitipografia4";
+             src: url('../tipografias/PokemonHollow.ttf');
+			 } 
+			 
+.fontface4 { font: 100px mitipografia4, fantasy;
+}
+
+
+@font-face { font-family: "mitipografia5";
+             src: url('../tipografias/Blazed.ttf');
+			 } 
+			 
+.fontface5 { font: 100px mitipografia5, fantasy;
+}
+
+@font-face { font-family: "mitipografia6";
+             src: url('../tipografias/RioGrande.ttf');
+			 } 
+			 
+.fontface6 { font: 100px mitipografia6, fantasy;
+}
+
+
+
+@font-face { font-family: "mitipografia7";
+             src: url('../tipografias/SnapsTasteChristmas.otf');
+			 } 
+			 
+.fontface7 { font: 100px mitipografia7, fantasy;
+}
+

@@ -1,0 +1,204 @@
+* { margin: 0px;
+	padding: 0px;
+	}
+
+body { padding: 20px;
+}
+
+h1 { font-size: 40px;
+	color: teal;
+	margin:5px;
+	}
+
+h2 { font-size: 30px;
+	color: navy;
+	margin:5px;
+	}
+	
+h3 { font-size: 24px;
+	color: silver;
+	margin:5px;
+	}
+	
+h4 { font-size: 14;
+	color: maroon;
+	text-decoration: underline;
+	margin:5px;
+	}
+
+.rosa { background-color: #f7819f;
+	height: 20px;
+	border: 2px dotted green;
+	margin: 10px;
+	}
+
+.amarillo { background-color: #F7FB16;
+	height: 25px;
+	border: 5px dashed #0D40CF;
+	border-radius: 1em;
+	margin: 20px;
+	}
+	
+	
+/*	
+table { 	width: 800px;
+		text-align: left;
+		border: 2px solid blue;
+		border-collapse: collapse;
+		margin-bottom: 20px;
+		margin-top: 20px;
+	}
+	
+td { 	border: 2px solid blue;
+		padding: 5px;
+	}
+*/
+
+
+.tabla2 { width: 800px;
+		text-align: left;
+		border: 2px solid blue;
+		border-collapse: collapse;
+		margin-bottom: 20px;
+		margin-top: 20px;
+	}
+	
+table.tabla2 td { width: 400px;	
+			border: 2px solid blue;
+			padding: 5px;
+	}
+
+
+
+
+	/* --> Margen de la barra de navegación */
+	
+	#barraMenu {
+		margin-bottom: 20px;
+		}
+	
+	
+	
+	/* --> Estilo aplicado a los elementos de clase menú --*/
+	.menu {
+		position:relative;
+		margin:0px;
+		padding:0px;
+		list-style-type:none;
+		list-style-position:inside;
+		text:indent;		
+	}
+	
+	
+	/* --> Estilo aplicado a los elementos li descendientes de los elementos de clase menú --*/
+	.menu li {
+		position:relative;
+		margin:-1px;
+		padding:0px;
+		width:200px;
+		display:inline-block;
+		background-color: #C00;
+		color:white;
+		text-align:center;
+		font-variant:small-caps;	
+		text-indent:0px;
+		cursor:pointer;	
+	}
+	
+	/* --> Estilo aplicado a los elementos anchor descendientes de li contenidos en elementos de clase menú --*/
+	.menu li a {
+		margin:0px;
+		padding:0px;
+		widht:200px;
+		display:block;
+		text-decoration:none;
+		color:silver;
+		text-align:center;
+	}
+	
+	/* --> Estilo aplicado a los elementos ul (lista desordenada) que son descendientes de elementos li contenidos en elementos de clase menú --*/
+	.menu li ul {
+		margin:0px;
+		padding:0px;
+		display:none;
+		text-indent:0px;
+	}
+	/* --> Estilo aplicado a los elementos ul (lista desordenada) que son hijos directos de li (a los cuales se les aplica hover, pasar por encima el ratón) que son descendientes de la clase menú --*/
+	
+	.menu > li:hover ul {
+		position:absolute;
+		display:block;
+		top:20px;
+		left:-1px;
+	}
+	
+
+
+/* Convirtiendo la cabecera en un contenedor flexible */
+
+#cabeceralogo {
+  display: flex;
+  justify-content: center;
+  width: 96%;
+  height: 150px;
+  padding: 0% 2%;
+  background-color: green;
+  margin-bottom: 20px;
+}
+
+#cabeceralogo > div {
+  flex: 1;
+  max-width: 960px;
+  padding-top: 45px;
+}
+#cabeceralogo h1 {
+  font: small-caps bold 54px Arial, sans-serif;
+  color: #FFFFFF;
+}						
+
+
+/* Convirtiendo el menu en un contenedor flexible */
+#barraMenu {
+  display: flex;
+  justify-content: left;
+  width: 96%;
+  height: 30px;
+  padding: 0% 2%;
+  
+}
+#barraMenu > div {
+  flex: 1;
+  max-width: 960px;
+}
+
+
+/* Así se transforman los enlaces al pasar por encima */
+
+.volverInicio { margin-top: 20px;
+		  margin-bottom: 20px;
+	}
+	
+.volverInicio > a:hover { text-decoration: none;
+					color: #A61A54;
+					font-weight: bold;
+					font-style: italic;
+					font-variant: small-caps;
+					}
+/* El estilo de los ejemplos */					
+.ejemplo { margin: 20px 0px 20px 0px;
+		   border: 1px solid silver;
+		   padding: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+		
+		
+		

@@ -1,0 +1,203 @@
+		 
+
+/*
+.tablaTeoria { 
+			   border: 1px solid black;
+			   border-collapse: collapse;
+			}
+	 
+.celdaTeoria { border: 1px solid black;
+			   width: 200px;
+			   vertical-align: top;
+		     } 
+
+.celdaTeoria2 { border: 1px solid black;
+			   width: 500px;
+			   vertical-align: top;
+		     }  			 
+*/
+
+h1 { font-size: 40px;
+	color: teal;
+	}
+
+h2 { font-size: 30px;
+	color: navy;
+	}
+
+hr { background-color: #f7819f;
+	height: 20px;
+	border: 2px dotted green;
+	margin: 10px;
+	}
+
+table { 	width: 800px;
+		text-align: left;
+		border: 2px solid blue;
+		border-collapse: collapse;
+		margin-bottom: 20px;
+	}
+	
+td { 	border: 2px solid blue;
+	}
+
+.tabla2 { width: 800px;
+		text-align: left;
+		border: 2px solid blue;
+		border-collapse: collapse;
+		margin-bottom: 20px;
+	}
+	
+table.tabla2 td { width: 10px;	
+			border: 2px solid blue;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+/* --> Estilo aplicado a los elementos de clase menú --*/
+		.menu {	position: relative;
+				margin: 0px;
+				padding: 0px;
+				list-style-type: none;
+				list-style-position: inside;
+				text-indent: 0px;
+				}
+				
+/* --> Estilo aplicado a los elementos li descendientes de los elementos de clase menú --*/
+        .menu li {position: relative;
+				margin: 0px 1px;
+				padding: 0px;
+				width: 200px;
+				display: inline-block;
+				background-color: #7CBEEF;
+				color: white;
+				text-align: center;
+				text-indent: 0px;
+				cursor: pointer;
+			}
+			
+	
+/* --> Estilo aplicado a los elementos anchor descendientes de li contenidos en elementos de clase menú --*/
+		.menu li a{ margin: 0px;
+				padding: 2px 5px;
+				display: block;
+				width: 200px;
+				text-align: center;
+				text-decoration: none;
+				color: white;
+			}
+		
+		
+/* --> Estilo aplicado a los elementos ul (lista desordenada) que son descendientes de elementos li contenidos en elementos de clase menú --*/
+		.menu li ul { margin: 0px;
+				padding: 0px;
+				display: none;
+				text-indent: 0px;
+				text-align: center;
+			}
+		
+		
+		
+		
+/* --> Estilo aplicado a los elementos ul (lista desordenada) que son hijos directos de li (a los cuales se les aplica hover, pasar por encima el ratón) que son descendientes de la clase menú --*/
+		.menu > li:hover ul{ position: absolute;
+				top: 20px;
+				left: -1px;
+				display: block;
+			}
+
+/* Estilo al menú de los selectores de atributos */
+
+/* --> Estilo aplicado a los elementos de clase menú --*/
+		.menu2 {	position: relative;
+				margin: 0px;
+				padding: 0px;
+				list-style-type: none;
+				list-style-position: inside;
+				text-indent: 0px;
+				}
+				
+/* --> Estilo aplicado a los elementos li descendientes de los elementos de clase menú --*/
+        .menu2 li {position: relative;
+				margin: 0px 1px;
+				padding: 0px;
+				width: 200px;
+				display: inline-block;
+				background-color: #99e094;
+				color: red;
+				text-align: center;
+				text-indent: 0px;
+				cursor: pointer;
+			}
+			
+	
+/* --> Estilo aplicado a los elementos anchor descendientes de li contenidos en elementos de clase menú --*/
+		.menu2 li a{ margin: 0px;
+				padding: 2px 5px;
+				display: block;
+				width: 200px;
+				text-align: center;
+				text-decoration: none;
+				color: red;
+			}
+		
+		
+/* --> Estilo aplicado a los elementos ul (lista desordenada) que son descendientes de elementos li contenidos en elementos de clase menú --*/
+		.menu2 li ul { margin: 0px;
+				padding: 0px;
+				display: none;
+				text-indent: 0px;
+				text-align: center;
+			}
+		
+		
+		
+		
+/* --> Estilo aplicado a los elementos ul (lista desordenada) que son hijos directos de li (a los cuales se les aplica hover, pasar por encima el ratón) que son descendientes de la clase menú --*/
+		.menu2 > li:hover ul{ position: absolute;
+				top: 20px;
+				left: -1px;
+				display: block;
+			}
+			
+
+
+
+
+
+
+
+
+	
+	
+		
+		
+		
+
+			 
+
+		
+
+
+
+
+
+	
+		
+		
+		
+		

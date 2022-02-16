@@ -1,0 +1,36 @@
+﻿.sombraTexto { font-size: 100px;
+				font-weight: bold;	
+				font-family: Impact;
+			text-shadow: 4px 4px 6px red;
+         
+		/* Filtro para Internet Explorer 9 */ /*filter:progid:DXImageTransform.Microsoft.Shadow(color='#aaaaaa', 
+         Direction=135, Strength=6);*/
+		 }
+
+
+
+
+
+
+		 
+.relieve { font-size: 100px;
+			font-weight: bold;	
+			font-family: fantasy;
+			color: white;
+			text-shadow: 8px 8px 12px olive;
+			
+			/* Un pequeño truco para perfilar la letra. aún no es estandar */
+			-webkit-text-stroke-color: red;
+			-webkit-text-stroke-width: 2.75px;
+			
+			
+			/* Filtro para Internet Explorer 9 */ 
+		/* filter:progid:DXImageTransform.Microsoft.Shadow(color='#aaaaaa', 
+          Direction=135, Strength=12);*/
+		  }
+		  
+		  
+		  
+		  
+		  
+		  

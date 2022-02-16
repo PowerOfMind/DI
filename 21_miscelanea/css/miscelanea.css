@@ -1,0 +1,14 @@
+﻿hr { background-color: #F7FB16;
+	height: 25px;
+	border: 5px dashed #0D40CF;
+	border-radius: 1em;
+	margin: 10px;
+	}
+	
+a:hover { text-decoration: none;
+	color: #A61A54;
+	font-weight: bold;
+	font-style: italic;
+	font-variant: small-caps;
+	}
+

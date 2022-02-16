@@ -1,0 +1,26 @@
+﻿.hueca { font-size: 72px;
+		text-stroke: 2px #000;
+		text-fill-color: transparent;
+          -webkit-text-stroke: 2px #000;
+          -webkit-text-fill-color: transparent;
+		  -moz-text-stroke: 2px #000;
+		  -moz-text-fill-color: transparent;
+		}
+
+.compatible { font-size: 72px;  
+              color: white;
+              text-shadow:
+              -1px -1px 0 #000,  
+              1px -1px 0 #000,
+              -1px 1px 0 #000,
+              1px 1px 0 #000;
+			}
+
+			
+			
+			
+			
+			
+			
+			
+			

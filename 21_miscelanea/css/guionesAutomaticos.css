@@ -1,0 +1,25 @@
+﻿.blocNone { width: 255px; 
+        text-align: justify;
+        -webkit-hyphens: none;
+        -moz-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none;
+		}	
+		
+.blocManual { width: 255px; 
+        text-align: justify;
+        -webkit-hyphens: manual;
+        -moz-hyphens: manual;
+        -ms-hyphens: manual;
+        hyphens: manual;
+		}
+
+	
+		
+.blocAuto { width: 255px; 
+        text-align: justify;
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+		}

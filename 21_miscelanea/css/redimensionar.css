@@ -1,0 +1,27 @@
+﻿.blocNone { resize: none; 
+			overflow: hidden; 
+			width: 270px; 
+			height: 60px; 
+			border: 2px solid silver;"
+		}
+
+.blocBoth { resize: both; 
+			overflow: hidden; 
+			width: 270px; 
+			height: 60px; 
+			border: 2px solid silver;"
+		}
+		
+.blocHorizontal { 	resize: horizontal; 
+					overflow: hidden; 
+					width: 270px; 
+					height: 60px; 
+					border: 2px solid silver;"
+		}
+		
+.blocVertical { resize: vertical; 
+				overflow: hidden; 
+				width: 270px; 
+				height: 60px; 
+				border: 2px solid silver;"
+		}

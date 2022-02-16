@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Selectores CSS3
+</title>
+
+<link rel="stylesheet" type="text/css" href="20_selectores.css">
+
+</head>
+<body>
+
+	<a id="menu_principal"></a>
+	<nav id="barraMenu">
+        	<ul class="menu">
+            	<li>Selectores CSS3
+                    <ul>
+                        <li><a href="#apartado1" tabindex="1" title="Selectores jerárquicos" target="_self">1. Selectores jerárquicos</a></li>
+                        <li><a href="#apartado2" tabindex="2" title="Pseudoclases de selección" target="_self">2. Pseudoclases de selección</a></li>
+                        <li><a href="#apartado3" tabindex="3" title="Selectores de atributos" target="_self">3. Selectores de atributos</a></a></li>
+					</ul>
+				</li>
+			</ul>
+	</nav>
+	
+	
+	<a id="apartado1"></a>
+	<h1>1. Selectores jerárquicos</h1>
+	<p>Para diversificar las opciones, CSS3 ofrece multitud de selectores.</p>
+	<p>Los selectores jerárquicos son:</p>
+	
+	<table class="tablaTeoria">
+		<tr>
+			<td class="celdaTeoria">A B</td>
+			<td class="celdaTeoria2">Descendentes</td>
+			<td class="celdaTeoria2">Selecciona cualquier elemento B que es descendiente del elemento A</td>
+		</tr>
+		<tr>
+			<td class="celdaTeoria">A > B</td>
+			<td class="celdaTeoria2">Hijos</td>
+			<td class="celdaTeoria2">Selecciona cualquier elemento B que es hijo directo del elemento A</td>
+		</tr>
+		<tr>
+			<td class="celdaTeoria">A + B</td>
+			<td class="celdaTeoria">Hermano adyacente</td>
+			<td class="celdaTeoria2">Selecciona cualquier elemento B precedido inmediatamente del elemento A</td>
+		</tr>
+	</table>
+	
+	<p>Se puede ver un ejemplo <a href="ejemplosSelectores/ejemploSelectores01.html" tabindex="" target="_blank" title="Ejemplo de selectores descendentes">aquí</a>.</p>
+	
+	<p>Se puede ver un ejemplo <a href="ejemplosSelectores/ejemploSelectores02.html" tabindex="" target="_blank" title="Ejemplo de selectores descendentes">aquí</a>.</p>
+	
+	<p>Se puede ver un ejemplo <a href="ejemplosSelectores/ejemploSelectores03.html" tabindex="" target="_blank" title="Ejemplo de selectores descendentes">aquí</a>.</p>
+	
+	<p><a href="#menu_principal" tabindex="" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	<a id="apartado2"></a>
+	<h1>2. Pseudoclases de selección</h1>
+	<p>Las pseudoclases de selección son:</p>
+	<table class="tabla2">
+		<tr>
+			<td><code>:root</code></td>
+			<td>- Representa el elemento raíz o el elemento en el nivel más alto del documento. Por ejemplo, en HTML5, la etiqueta &lt;html&gt;.</td>
+		</tr>
+		<tr>
+			<td><code>:empty</code></td>
+			<td>- corresponde a los elementos vacíos y que no tienen hijos.</td>
+		</tr>
+		<tr>
+			<td><code>:only-child</code></td>
+			<td>- devuelve el hijo único, es decir, este elemento no tiene elementos hermanos.</td>
+		</tr>
+		<tr>
+			<td><code>:first-child</code></td>
+			<td>- selecciona el primer elemento hijo.</td>
+		</tr>
+		<tr>
+			<td><code>:last-child</code></td>
+			<td>- selecciona el último elemento hijo.</td>
+		</tr>
+		<tr>
+			<td><code>:nth-child</code></td>
+			<td>-  designa el enésimo elemento hijo, donde <code>n</code> es un número o bien las palabras clave <code>even</code> (pares) y <code>odd</code> (impares).</td>
+		</tr>
+		<tr>
+			<td><code>:nth-last-child(n)</code></td>
+			<td>- selecciona el enésimo elemento hijo, a partir del último elemento, donde <code>n</code> es un número o bien las palabras clave <code>even</code> (pares) y <code>odd</code> (impares).</td>
+		</tr>
+		<tr>
+			<td><code>:only-of-type</code></td>
+			<td>- devuelve el único elemento de este tipo.</td>
+		</tr>
+		<tr>
+			<td><code>:first-of-type</code></td>
+			<td>- devuelve el primer elemento de este tipo.</td> 
+		</tr>
+		<tr>
+			<td><code>:last-of-type</code></td>
+			<td>- devuelve el último elemento de este tipo.</td>
+		</tr>
+		<tr>
+			<td><code>:nth-of-type(n)</code></td>
+			<td>- designa el enésimo elemento de este tipo, donde <code>n</code> es un número o bien las palabras clave <code>even</code> (pares) y <code>odd</code> (impares).</td>
+		</tr>
+		<tr>
+			<td><code>:nth-last-of-type(n)</code></td>
+			<td>- selecciona el enésimo elemento de este tipo partiendo del último elemento, donde <code>n</code> es un número o bien las palabras clave <code>even</code> (pares) y <code>odd</code> (impares).</td>
+		</tr>
+	</table>
+		
+	
+	<p>Se puede ver un ejemplo de como seleccionar el primer elemento de una lista <a href="ejemplosSelectores/html/primer_elemento.html" tabindex="" target="_blank" title="Ejemplo de seleccion del primer hijo">aquí</a>.</p>
+	
+	<p>Se puede ver un ejemplo de como seleccionar el último elemento de una lista <a href="ejemplosSelectores/html/ultimo_elemento.html" tabindex="" target="_blank" title="Ejemplo de seleccion del último hijo">aquí</a>.</p>
+	
+	<p>Se puede ver un ejemplo de como seleccionar el tercer elemento de una lista <a href="ejemplosSelectores/html/tercer_elemento.html" tabindex="" target="_blank" title="Ejemplo de seleccion del tercer hijo">aquí</a>.</p>
+	
+	<p>Se puede ver un ejemplo de como seleccionar el cuarto elemento de una lista (o el segundo a partir del último elemento)<a href="ejemplosSelectores/html/cuarto_elemento.html" tabindex="" target="_blank" title="Ejemplo de seleccion del cuarto elemento">aquí</a>.</p>
+	
+	<p>Se puede ver un ejemplo de como seleccionar los  elementos impares de una lista <a href="ejemplosSelectores/html/elementos_impares.html" tabindex="" target="_blank" title="Ejemplo de seleccion de los elementos impares">aquí</a>.</p>
+	
+	<p>Se puede ver un ejemplo de como seleccionar los  elementos pares de una lista<a href="ejemplosSelectores/html/elementos_pares.html" tabindex="" target="_blank" title="Ejemplo de seleccion de los elementos pares">aquí</a>.</p>
+	
+	
+	<p><a href="#menu_principal" tabindex="" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	<a id="apartado3"></a>
+	<h1>3. Selectores de atributos</h1>
+	<p>Los selectores de atributos son:</p>
+	<table>
+		<tr>
+			<td><code>[atr]</code></td>
+			<td>- Designa un elemento que contiene el atributo <code>atr</code> informado.</td>
+		</tr>
+		<tr>
+			<td><code>[atr="valor"]</code></td>
+			<td>- Designa un elemento que contiene el atributo <code>atr</code> con el valor indicado. </td>
+		</tr>
+		<tr>
+			<td><code>[atr~="valor"]</code></td>
+			<td>- Corresponde con todo elemento donde el atributo <code>atr</code> contenga una lista de valores separados por espacios y donde alguno de ellos sea dicho valor.</td>
+		<tr>
+		<tr>
+			<td><code>[atr|="valor"]</code></td>
+			<td>- Corresponde con todo elemento donde el atributo <code>atr</code> contenga una lista de valores separados por guiones comenzando por el valor.</td>
+		</tr>
+		<tr>
+			<td><code>[atr^="valor"]</code></td>
+			<td>- Representa un elemento donde el atributo <code>atr</code> comience con el prefijo indicado.</td>
+		</tr>
+		<tr>
+			<td><code>[atr$="valor"]</code></td>
+			<td>- Representa un elemento donde el atributo <code>atr</code> termine con el sufijo indicado.</td>
+		</tr>
+		<tr>
+			<td><code>[atr*="valor"]</code></td>
+			<td>- Representa un elemento donde el atributo <code>atr</code> contenga una instancia u ocurrencia del valor indicado.
+			</td>
+		</tr>
+				
+	</table>
+	
+	
+	<p>Se puede ver un ejemplo de selectores de elementos con el atributo <code>name</code> <a href="ejemplosSelectores/html/selectorAtrUno.html" tabindex="" target="_blank" title="Ejemplo de selectores de atributos">aquí</a>.</p>
+		
+	<p>Se puede ver un ejemplo de selectores de elementos con el atributo <code>class="titulo"</code> <a href="ejemplosSelectores/html/selectorAtrDos.html" tabindex="" target="_blank" title="Ejemplo de selectores de atributos">aquí</a>.</p>
+		
+	<p>Se puede ver un ejemplo de selectores de elementos con el atributo  <code>rel</code> <a href="ejemplosSelectores/html/selectorAtrTres.html" tabindex="" target="_blank" title="Ejemplo de selectores de atributos">aquí</a>.</p>
+	
+	<p>Se puede ver un ejemplo de selectores de elementos con atributos separados por guiones <a href="ejemplosSelectores/html/selectorAtrCuatro.html" tabindex="" target="_blank" title="Ejemplo de selectores de atributos">aquí</a>.</p>
+		
+	<p>Se puede ver un ejemplo de selectores de elementos con un atributo nombrado que comience por <code>"ult"</code> <a href="ejemplosSelectores/html/selectorAtrCinco.html" tabindex="" target="_blank" title="Ejemplo de selectores de atributos">aquí</a>.</p>
+		
+	<p>Se puede ver un ejemplo de selectores de elementos en que el atributo <code>title</code> termine por <code>"os"</code> <a href="ejemplosSelectores/html/selectorAtrSeis.html" tabindex="" target="_blank" title="Ejemplo de selectores de atributos">aquí</a>.</p>
+	
+	<p>Se puede ver un ejemplo de selectores de elementos en que el atributo <code>title</code> contenga <code>"re"</code> <a href="ejemplosSelectores/html/selectorAtrSiete.html" tabindex="" target="_blank" title="Ejemplo de selectores de atributos">aquí</a>.</p>
+	
+	
+	
+	
+	
+	
+	
+	<!--
+	<p><a href="#menu_principal" tabindex="" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	
+	<p>La sintaxis es:<br />
+	<table class="tablaTeoria">
+		<tr>
+			<td class="celdaTeoria"><code></code></td>
+			<td class="celdaTeoria2">- <code></code><br />
+			- <code></code><br />
+			- <code></code><br />
+			- <code></code><br />
+			</td>
+		</tr>
+	</table>
+	
+	
+	<p>Se puede ver un ejemplo <a href="ejemplosListasTablas/ejemplo1.html" tabindex="" target="_blank" title="Ejemplo de marcadores de listas">aquí</a>.</p>
+	
+	-->
+	
+</body>	
+	
+</html>

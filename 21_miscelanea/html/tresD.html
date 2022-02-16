@@ -1,0 +1,36 @@
+﻿<!doctype html>
+<html>
+<head>
+<title>Tarjeta en 3D</title> 
+<meta charset="utf-8">
+	
+	<link rel="stylesheet" type="text/css" href="../css/tresD.css">
+
+	<script>
+function flip (event){	
+var element = event.currentTarget;	
+element.className = (element.className == 'carta') ? 'carta flipped' : 'carta';
+}
+</script>
+
+</head>
+<body>
+	<div id="box">
+	<div id="carta" class="carta" onclick="flip(event)">
+	<div id="recto" class="recto verso">
+	<p>¡Hola, mundo!</p>
+	<p>Doy<br />vueltas<br />si pinchas</p>
+	</div>
+	
+	<div id="back" class="back verso">
+	<p>¡Hola<br />mundo!</p>
+	<p>Vuelve <br />a pinchar</p>
+	</div>
+	</div>
+	</div>
+</body>
+</html>
+
+
+
+

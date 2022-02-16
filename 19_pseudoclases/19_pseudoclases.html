@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Pseudoclases</title>
+
+<link rel="stylesheet" type="text/css" href="19_pseudoclases.css">
+
+<style type="text/css">
+
+a:link { text-decoration: none;
+		  color: olive;
+	}
+
+a:visited { text-decoration: line-through;
+			color: orange;
+	}	
+
+a:hover { font-weight: bold;
+		   font-style: italic;
+		   font-size: 1.5em;
+		   color: pink;
+	}
+
+a:active { text-decoration: underline overline;
+			color: navy;
+	}
+
+.azul { width: 200px;
+	  height: 50px;
+	  border: 1px solid black;
+	}
+
+div.azul:hover { background-color: rgb(125, 165, 205);
+	}
+
+
+</style>
+
+
+
+
+
+</head>
+<body>
+	<a id="menu_principal"></a>
+	<a href="#apartado1" tabindex="1" title="Pseudoclases">1. Noción de pseudoclases</a><br />
+	<a href="#apartado2" tabindex="2" title="Pseudoclases de enlace">2. Pseudoclases de enlace</a><br />
+	<a href="#apartado3" tabindex="3" title="Pseudoclases de párrafo">3. Pseudoclases de párafo</a><br />
+	<a href="#apartado4" tabindex="4" title="Pseudoclases de insertar contenido">4. Pseudoclases para insertar un contenido</a><br />
+	
+	
+	
+	
+	
+	<a id="apartado1"></a>
+	<h1>1. Noción de pseudoclases</h1>
+	
+	<p>Una pseudoclase en CSS es una palabra clave que se añade a los selectores y que especifica un estado especial del elemento seleccionado.</p>
+	
+	<p>Las pseudoclases permiten aplicar un estilo a un elemento no sólo en relación con el contenido del árbol del documento, sino también en relación a factores externos como el historial del navegador, el estado de su contenido, o la posición del ratón.</p>
+	
+	<p>Las pseudoclases afectan al comportamiento de los elementos en un determinado momento. Sin embargo, no es funcionalidad. Lo importante es saber cuál hay que aplicar en cada momento.</p>
+	
+	<p>Las pseudoclases se pueden aplicar sobre todos los elementos. No obstante, conviene utilizarlas en aquellos elementos que tienen algún objetivo, es decir, en aquellos elementos que tiene sentido modificar para hacer algo.</p>
+	
+	<p>La sintaxis de las pseudoclases es:<br />
+	<code>selector:pseudoclase { declaración de estilo; }</code></p>	
+	<p>Las pseudoclases pueden utilizarse también con las clases. Entonces, la sintaxis es:<br />
+	<code>selector.clase:pseudoclase { declaración(es) de estilo; }</code></p>
+	
+	<p>Al igual que con las clases, las pseudoclases pueden declararase en línea, en el interior del html (es decir, en el <code>head</code>) o en una página de estilo externa.</p>
+	
+	<p><a href="#menu_principal" tabindex="5" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	
+	<a id="apartado2"></a>
+	<h1>2. Pseudoclases de enlace</h1>
+	
+	<h2>2.1 Pseudoclase de enlace <code>a:link</code></h2>
+	
+	<p>La pseudoclase <code>a:link</code> permite definir la apariencia de un enlace que todavía no se ha seleccionado. Por ejemplo, eliminando el estilo por defecto de los enlaces como se puede ver a continuación.</p>
+		
+	<p><a href="https://www.google.es/" target="_blank" tabindex="6" title="Vámonos a Google" accesskey="g">¡Esto, aunque no lo parezca, es un enlace!</a></p> 
+	
+	
+	<h2>2.2 Pseudoclase de enlace <code>a:visited</code></h2>
+	
+	<p>La pseudoclase <code>a:visited</code> permite definir la apariencia de un enlace que ha sido visitado. Depende de que el navegador se entere de que se ha hecho la visita.</p>
+		
+	<p><a href="https://es.yahoo.com/" target="_blank" tabindex="7" title="Vámonos a Yahoo" accesskey="y">¡Esto es un enlace visitado!</a></p> 
+	
+	<h2>2.3 Pseudoclase de enlace <code>a:hover</code></h2>
+	
+	<p>La pseudoclase <code>a:hover</code> permite definir la apariencia de un enlace cuando el ratón pasa sobre él (es decir, antes de hacer click), como sucede en el siguiente ejemplo.
+	
+	<p><a href="https://www.bing.com/?setlang=es" target="_blank" tabindex="8" title="Vámonos a Bing" accesskey="g">¡Esto es un enlace que cambia al pasar el ratón sobre él!</a></p>
+	
+	<h2>2.4 Pseudoclase de enlace <code>a:active</code></h2>
+	
+	<p>La pseudoclase <code>a:active</code> permite definir la apariencia de un enlace en el preciso momento en que se hace clic sobre él. Es decir, <code>active</code> funciona con aquellos elementos que son capaces de coger el foco (elementos con los que se puede navegar) y funciona cuando se activa el elemento, es decir, cuando se realiza la acción sobre él. Así, sucede en el siguiente ejemplo.</p>
+	
+	<p><a href="https://www.ecosia.org/" target="_blank" tabindex="9" title="Vámonos a Ecosia" accesskey="e">¡Esto es un enlace que cambia justo al hacer clic sobre él!</a></p>
+	
+	<p>La pseudoclase <code>:active</code> se utiliza, generalmente, de forma conjunta con <code>:visited, :hover</code> y <code>:link</code>. Para obtener un resultado correcto, es imprescindible declarar las apariencias para los enlaces en el orden siguiente:<br />
+	- <code>:link<br />
+	- :visited<br />
+	- :hover<br />
+	- :active</code></p>
+	
+	<p>La pseudoclase<code>:hover</code> puede utilizarse sobre otros elementos, como por ejemplo un &lt;div&gt;, como sucede en el siguiente ejemplo.</p>
+	
+	<hr>
+	<div class="azul"></div>
+	
+	<hr>
+	
+	<p><a href="#menu_principal" tabindex="10" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	<a id="apartado3"></a>
+	<h1>3. Pseudoclases de párrafo</h1>
+	
+	<h2>3.1 Pseudoclase de párrafo <code>:first-letter</code></h2>
+	<p>La pseudoclase <code>:first-letter</code> permite definir la apariencia de la primera (y sólo de la primera) letra de un párrafo, logrando un efecto de letra capitular. </p>
+	
+	
+	<p>Se puede ver un ejemplo <a href="ejemplosPseudoclases/ejemplo01.html" tabindex="11" target="_blank" title="Ejemplo de letra capitular">aquí</a>.</p>
+	
+	<h2>3.2 Pseudoclase de párrafo <code>:first-line</code></h2>
+	<p>La pseudoclase <code>:first-line</code> permite definir la apariencia de la primera (y sólo de la primera) línea de un párrafo. </p>
+		
+	<p>Se puede ver un ejemplo <a href="ejemplosPseudoclases/ejemplo02.html" tabindex="12" target="_blank" title="Ejemplo de primera línea">aquí</a>.</p>
+	
+	<hr>
+	
+	<p><a href="#menu_principal" tabindex="13" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	<a id="apartado4"></a>
+	<h1>4. Pseudoclases para insertar un contenido</h1>
+	
+	<h2>4.1 Pseudoclase de insertar contenido <code>:before</code></h2>
+	
+	<p>La pseudoclase <code>:before</code> asociada a la propiedad <code>content</code> permite insertar un contenido antes de un elemento.</p>
+	
+	<p>Se puede ver un ejemplo <a href="ejemplosPseudoclases/ejemplo03.html" tabindex="14" target="_blank" title="Ejemplo de insertar un contenido antes">aquí</a>.</p>
+		
+	
+	<h2>4.2 Pseudoclase de insertar contenido <code>:after</code></h2>
+	
+	<p>La pseudoclase <code>:after</code> asociada a la propiedad <code>content</code> permite insertar un contenido después de un elemento.</p>
+	
+	<p>Se puede ver un ejemplo <a href="ejemplosPseudoclases/ejemplo04.html" tabindex="15" target="_blank" title="Ejemplo de insertar un contenido después">aquí</a>.</p>
+	
+	
+</body>	
+	
+</html>

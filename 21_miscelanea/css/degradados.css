@@ -1,0 +1,97 @@
+﻿/* Degradado lineal */
+#box { width:250px; 
+		height: 80px;
+       border: 1px solid gray;
+       background: -moz-linear-gradient(top left, #7DA5CD, #ffffff);
+	   }
+
+#box2 { width:250px; 
+		height: 80px;
+       border: 1px solid gray;
+       background-color: #7DA5CD;
+       filter:progid:DXImageTransform.Microsoft.Gradient(     
+       StartColorStr='#7DA5CD', EndColorStr='#ffffff', GradientType=1);
+       background: -moz-linear-gradient(top left, #7DA5CD, #ffffff);
+       background: -webkit-gradient(linear, left top, right bottom, from(#7DA5CD), to(white));
+	   }
+	   
+	   
+#box3 { width:200px; 
+		height: 150px;
+       border: 1px solid gray;
+       background: -moz-radial-gradient(top left, circle, white, #7DA5CD);
+	   }
+
+	   
+
+/* Para navegadores modernos*/
+
+.gradient1 { 
+		width: 180px; 
+		height: 240px;
+		border: 1px solid black;
+		background:-webkit-gradient(linear,left top,left bottom,from(#D7EBFF), to(#697D91));
+		background:-webkit-linear-gradient(top, #D7EBFF, #697D91);
+		background:-moz-linear-gradient(top, #D7EBFF, #697D91);
+		background:-ms-linear-gradient(top, #D7EBFF, #697D91);
+		background:-o-linear-gradient(top, #D7EBFF, #697D91);
+		background:linear-gradient(top, #D7EBFF, #697D91)
+	}
+
+.gradient2 { 
+		display: block;
+		height: 25px;
+		width: 180px;
+		padding-top: 6px;
+		margin-bottom: 12px;
+		border: 1px solid black;
+		margin-top: 12px;
+		text-align: center;
+		border-radius: 4px;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		box-shadow: 1px 3px 5px rgba(0,0,0,0.6);
+		-moz-box-shadow: 1px 3px 5px rgba(0,0,0,0.6);
+		-webkit-box-shadow: 1px 3px 5px rgba(0,0,0,0.6);
+		background:-webkit-gradient(linear,left top,left bottom, from(#D7EBFF), to(#697D91));
+		background:-webkit-linear-gradient(top, #D7EBFF, #697D91);
+		background:-moz-linear-gradient(top, #D7EBFF, #697D91);
+		background:-ms-linear-gradient(top, #D7EBFF, #697D91);
+		background:-o-linear-gradient(top, #D7EBFF, #697D91);
+		background:linear-gradient(top, #D7EBFF, #697D91)
+		}
+
+/* Degradados circulares */
+.gradient3 { 
+	width: 180px; 
+	height: 240px;
+	border: 1px solid black;
+	background: -moz-radial-gradient(top left, circle, #D7EBFF, #697D91); 
+	background: -webkit-radial-gradient(top left, circle, #D7EBFF, #697D91);
+	background: -ms-radial-gradient(top left, circle, #D7EBFF, #697D91);
+	background: -o-radial-gradient(top left, circle, #D7EBFF, #697D91);
+	background: radial-gradient(top left, circle, #D7EBFF, #697D91);
+	}      
+      
+.gradient4 { display: block;
+			height: 25px;
+			width: 180px;
+			padding-top: 6px;
+			margin-bottom: 12px;
+			border: 1px solid black;
+			margin-top: 12px;
+			text-align: center;
+			border-radius: 4px;
+			-webkit-border-radius: 4px;
+			-moz-border-radius: 4px;
+			box-shadow: 1px 3px 5px rgba(0,0,0,0.6);
+			-moz-box-shadow: 1px 3px 5px rgba(0,0,0,0.6);
+			-webkit-box-shadow: 1px 3px 5px rgba(0,0,0,0.6);
+			background: -moz-radial-gradient(top left, circle, #D7EBFF, #697D91); 
+			background: -webkit-radial-gradient(top left, circle, #D7EBFF, #697D91);
+			background: -ms-radial-gradient(top left, circle, #D7EBFF, #697D91);
+			background: -o-radial-gradient(top left, circle, #D7EBFF, #697D91);
+			background: radial-gradient(top left, circle, #D7EBFF, #697D91);
+			}
+
+

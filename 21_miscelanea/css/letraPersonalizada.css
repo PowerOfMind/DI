@@ -1,0 +1,12 @@
+﻿@font-face { font-family: 'rocker';
+             src: url('rocker.eot');
+			 src: url('rocker.eot?#iefix') format('embedded-opentype'),
+				  url('rocker.woff') format ('woff'),
+				  url('rocker.ttf') format ('truetype');,
+			 }
+			 
+.letra { font: 40px 'rocker', fantasy;
+	}
+
+p:first-letter { font-size: 200%;
+}

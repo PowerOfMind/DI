@@ -1,0 +1,59 @@
+﻿	/* Bordes decorados con valor round */	  
+#box { 	width: 220px; 
+		height: 80px;
+		border-width: 20px;
+		border-image: url(../img/border.png) 30 30 round;
+		-moz-border-image: url(../img/border.png) 30 30 round;
+		-webkit-border-image: url(../img/border.png) 30 30 round;
+		-o-border-image: url(../img/border.png) 30 30 round;
+		padding: 10px;
+		text-align: center;
+		margin-top: 10px;
+		margin-bottom: 20px;
+	   }
+
+
+	   
+	   
+	   
+	   
+	   
+
+
+	   
+	   
+	   
+	   
+	   
+	/* Bordes decorados con valor de estiramiento stretch */	  
+	   
+#box2 { width: 500px; 
+		height: 80px;
+       border-width: 20px;
+       border-image: url(../img/border.png) 30 30 stretch;
+       -moz-border-image: url(../img/border.png) 30 30 stretch;
+       -webkit-border-image: url(../img/border.png) 30 30 stretch;
+	   -o-border-image: url(../img/border.png) 30 30 stretch;
+       padding: 40px 20px 10px 20px;
+       text-align: center;
+	   margin-top: 20px;
+		margin-bottom: 20px;
+	   }
+
+	   
+	   
+	   
+/* Bordes decorados con una imagen para todo el fondo */	  
+#box3 { width: 300px; 
+		height: 80px;
+       border-width:20px;
+       border-image:url(../img/border_image.png) 30 30 round;
+       -moz-border-image:url(../img/border_image.png) 30 30 round;
+       -webkit-border-image:url(../img/border_image.png) 30 30 round;
+	   -o-border-image:url(../img/border_image.png) 30 30 round;
+       padding: 10px;
+       text-align: center;
+	   margin-top: 20px;
+		margin-bottom: 20px;
+	   }
+	   

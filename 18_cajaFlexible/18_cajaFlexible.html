@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Modelo de caja flexible</title>
+
+<link rel="stylesheet" type="text/css" href="18_cajaFlexible.css">
+
+</head>
+<body>
+
+
+	<a id="menu_principal"></a>
+	<a href="#apartado1" tabindex="1" title="Caja flexible">1. Modelo de caja flexible </a><br />
+	<a href="#apartado2" tabindex="2" title="Organizando elementos flexibles">2. Organizando elementos flexibles </a><br />
+	
+	
+		<a id="apartado1"></a>
+	
+	<h1>1. Modelo de caja flexible</h1>
+	<p>El modelo de caja tradicional ofrece básicamente la forma de dividir el espacio disponible en la ventana, creando filas y columnas. Sin embargo, el modelo de caja tradicional no es el más eficaz para ello.</p>
+	<p>Cuestiones complejas como expandir columnas para ocupar el espacio disponible, centrar el contenido de una caja en el eje vertical o extender una columna desde la parte superior a la parte inferior de una página independiente del tamaño de su contenido han llevado a buscar otras soluciones. La más aceptada ha sido el modelo de caja flexible.</p>
+	
+	<p>La propiedad <code>Flexible Box</code>, o <code>flexbox</code>, de CSS3, permite colocar los elementos de una página para que se comporten de forma predecible cuando el diseño de la página debe acomodarse a diferentes tamaños de pantalla y diferentes dispositivos. Para muchas aplicaciones, el modelo "caja flexible" produce una mejora sobre el modelo "bloque" porque no utiliza la propiedad <code>float</code>, ni hace que los márgenes del contenedor flexible interfieran con los márgenes de sus contenidos.</p>
+		
+	<p>El modelo "caja flexible" es más sencillo de utilizar. Los elementos "hijos" de una "caja flexible" pueden colocarse en cualquier dirección y pueden tener dimensiones flexibles para adaptarse al espacio visible. Posicionar los elementos "hijos" es por tanto mucho más sencillo, y los diseños complejos pueden hacerse más fácilmente y con código más limpio, ya que el orden de visualización de los elementos es independiente del orden que estos tengan en el código fuente. Esta independencia afecta  únicamente a la representación visual, dejando el orden de locución y navegación a lo que diga el código fuente.</p>
+		
+	<p>Lo que caracteriza un diseño flexible es su habilidad para alterar el ancho y alto de sus elementos para ajustarse lo mejor posible al espacio disponible en cualquier dispositivo. Un contenedor flexible expande sus elementos para rellenar el espacio libre, o los comprime para evitar que rebasen el área prevista.</p>
+		
+	<p>El algoritmo del modelo de diseño de "cajas flexibles" no parte de niguna dirección predeterminada, al contrario de lo que ocurre con el modelo "bloque", que asume una disposición vertical de los elementos, o lo que pasa con el modelo "en línea", que asume una disposición horizontal. Mientras que el modelo "bloque" funciona bien para páginas, se queda muy corto cuando se trata de aplicaciones en las que hay que tener en cuenta el cambio de orientación del dispositivo o los cambios de tamaño realizados por los gestos del usuario. El modelo de "cajas flexibles" es más apropiado para diseños de pequeña escala, mientras que el (emergente) modelo "rejilla" es adecuado para diseños de gran escala. Ambos son parte del gran esfuerzo que el "CSS Working Group" está realizando para proveer de mayor interoperabilidad a las aplicaciones web con todo tipo de usuarios, distintos modos de escritura, y otras necesidades de flexibilidad.</p>
+		
+	<p><b>Hay que tener en cuenta que...</b><br /> Aunque la especificación del diseño de "cajas flexibles" de CSS está en fase de "candidata a recomendación", no todos los navegadores la han implementado. La implementación de WebKit requiere el prefijo -webkit; Internet Explorer implementa una versión antigua de la especificación, con prefijo; Opera 12.10 implementa la última versión, sin prefijo. Es necesario revisar la tabla de compatibilidad de cada propiedad para saber cuál es su estado actual.</p>
+		
+	<p><b><mark>Un contenedor flexible</mark></b> aprovecha las herramientas que usa el modelo de caja tradicional, como el posicionamiento absoluto y las columnas, pero en lugar de hacer flotar los elementos organiza las cajas usando contenedores flexibles. Un contenedor flexible es un elemento que convierte su contenido en cajas flexibles. Así, en este nuevo modelo, cada grupo de cajas debe estar incluido dentro de otra caja que es la encargada de configurar sus características.</p>
+	
+	
+	<p>La sintaxis es:<br />
+	<table class="tablaTeoria">
+		<tr>
+			<td class="celdaTeoria"><code>flex-grow:</code><br />
+			<code>flex-shrink:</code><br />
+			<code>flex-basis:</code><br />
+			<code>flex:</code>
+			</td>
+		</tr>
+	</table>
+		
+	<p><b>Hay que tener en cuenta que...</b></p>
+	- <code>flex-grow</code> declara la proporción en la cual el elemento se va a expandir o encoger. La proporción se determina considerando los valores asignados al resto de los elementos de la caja (es decir, los elementos hermanos).<br />
+		
+	- <code>flex-shrink</code> declara la proporción en la cual el elemento se va a reducir. La proporción se determina a partir de los valores asignados al resto de los elementos de la caja (es decir, los elementos hermanos).<br />
+		
+	- <code>flex-basis</code> determina un tamaño inicial para el elemento.<br />
+		
+	- <code>flex</code> permite indicar los valores de las propiedades <code>flex-grow, flex-shrink</code> y <code>flex-basis</code>.</p>
+		
+	<p>Las cajas flexibles se expanden o encogen para ocupar el espacio libre dentro de la caja padre. La distribución del espacio depende de las propiedades del resto de las cajas. Si todas las cajas se configuran como flexibles, el tamaño de cada una de ellas dependerá del tamaño de la caja padre y del valor de la propiedad <code>flex</code>.</p>
+			
+	<p>Se puede ver un ejemplo <a href="ejemplosCajaFlexible/ejemplo01.html" tabindex="9" target="_blank" title="Ejemplo de cajas flexibles">aquí</a>.</p>
+	
+	<p><b>Para calcular el tamaño de cada caja</b> se multiplica el valor del tamaño de la caja padre por el valor de su propiedad <code>flex</code> dividido por la suma de los valores <code>flex-grow</code> de todas las cajas. Por ejemplo, la fórmula para el elemento <code><b>caja-1</b></code> es <b>600 x 1/4 = 150</b>. Es decir, el valor de la cajapadre (600) por el valor de la propiedad flex asignado al elemento <code>caja-1</code> (1) dividido entre la suma de los valores de la propiedad <code>flex</code> asignados a cada una de las cajas (4). Al tener todas las cajas el mismo valor (1), el tamaño de cada caja será de 150 píxeles menos los márgenes (establecido en 5 píxeles en el elemento <code>div</code>).</p>	
+		
+	<p>Se puede ver un ejemplo con diferentes valores (caja-1:2; caja-2:1; caja-3:1; caja-4:1) <a href="ejemplosCajaFlexible/ejemplo02.html" tabindex="9" target="_blank" title="Ejemplo de cajas flexibles">aquí</a>.</p>
+			
+	<p>En este segundo ejemplo, se asigna <b>2</b> a la propiedad <code>flex</code> el elemento <code>caja-1</code>, por lo que la fórmula para calcular el tamaño es <b>600 x 2/5 = 240</b></code>. Para el resto de las cajas, la fórmula es <b>600 x 1/5 = 120</b>. En este ejemplo, el elemento <code>caja-1</code> recibe dos porciones porque su propiedad <code>flex</code> es 2, mientras que el resto de los elementos solo recibe una porción. De esta forma, los elementos se vuelven flexibles y cada vez que se agrega un elemento no hay que calcular el tamaño, pues se recalculan automáticamente.</p>
+		
+	<p>Además, cuando una de las cajas es inflexible y tiene un tamaño explícito, las otras cajas se flexionan para compartir el resto del espacio disponible.</p>
+		
+	<p>Se puede ver un ejemplo de combinación de cajas flexibles e inflexibles (caja-1=300px; caja-2=1; caja-3= 1; caja-4=1) <a href="ejemplosCajaFlexible/ejemplo03.html" tabindex="9" target="_blank" title="Ejemplo de cajas flexibles">aquí</a>. En este caso, el espacio a distribuir entre las cajas es de 300 píxeles (600 - 300 = 300), por lo que el navegador calcula el espacio a repartir para las cajas flexibles con la misma fórmula (300 x 1/3 = 100).</p>
+		
+	<p>También se puede tener varias o más cajas de tamaño explícito. Incluso, es posible declarar el tamaño de un elemento pero mantenerlo flexible, para lo cual se utilizan las propiedades <code>flex-shrink</code> y <code>flex-basis</code>.</p>
+		
+	<p>Se puede ver un ejemplo <a href="ejemplosCajaFlexible/ejemplo04.html" tabindex="9" target="_blank" title="Ejemplo de cajas flexibles">aquí</a>. 
+	
+	<p>En este caso se manejan tres parámetros. Para <code>flex-grow</code> se define el valor 1 declarando la misma proporción de expansión. El parámetro <code>flex-shrink</code> trabaja como <code>flex-grow</code> pero determina la proporción en la que las cajas se reducirán para caber en el espacio disponible. Como el valor de la caja-1 es 1 y para el resto de las cajas es 4 asigna más espacio a caja-1. Por su parte, el parámetro <code>flex-basis</code> establece un valor inicial para el elemento y se considera para calcular cuánto se expandirá o se reducirá un elemento flexible. Cuando este valor es cero o no se declara, el valor considerado es el tamaño del contenido del elemento.</p>
+		
+	<p>Se puede ver un ejemplo asignando el valor <code>auto</code> a <code>flex-basis</code> <a href="ejemplosCajaFlexible/ejemplo05.html" tabindex="9" target="_blank" title="Ejemplo de cajas flexibles con valor auto">aquí</a>. 
+		
+	<p>En esta ocasión, con un ancho definido de 100px, queda, tras ser posicionadas, un espacio libre de 100 píxeles que se divide entre las cajas flexibles. Aplicando la fórmula (100 x 1/4 =25), se agregan 25 píxeles adicionales a cada caja (menos los márgenes).</p>
+		
+	<p>Además, la propiedad <code>flex-basis</code> permite definir un tamaño inicial para influir en el navegador a la hora de distribuir el espacio disponible entre las cajas, pero las cajas aún se expanden o se reducen más allá de ese valor. Existen varias propiedades para poner limitaciones al tamaño de una caja.</p>
+		
+	<p>La sintaxis es:<br />
+	<table class="tablaTeoria">
+		<tr>
+			<td class="celdaTeoria"><code>max-width</code><br />
+			<code>min-width</code><br />
+			<code>max-height</code><br />
+			<code>min-height</code><br />
+			</td>
+			<td class="celdaTeoria2">- especifica el ancho máximo permitido para el elemento en cualquier unidad disponible en CSS;<br />
+			- especifica el ancho mínimo permitido para el elemento en cualquier unidad disponible en CSS;<br />
+			- especifica la altura máxima permitida para el elemento en cualquier unidad disponible en CSS;<br />
+			- especifica la altura mínima permitida para el elemento en cualquier unidad disponible en CSS;<br />
+			</td>
+		</tr>
+	</table>
+	
+	<p>Se puede ver un ejemplo asignando un ancho máximo de 50 píxeles al elemento <code>caja-1</code> y un ancho mínimo de 150 al elemento <code>caja-4 </code><a href="ejemplosCajaFlexible/ejemplo06.html" tabindex="9" target="_blank" title="Ejemplo de ancho máximo y mínimo">aquí</a>.</p>
+	
+	
+	<a id="apartado2"></a>
+	<p><a href="#menu_principal" tabindex="" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	
+	<h1>2. Organizando elementos flexibles</h1>
+	<p>Por defecto, los elementos dentro de un contenedor flexible se organizan horizontalmente en la misma línea. Pero un contenedor flexible usa ejes para describir la orientación de su contenido. Se utilizan dos ejes: uno horizontal y otro transversal. El principal es aquel en el que se presenta el contenido (normalmente, el horizontal) y el transversal es el perpendicular al principal (generalmente, el vertical). No obtante, la orientación de dichos ejes puede cambiar, desplazando con ellos al contenido.</p>
+	<p>Las propiedades trabajan con estos ejes y organizan los elementos desde sus extremos: main-start (inicio-principal), main-end (fin-principal), cross-start (inicio-transversal) y cross-end (fin-transversal).</p>
+		
+	<p><img src="ejemplosCajaFlexible/ejeHorizontal.jpg"></p>
+	<p><img src="ejemplosCajaFlexible/ejeVertical.jpg"></p>
+		
+	<p>Para cambiar la organización de las cajas, CSS ofrece las siguientes propiedades.</p>
+	<p>La sintaxis es:<br />
+	<table class="tablaTeoria">
+		<tr>
+			<td class="celdaTeoria"><code>flex-direction:</code><br />
+			<code>order:</code><br />
+			<code>justify-content:</code><br />
+			<code>align-items:</code><br />
+			<code>align-self:</code><br />
+			<code>flex-wrap:</code><br />
+			<code>align-content:</code><br />
+			</td>
+		</tr>
+	</table>
+		
+	<p><b>Hay que tener en cuenta que...</b><br />
+	- <code>flex-direction:</code> define el orden y orientación de las cajas en un contenedor flexible. Dispone de los valores <code>row</code>, (por defecto), <code>row-reverse, column</code> y <code> column-reverse</code>.<br />
+		
+	- <code>order:</code> especifica el orden de las cajas utilizando números enteros.<br />
+		
+	- <code>justify-content:</code> determina cómo se va a distribuir el espacio libre. Dispone de los valores <code>flex-start, flex-end, center, space-between </code>y <code> space-around</code>.<br />
+	- <code>align-items:</code> alinea las cajas en el eje transversal mediante los valores <code> flex-start, flex-end, center, baseline </code> y <code>stretch</code>.<br />
+	- <code>align-self:</code> alinea una caja en el eje transversal. Funciona como <code>align-items</code> pero afecta a las cajas de manera individual. Dispone de los valores <code>auto, flex-start, flex-end, center, baseline </code> y <code>stretch</code>.<br />
+	- <code>flex-wrap:</code> determina si se permiten crear múltiples líneas de cajas con los valores <code>nowrap, wrap</code> y <code>wrap-reverse</code>.<br />
+	
+	- <code>align-content:</code> alinea las líneas de cajas en el eje vertical con los valores <code>flex-start, flex-end, center, space-between, space-around </code> y <code>stretch</code>.</p>
+		
+	<p>Si <code>row</code> declara la orientación de las cajas de acuerdo a la orientación del texto (normalmente horizontal) y ordena las cajas desde main-start hasta main-end (normalmente, de izquierda a derecha), el valor <code>row-reverse</code> indica la misma orientación, pero invierte el orden de los elementos (es decir, van desde main-end a main-start, de derecha a izquierda.</p>
+
+	<p>Por su parte, el valor <code>column</code> declara la orientación de acuerdo a la orientación en la cual se presentan los bloques de texto (normalmente vertical) y ordena las cajas desde cross-start a cross-end (normalmente de extremo superior a inferior) y finalmente el valor <code>column-reverse</code> declara la misma orientación que <code>column</code> pero invierte el orden de los elementos desde cross-end a cross-start (normalmente, de extremo inferior a superior).
+	
+	
+	<p>Se puede ver un ejemplo de la dirección de las cajas aplicando <code>row-reverse</code> <a href="ejemplosCajaFlexible/ejemplo07.html" tabindex="9" target="_blank" title="Ejemplo de dirección de las cajas">aquí</a>.</p>
+	
+	<p>El orden de las cajas también se puede personalizar.</p>
+	
+	<p>Se puede ver un ejemplo de cómo declarar la ubicación de cada caja <a href="ejemplosCajaFlexible/ejemplo08.html" tabindex="9" target="_blank" title="Ejemplo de ubicación de las cajas">aquí</a>.</p>
+		
+	<p>Una ventaja de este modelo de caja es la capacidad de distribuir el espacio libre cuando las cajas no ocupan todo el espacio en el contenedor.</p>
+	
+	<p>Se puede ver un ejemplo de distribución del espacio libre <a href="ejemplosCajaFlexible/ejemplo09.html" tabindex="9" target="_blank" title="Ejemplo de distribución del espacio libre">aquí</a>, donde el contenedor flexible tiene un tamaño de 600 píxeles  y las cajas tienes un ancho de 100 píxeles, por lo que queda un espacio libre de 200 píxeles menos los márgenes. Un borde permite apreciar el espacio extra. Por defecto, las cajas se ordenan desde main-start a main-end, dejando un espacio libre al final.</p>
+	
+	
+	
+	<p>No obstante, se puede modificar el comportamiento por defecto de las cajas utilizando la propiedad <code>justify-content</code>.</p>
+	
+	<p>Se puede ver un ejemplo de distribución del espacio libre con la propiedad <code>justify-content: flex-start</code> <a href="ejemplosCajaFlexible/ejemplo10.html" tabindex="9" target="_blank" title="Ejemplo de distribución del espacio libre con propiedad justify-content">aquí</a>.</p>
+		
+	
+	<p>Se puede ver un ejemplo de distribución del espacio libre con la propiedad <code>justify-content: flex-end</code> <a href="ejemplosCajaFlexible/ejemplo11.html" tabindex="9" target="_blank" title="Ejemplo de distribución del espacio libre con propiedad justify-content">aquí</a>.</p>
+	
+		
+	<p>Se puede ver un ejemplo de distribución del espacio libre con la propiedad <code>justify-content: center</code> <a href="ejemplosCajaFlexible/ejemplo12.html" tabindex="9" target="_blank" title="Ejemplo de distribución del espacio libre con propiedad justify-content">aquí</a>.</p>
+	
+		
+	<p>Se puede ver un ejemplo de distribución del espacio libre con la propiedad <code>justify-content: space-between</code> <a href="ejemplosCajaFlexible/ejemplo13.html" tabindex="9" target="_blank" title="Ejemplo de distribución del espacio libre con propiedad justify-content">aquí</a>.</p>
+		
+	<p>Se puede ver un ejemplo de distribución del espacio libre con la propiedad <code>justify-content: space-around</code> <a href="ejemplosCajaFlexible/ejemplo14.html" tabindex="9" target="_blank" title="Ejemplo de distribución del espacio libre con propiedad justify-content">aquí</a>.</p>
+		
+	
+	<p>Por su parte, <code>align-items</code> alinea las cajas en el eje transversal.</p>
+	
+	<p>Se puede ver un ejemplo de distribución vertical con la propiedad <code>align-items: center</code> <a href="ejemplosCajaFlexible/ejemplo15.html" tabindex="9" target="_blank" title="Ejemplo de distribución del espacio con la propiedad align-items">aquí</a>.</p>
+		
+	<p>Se puede ver un ejemplo de distribución vertical con la propiedad <code>align-items: stretch</code> <a href="ejemplosCajaFlexible/ejemplo16.html" tabindex="9" target="_blank" title="Ejemplo de distribución del espacio con la propiedad align-items">aquí</a>. El valor <code>stretch</code> hace que, si no se declara la altura de las cajas, estas adoptan automáticamente el tamaño de sus elementos padre. Es muy útil cuando se tiene columnas con diferente contenido, pues si se deja que el contenido determine la altura, una columna será más corta que la otra, mientras que si se utiliza <code>stretch</code> las columnas más cortas se estiran para coincidir con las más largas.</p>
+	
+	
+	<p>Se puede ver un ejemplo de distribución vertical con la propiedad <code>align-items: flex-start</code> <a href="ejemplosCajaFlexible/ejemplo17a.html" tabindex="9" target="_blank" title="Ejemplo de distribución del espacio con la propiedad align-items">aquí</a>.</p>
+	
+	
+	<p>Se puede ver un ejemplo de distribución vertical con la propiedad <code>align-items: flex-end</code> <a href="ejemplosCajaFlexible/ejemplo17.html" tabindex="9" target="_blank" title="Ejemplo de distribución del espacio con la propiedad align-items">aquí</a>.</p>
+	
+	
+	
+	<p>Se puede ver un ejemplo de distribución vertical con la propiedad <code>align-items: baseline</code> <a href="ejemplosCajaFlexible/ejemplo19.html" tabindex="9" target="_blank" title="Ejemplo de distribución del espacio con la propiedad align-items">aquí</a>.</p>
+	
+	
+	<p>A veces es interesante alinear las cajas de forma independiente, utilizando la propiedad <code>align-self:</code> a la caja que se quiera modificar <a href="ejemplosCajaFlexible/ejemplo20.html" tabindex="9" target="_blank" title="Ejemplo de distribución del espacio con la propiedad align-self">aquí</a>.</p>
+			
+	<p>Un contenedor flexible puede organizar las cajas en una o varias líneas con la propiedad <code>flex-wrap</code> que utiliza tres valores:<br />
+	- <code>nowrap</code> define el contenedor como un contenedor de una sola línea (las líneas no se agrupan);<br />
+	- <code>wrap</code> define el contenedor como un contenedor de múltiples líneas y las ordena desde el extremo cross-start a cross-end;<br />
+	- <code>wrap-reverse</code> define el contenedor como un contenedor de múltiples líneas en orden invertido.</p>
+	
+	<p>Se puede ver un ejemplo de  la propiedad <code>flex-wrap: wrap</code> <a href="ejemplosCajaFlexible/ejemplo21.html" tabindex="9" target="_blank" title="Ejemplo de distribución del espacio con la propiedad flex-wrap">aquí</a>.</p>
+	
+	
+	
+	<p>Se puede ver un ejemplo de  la propiedad <code>flex-wrap: wrap-reverse</code> <a href="ejemplosCajaFlexible/ejemplo22.html" tabindex="9" target="_blank" title="Ejemplo de distribución del espacio con la propiedad flex-wrap">aquí</a>.</p>
+			
+	<p>Cuando los contenedores tienen múltiples líneas se pueden alinear con la propiedad <code>align-content</p>
+	
+	<p>Se puede ver un ejemplo de  la propiedad <code>align-content: flex-start</code> <a href="ejemplosCajaFlexible/ejemplo23.html" tabindex="9" target="_blank" title="Ejemplo de distribución del espacio con la propiedad align-content">aquí</a>.</p>
+		
+	<p>Se puede ver un ejemplo de la propiedad <code>align-content: flex-end</code> <a href="ejemplosCajaFlexible/ejemplo24.html" tabindex="9" target="_blank" title="Ejemplo de distribución del espacio con la propiedad align-content">aquí</a>.</p>
+	
+	<p>Se puede ver un ejemplo de la propiedad <code>align-content: center</code> <a href="ejemplosCajaFlexible/ejemplo25.html" tabindex="9" target="_blank" title="Ejemplo de distribución del espacio con la propiedad align-content">aquí</a>.</p>
+	
+	<p>Se puede ver un ejemplo de la propiedad <code>align-content: space-between</code> <a href="ejemplosCajaFlexible/ejemplo26.html" tabindex="9" target="_blank" title="Ejemplo de distribución del espacio con la propiedad align-content">aquí</a>.</p>
+	
+	<p>Se puede ver un ejemplo de la propiedad <code>align-content: space-around</code> <a href="ejemplosCajaFlexible/ejemplo27.html" tabindex="9" target="_blank" title="Ejemplo de distribución del espacio con la propiedad align-content">aquí</a>.</p>
+	
+	<p>Se puede ver un ejemplo de la propiedad <code>align-content: stretch</code> <a href="ejemplosCajaFlexible/ejemplo28.html" tabindex="9" target="_blank" title="Ejemplo de distribución del espacio con la propiedad align-content">aquí</a>.</p>
+	
+	
+	
+	<p><a href="#menu_principal" tabindex="" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a></p>
+	
+
+	
+</body>	
+	
+</html>

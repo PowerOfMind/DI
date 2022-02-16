@@ -1,0 +1,6 @@
+﻿.imagen { width: 350px; 
+		  height: 253px;
+		  }
+		  
+.ejemplo .imagen { background-image: -webkit-cross-fade(url(../img/paisaje.png), url(../img/retrato.png), 25%);
+	}

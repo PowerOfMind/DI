@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+
+<title>Miscelánea</title>
+
+<meta name="description" content="Esta es una página explicando código CSS">
+<meta name="keywords" content="CSS, HTML, apuntes, miscelánea">
+<link rel="icon" href="img/favicon.png" type="image/png" size="16x16">
+
+<link rel="stylesheet" type="text/css" href="css/21_miscelanea.css">
+
+
+</head>
+<body>
+	<header id="cabeceralogo">
+		<div>
+		  <h1>Miscelánea</h1>
+		  <h2>Un poco de todo</h2>
+		</div>
+	</header>
+
+	<a id="menu_principal"></a>
+	
+	<nav id="barraMenu">
+    	<ul id="menuPrincipal" class="menu">
+        	<li>Metadatos
+            	<ul id="metadatos">
+               		<li><a href="#apartado1" tabindex="1" title="Ir a los metadatos" target="_blank">Los metadatos</a></li>
+            
+                 </ul>
+			</li>
+    		<li>Bordes
+        		<ul id="bordes">
+                <li><a href="#apartado2" tabindex="2" title="Ir a bordes redondeados" target="_blank">Bordes redondeados</a></li>
+				<li><a href="#apartado3" tabindex="3" title="Ir a bordes decorados" target="_blank">Bordes decorados</a></li>
+                				
+				</ul>
+            </li>
+          <li>Sombras
+          	<ul id="sombras">
+            	<li><a href="#apartado4" tabindex="4" title="Ir a sombras sobre el texto" target="_blank">Sombras sobre el texto</a></li>
+				<li><a href="#apartado5" tabindex="5" title="Ir a sombras sobre un elemento caja" target="_blank">Sombras sobre un elemento caja</a></li>
+		        </ul>
+            </li> 
+			
+			<li>Texto
+          	<ul id="texto">
+            	<li><a href="#apartado6" tabindex="6" title="Ir a letras personalizadas" target="_blank">Letras personalizadas</a></li> 
+				<li><a href="#apartado7" tabindex="7" title="Ir a letras huecas" target="_blank">Letras huecas</a></li>
+				<li><a href="#apartado8" tabindex="8" title="Ir a títulos largos" target="_blank">Títulos largos</a></li>
+				<li><a href="#apartado9" tabindex="9" title="Ir a guiones automáticos" target="_blank">Guiones automáticos</a></li>
+		        <li><a href="#apartado10" tabindex="10" title="Ir a redimensionar un elemento" target="_blank">Redimensionar un elemento</a></li>
+		       	<li><a href="#apartado11" tabindex="11" title="Ir a ajustar la altura de los caracteres" target="_blank">Ajustar la altura de los caracteres</a></li>
+		        </ul>
+            </li>
+		
+		<li>Fondos
+          	<ul id="fondos">
+            	<li><a href="#apartado12" tabindex="12" title="Ir a fondos múltiples" target="_blank">Fondos múltiples</a></li> 
+				<li><a href="#apartado13" tabindex="13" title="Ir a degradados de color" target="_blank">Degradados de color</a></li>
+				<li><a href="#apartado14" tabindex="14" title="Ir a opacidad y transparencia" target="_blank">Opacidad y transparencia</a></li>
+				</ul>
+            </li>
+		
+		<li>Movimiento
+          	<ul id="movimiento">
+            	<li><a href="#apartado15" tabindex="15" title="Ir a transformaciones" target="_blank">Transformaciones</a></li> 
+				<li><a href="#apartado16" tabindex="16" title="Ir a transiciones" target="_blank">Transiciones</a></li>
+				<li><a href="#apartado18" tabindex="17" title="Ir a filtros gráficos" target="_blank">Filtros gráficos</a></li>
+				<li><a href="#apartado19" tabindex="18" title="Ir a máscaras" target="_blank">Las máscaras</a></li>
+				<li><a href="#apartado20" tabindex="19" title="Ir a efecto reflejo" target="_blank">Efecto reflejo</a></li>
+				<li><a href="#apartado21" tabindex="20" title="Ir a fusión de imágenes" target="_blank">Fusión de imágenes</a></li>
+				</ul>
+            </li>
+		
+        </ul>
+    </nav>
+	
+	
+	
+	
+	<main>
+		<div>
+		
+		<section>
+		<a id="apartado1"></a>
+		<article class="articulo1">
+		<h1>Los metadatos</h1>
+		<p>En el <code>head</code>, además de <code>title</code> y <code>meta charset</code>, es conveniente utilizar las etiquetas &lt;meta&gt; para declarar información adicional que permitan a los robots de los buscadores indexar correctamente nuestra página.</p>
+		<p>Para ello, se suele incluir una descripción de la página y las palabras clave que identifican su contenido.</p>
+		<p>La sintaxis es:<br />
+		<code>&lt;meta name="description" content="Esta es una página explicando código CSS"&gt;<br />
+		&lt;meta name="keywords" content="CSS, HTML, apuntes, miscelánea"&gt;</code></p>
+		
+		
+		<div class="ejemplo">
+		<p><b><mark>Para un ejemplo,</mark></b> mirar el <code>head</code>.</p>
+		</div>
+			
+		<p>También en el <code>head</code> se puede utilizar el elemento <code>link</code> para mostrar un icono en la parte superior de la ventana, junto con el título de la página.</p>
+		<p>Para ello, la sintaxis es:<br />
+		<code>&lt;link rel="icon" href="img/favicon.png" type="image/png" sizes="16x16"&gt;</code></p>
+		<p>Donde:<br />
+		- <code>link </code> indica que es un enlace del &lt;head&gt;<br />
+		- <code>rel </code> indica, con el atributo <code>icon</code> la definición de un icono;<br />
+		- <code>href </code> declara la ruta de ubicación del archivo;<br />
+		- <code>type </code> especifica el formato del archivo;<br />
+		- <code>sizes </code> indica el ancho y el alto del icono separados por la letra x. Como hay poco espacio, el tamaño habitual es 16x16px.</p>
+		<div class="ejemplo">
+			<p><b><mark>Para un ejemplo,</mark></b> mirar el <code>head</code>.</p>
+		</div>
+				
+		</article>
+		
+		</section>
+		
+		<div class="volverInicio">
+		<a href="#menu_principal" tabindex="21" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a>
+		</div>
+		
+		<hr class="rosa">
+				
+		<section>
+		
+		<a id="apartado2"></a>
+		<article class="articulo2">
+		<h1>Bordes redondeados</h1>
+		<p>Con CSS3 es posible crear cajas con las esquinas redondeadas.</p>
+		<p>Los bordes redondeados en los cuatro extremos se introducen mediante la propiedad siguiente:</p>
+		<table class="tabla2">
+			<tr>
+				<td><code>border-radius:</code></td>
+				<td><code>x y;</code></td>
+			</tr>
+		</table>
+		<p>Donde:<br /> los valores "x" e "y" (en valor o porcentaje)  determinan los radios horizontal y vertical de un cuarto de elipse, lo cual provoca la curvatura de la esquina.</p>
+				
+		<p>Es posible indicar un único valor. En ese caso, el valor de "x" será igual al valor de "y".</p>
+		<p>El orden de aplicación de los valores es: arriba-izquierda, arriba-derecha, abajo-derecha y abajo-izquierda. Es decir, desde arriba-izquierda en el sentido de las agujas del reloj.</p>
+		<p>También es posible especificar de forma independiente un radio para cada esquina.</p>
+		<p>La sintaxis es:</p>
+		<table class="tabla2">
+			<tr>
+				<td><code>border-top-right-radius:</code></td>
+			</tr>
+			<tr>
+				<td><code>border-bottom-right-radius:</code></td>
+			</tr>
+			<tr>
+				<td><code>border-bottom-left-radius:</code></td>
+			</tr>
+			<tr>
+				<td><code>border-top-left-radius:</code></td>
+			</tr>
+		</table>
+				
+				
+		<p>El problema de los bordes redondeados es que hay navegadores que no los reconocen.</p>
+		<p>Para solucionarlo, hay que indicar un prefijo antes de la declaración <code>border-radius:</code>. </p>
+		
+		<p>Dicho prefijo es:<br />
+		<code>-moz-</code> para Firefox y Explorer.<br >
+		<code>-webkit-</code> para Chrome, Safari y Opera.</p>
+						
+		<p>La notación con los prefijos -moz- y -webkit- sería:</p>
+		<table class="tabla2">
+			<tr>
+				<td>Para Firefox y Explorer:</td>
+				<td><code>-moz-border-radius-topright:<br />
+				-moz-border-radius-bottomright:<br />
+				-moz-border-radius-bottomleft:<br />
+				-moz-border-radius-topleft:</code>
+				</td>
+			</tr>
+			<tr>
+				<td>Para Chrome, Safari y Opera:</td>
+				<td><code>-webkit-border-top-right-radius:<br />
+				-webkit-border-bottom-right-radius:<br />
+				-webkit-border-bottom-left-radius:<br />
+				-webkit-border-top-left-radius:</code>
+				</td>
+			</tr>
+		</table>
+		
+		<p>Los bordes redondeados también se pueden aplicar a una tabla y a una imagen.</p>
+		
+				
+		<div class="ejemplo">
+		<p>Se pueden ver los ejemplos <a href="html/bordesRedondeados.html" tabindex="22" target="_blank" title="Ir a ejemplos de los bordes redondeados">aquí</a>.</p>
+		</div>
+		
+		</article>
+		<div class="volverInicio">
+		<a href="#menu_principal" tabindex="23" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a>
+		</div>
+		<a id="apartado3"></a>
+		<article>
+		<h1>Bordes decorados</h1>
+		<p><b>Novedad de CSS3.</b> La propiedad <code>border-image</code> toma una imagen rectangular y la divide en 9 partes. Las 8 partes correspondientes al contorno se utilizan para las esquinas y los lados. El centro se oculta para poder visualizar el contenido.</p>
+			
+		
+		<p>La sintaxis es:<br />
+	<table class="tabla2">
+		<tr>
+			<td><code>border-image:</code></td>
+			<td>- <code>url(archivo de imagen) a, b, c, d + valor valor</code>.</td>
+			</tr>
+	</table>
+		
+		<p><b>Donde...</b><br />
+		- <code>url(archivo de imagen)</code>, es la ruta relativa de la imagen que se va a utilizar para confeccionar el borde;<br />
+		- <code>a, b, c </code>y<code> d</code> representan la dimensión de las partes de la rendija a los cuatro lados del borde;<br />
+		- <code>valor</code> puede ser <code>round, repeat</code>o <code>stretch</code>.</p>
+		
+		
+		<p><b>Por ejemplo:</b><code> border-image: url(border.png) 27 27 27 27 round round;</code></p>
+		
+		<p><b>Hay que tener en cuenta que...</b><br />
+		- Para <code>a, b, c</code> y <code>d</code>, es posible señalar un solo parámetro, de tal forma que se aplicará a los cuatro lados. Dos parámetros determinan la dimensión de los lados superior/inferior y derecho/izquierdo. Tres parámetros definen los lados superior, derecho/izquierdo e inferior.<br />
+		
+		- La palabra clave <code>round</code> reproduce las imágenes y las redimensiona para que se ajusten exactamente a la anchura y altura del elemento.<br />
+		
+		- La palabra clave <code>repeat</code> hace lo mismo que <code>round</code> pero sin ajustar las imágenes. No está soportada por algunos navegadores.<br />
+		
+		- La palabra clave <code>stretch</code> (valor por defecto) estira la imagen y la ajusta a las dimensiones de la caja.<br />
+		
+		- Declarar un solo <code>valor </code>determina los cuatro lados. Dos valores se aplican respectivamente a los lados superior/inferior y derecha/izquierda.</p>
+		
+		
+		<p>La propiedad <code>border-image</code> está soportada por:<br />
+	<table class="tabla2">
+		<tr>
+			<td>- Firefox 3.6+</td>
+			<td>- con el prefijo <code>-moz-</code>; desde Firefox 15.0+ sin prefijo.</td>
+		</tr>
+		<tr>
+			<td>- Chrome 4.0+</td>
+			<td>- con el prefijo <code>-webkit-</code>; desde Chrome 16.0+ sin prefijo.</td>
+		</tr>
+		<tr>
+			<td>- Safari 3.1+</td>
+			<td>- con el prefijo <code>-webkit-</code>; desde Safari 6.0+ sin prefijo.</td>
+		</tr>
+		<tr>
+			<td>- Opera 11.0+</td>
+			<td>- con el prefijo <code>-o-</code></td>
+		</tr>
+		<tr>
+			<td>- Internet Explorer</td>
+			<td>- incluso en su versión 10 no reconoce esta propiedad.</td>
+		</tr>
+		<tr>
+			<td>- iOS Safari 3.2+</td>
+			<td>- con el prefijo <code>-webkit-</code></td>
+		</tr>
+		<tr>
+			<td>- Android Browser 2.1+</td>
+			<td>- con el prefijo <code>-webkit-</code></td>
+		</tr>
+	</table>
+		
+		<div class="ejemplo">
+		<p>Se pueden ver los ejemplos <a href="html/bordesDecorados.html" tabindex="" target="_blank" title="Ir a ejemplos de los bordes decorados">aquí</a>.</p>
+		</div>
+
+		</article>
+			
+		</section>
+		
+		<section>
+		<div class="volverInicio">
+		<a href="#menu_principal" tabindex="24" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a>
+		</div>
+		
+		<a id="apartado4"></a>
+		<article>
+		
+		<hr class="rosa">
+		<h1>Sombras</h1>
+		<p>Con CSS3, es posible agregar efectos de sombra tanto sobre los textos como sobre los elementos de tipo caja.</p>
+				
+		<h2>Sombras sobre el texto</h2>
+
+		<p>La sintaxis es:<br />
+			<table class="tabla2">
+				<tr>
+					<td><code>text-shadow:</td>
+					<td><code>x y z color</td>
+				</tr>
+			</table>
+						
+		<p><b>Donde...</b><br />
+		- <code>x</code> es el margen de la sombra hacia la derecha;<br />
+		- <code>y</code> es el margen de la sombra hacia abajo; <br />
+		- <code>z</code> es la intensidad de degradado o de desenfocado (es opcional y su valor por defecto es 0);<br />
+		- <code>color</code> es el color de la sombra.</p>
+		<p>Si se ponen valores negativos, la sombra se desplaza hacia la izquierda y hacia arriba.</p>
+				
+		<p>La propiedad <code>text-shadow</code> está soportada por:<br />
+	<table class="tabla2">
+		<tr>
+			<td>- Internet Explorer 10+</td>
+			<td>- para Internet Explorer 9 se debe utilizar el filtro propietario de Microsoft Shadow.</td>
+		</tr>
+			<td>- Firefox 3.6+</td>
+		</tr>
+		<tr>
+			<td>- Chrome 4.0+</td>
+		</tr>
+		<tr>
+			<td>- Safari 3.1+</td>
+		</tr>
+		<tr>
+			<td>- Opera 10.0+</td>
+		</tr>
+		<tr>
+			<td>- iOS Safari 3.2+</td>
+		</tr>
+		<tr>
+			<td>- Android Browser 2.1+</td>
+		</tr>
+	</table>
+				
+		<div class="ejemplo">
+		<p>Se pueden ver los ejemplos <a href="html/sombrasTexto.html" tabindex="" target="_blank" title="Ir a ejemplos de las sombras sobre el texto">aquí</a>.</p>
+		</div>
+		
+		<div class="volverInicio">
+		<a href="#menu_principal" tabindex="25" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a>
+		</div>
+		
+		<a id="apartado5"></a>		
+		<h2>Sombras sobre un elemento caja</h2>
+
+		<p>La sintaxis es:<br />
+			<table class="tabla2">
+				<tr>
+					<td><code>box-shadow:</td>
+					<td><code>x y z color</code></td>
+				</tr>
+			</table>
+		
+		<p><b>Donde...</b><br />
+		- <code>x</code> es el margen de la sombra hacia la derecha;<br />
+		- <code>y</code> es el margen de la sombra hacia abajo; <br />
+		- <code>z</code> es la intensidad de degradado o de desenfocado (es opcional y su valor por defecto es 0);<br />
+		- <code>color</code> es el color de la sombra.</p>
+		<p>Si se ponen valores negativos, la sombra se desplaza hacia la izquierda y hacia arriba.</p>
+		<p>La propiedad se aplica sobre la caja del elemento y no sobre su borde. El sombreado no afecta, por tanto, al tamaño de la caja del elemento.</p>
+		<p>La propiedad <code>box-shadow</code> está implementada por:<br />
+	<table class="tabla2">
+		<tr>
+			<td>- Internet Explorer 10+ </td>
+			<td>- sin prefijo</td>
+		</tr>
+			<td>- Firefox 3.6+</td>
+			<td>- con el prefijo <code>-moz-</code>; desde Firefox 4.0+ sin prefijo</td>
+		</tr>
+		<tr>
+			<td>- Chrome 4.0+</td>
+			<td>con el prefijo <code>-webkit-</code>; desde Chrome 10.0+ sin prefijo</td>
+		</tr>
+		<tr>
+			<td>- Safari 3.1+</td>
+			<td>con el prefijo <code>-webkit-</code>; desde Safari 5.1+ sin prefijo</td>
+		</tr>
+		<tr>
+			<td>- Opera 10.0+</td>
+			<td>- sin prefijo</td>
+		</tr>
+		<tr>
+			<td>- iOS Safari 3.2+</td>
+			<td>con el prefijo <code>-webkit-</code>; desde  5.0+ sin prefijo</td>
+		</tr>
+		<tr>
+			<td>- Android Browser 2.1+</td>
+			<td>con el prefijo <code>-webkit-</code>; desde  4.0+ sin prefijo</td>
+		</tr>
+	</table>
+		<div class="ejemplo">
+		<p>Se puede ver el ejemplo <a href="html/sombrasCaja.html" tabindex="" target="_blank" title="Ir al ejemplo de las sombras sobre una caja">aquí</a>.</p>
+		</div>
+		
+		</article>
+		</section>
+		
+		<div class="volverInicio">
+		<a href="#menu_principal" tabindex="26" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a>
+		</div>
+		<a id="apartado6"></a>	
+		
+		<hr class="rosa">
+		<h1>Texto</h1>
+		<section>
+		<article>
+		<h2>Letras personalizadas</h2>
+		<p>Para no depender de las tipografías instaladas en el ordenador del usuario y poder diversificar los tipos de letra en nuestros sitios web, las hojas de estilo CSS3 permiten importar y utilizar una tipografía personalizada incluso si no está instalada en el puesto del usuario. Para ello, se debe utilizar la propiedad <code>@font-face</code>.</p>
+		<p>Para adoptar un tipo de letra particular...<br />
+		<b>Primero:</b> hay que descargar el tipo de letra que se desea<br />
+		<b>Segundo:</b> hay que incorporarlo en la página. </p>
+		
+		<p>Para el primer paso, se pueden descargar tipografías en páginas web como <a href="https://www.dafont.com/es/" tabindex="27" target="_blank" title="Ir a dafont">dafont</a>o <a href="https://www.fontsquirrel.com/" tabindex="28" target="_blank" title="Ir a dafont">fontsquirrel</a>.  
+		</p>
+		
+		<p>Hay que tener en cuenta que existen diferentes formatos de fuentes adaptadas a la web. Son las llamadas <code>Webfonts</code> y son los siguientes formatos:<br />
+		- <b>Formato .eot</b> (<i>Embedded Open Type</i>) es un formato compacto de fuente OpenType nativo o propietario de Microsoft.<br />
+		- <b>Formato .ttf</b> (<i>True Type Font</i>) es el formato de fuente de caracteres más extendido.<br />
+		- <b>Formato .otf</b> (<i>OpenType Font</i>) evolución del formato ttf.<br />
+		- <b>Formato .woff</b> (<i>Web Open Font Format</i>), desarrollado en 2009, es un formato de fuente de caracteres comprimido para usar en la web adoptado rápidamente por diferentes navegadores.</p>
+		
+		<p>La sintaxis es:<br />
+		<pre><code>@font-face { font-family: "nombre_tipografia";
+		src: url("nombre_tipografia.extension_tipografia");}</code></pre></p>
+		
+			<p>La propiedad <code>@font-face</code> y los diversos formatos de letra se reconocen por:<br />
+		<table class="tabla2">
+		<tr>
+			<td>- Internet Explorer 9+ </td>
+			<td>- pero solo el formato eot.</td>
+		</tr>
+			<td>- Firefox 3.6+</td>
+			<td>- para los formatos ttf, otf y woff.</td>
+		</tr>
+		<tr>
+			<td>- Chrome 4.0+</td>
+			<td>- para los formatos ttf y otf.</td>
+		</tr>
+		<tr>
+			<td>- Chrome 5.0+</td>
+			<td>- para el formato woff.</td>
+		</tr>
+		<tr>
+			<td>- Safari 3.1+</td>
+			<td>- para los formatos ttf y otf.</td>
+		</tr>
+		<tr>
+			<td>- Safari 5.1+</td>
+			<td>- para el formato woff.</td>
+		</tr>
+		<tr>
+			<td>- Opera 10.0+</td>
+			<td>- para los formatos ttf y otf.</td>
+		</tr>
+		<tr>
+			<td>- Opera 11.1+</td>
+			<td>- para el formato woff.</td>
+		</tr>
+		<tr>
+			<td>- iOS Safari 4.2+</td>
+			<td>- para los formatos ttf y otf.</td>
+		</tr>
+		<tr>
+			<td>- iOS Safari5.0+</td>
+			<td>- para el formato woff.</td>
+		</tr>
+		<tr>
+			<td>- Android Browser 2.2+</td>
+			<td>- para los formatos ttf y otf.</td>
+		</tr>
+	</table>
+		
+		<div class="ejemplo">
+		<p>Se puede ver el ejemplo de letras personalizadas <a href="html/letraPersonalizadaEjemplo01.html" tabindex="29" target="_blank" title="Ir al ejemplo de las letras personalizadas">aquí</a>.</p>
+		</div>
+		
+		
+		<p>Para asegurar la compatibilidad y dado que Internet Explorer 9 tiene ciertas dificultades con el atributo <code>src</code> cuando hace referencia a un tipo de letra eot y después a un tipo de letra ttf o woff, hay que utilizar la siguiente <a href="html/letraPersonalizadaEjemplo02.html" tabindex="30" target="_blank" title="Ir al segundo ejemplo de las letras personalizadas">astucia</a>.</p>
+		</div>
+		
+		<p>La astucia consiste en implementar el siguiente código:</p>
+		<p>
+		<pre>
+		<code>@font-face { font-family: 'mitipografia';
+			src: url('rocker.eot') format('embedded-opentype'),
+			url('rocker.woff') format('woff'),
+			url('rocker.ttf') format('truetype');
+							}</pre></code>
+									
+		
+		<p>De esta forma, se solucionan los problemas que plantea Internet Explorer 9 para interpretar el atributo <code>src</code> cuando hace referencia a un tipo de letra eot y, después, a un tipo de letra ttf o woff.</p>
+		
+		<p>Para poder contar con familias de fuentes en diferentes formatos se puede acudir <a href="http://font2web.com/" tabindex="31" target="_blank" title="Ir al font2web">aquí</a> y <a href="https://www.fontsquirrel.com/" tabindex="32" target="_blank" title="Ir al fontsquirrel">aquí</a>.</p>
+		
+		<p>Existe una tercera forma de utilizar letras particulares en una página web sin recurrir a <code>@font-face</code> y que es perfectamente compatible con los distintos navegadores. Para ello, nada más sencillo que utilizar <b>Google Api Fonts</b> que proporciona innumerables tipografías adaptadas a cualquier navegador y con un peso reducido, pues no hay que descargarlas.</p>
+		<p>Para utilizarlas, primero se agrega una hoja de estilo en la página html y después se aplica la norma CSS al texto deseado mediante la propiedad font-family.</p>
+		
+		<p>El servicio de Google Fonts se encuenta <a href="https://fonts.google.com/" tabindex="33" target="_blank" title="Ir al Google Fonts">aquí</a>.</p>
+		
+		<div class="ejemplo">
+		<p>Se puede ver el ejemplo de letras personalizadas con Google Fonts <a href="html/letraPersonalizadaEjemplo03.html" tabindex="34" target="_blank" title="Ir al ejemplo de las letras personalizadas con Google Fonts">aquí</a>.</p>
+		</div>
+		
+		</article>
+		<div class="volverInicio">
+		<a href="#menu_principal" tabindex="35" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a>
+		</div>
+		
+		
+		<a id="apartado7"></a>	
+		<article>
+		<h2>Letras huecas</h2>
+		<p>Es posible crear efecto de letras huecas con la propiedad <code>text-stroke</code>.</p>
+		<p>La sintaxis es:<br />
+		<table class="tabla2">
+				<tr>
+					<td><code>text-stroke-width: valor;</td>
+					<td>para el grosor del borde de las letras (en pixeles);</td>
+				</tr>
+				<tr>
+					<td><code>text-stroke-color: color;</td>
+					<td>para el color del borde de las letras);</td>
+				</tr>
+				<tr>
+					<td><code>text-stroke: valor color;</td>
+					<td>contracción de las dos anteriores;</td>
+				</tr>
+				<tr>
+					<td><code>text-fill-color: color;</td>
+					<td>para el color de relleno de las letras; permite el valor <code>transparent</code>.</td>
+				</tr>
+			</table>
+		
+		
+		<p>Para suplir la falta de compatibilidad de este efecto, se puede utilizar un pequeño truco. Consiste en utilizar la propiedad <code>text-shadow</code> con un tamaño de 1px sin propagación para las cuatro posiciones (arriba a la derecha, arriba a la izquierda, abajo a la izquierda y abajo a la derecha). La propiedad <code>color</code> sustituye a <code>text-fill-color</code></p>
+	
+		<div class="ejemplo">
+		<p>Se pueden ver el ejemplo <a href="html/letrasHuecas.html" tabindex="36" target="_blank" title="Ir a ejemplo de las letras huecas">aquí</a>.</p>
+		</div>
+	
+		</article>
+		</section>
+		<div class="volverInicio">
+		<a href="#menu_principal" tabindex="37" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a>
+		</div>
+		
+		
+		<a id="apartado8"></a>	
+		<article>
+		<h2>Manejar títulos largos</h2>
+		
+		<p>La propiedad <code>text-overflow:</code>, muy útil para contenidos recortados voluntariamente.</p>
+		<p>La sintaxis es: 
+		<table class="tabla2">
+				<tr>
+					<td><code>text-overflow:</code></td>
+					<td><code>clip:</code></td>
+					<td>- que corta el texto excedente;</td>
+				</tr>
+				<tr>
+					<td><code></code></td>
+					<td><code>ellipsis:</code></td>
+					<td>- que termina el texto cortado con puntos suspensivos;</td>
+				</tr>
+				<tr>
+					<td><code></code></td>
+					<td><code>string:</code></td>
+					<td>- que termina el texto con una cadena de caracteres, pero que solo funciona en Firefox;</td>
+				</tr>
+			</table>
+		
+		<div class="ejemplo">
+		<p>Se pueden ver el ejemplo <a href="html/titulosLargos.html" tabindex="38" target="_blank" title="Ir a ejemplo de los títulos largos">aquí</a>.</p>
+		</div>
+		
+		</article>
+		
+		<div class="volverInicio">
+		<a href="#menu_principal" tabindex="39" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a>
+		</div>
+		<a id="apartado9"></a>	
+		<article>
+		<h2>Guiones automáticos</h2>
+		
+		<p>La propiedad <code>hyphens</code> le indica al navegador el método que tiene que utilizar para separar sílabas.</p>
+		<p>La sintaxis es: 
+		<table class="tabla2">
+				<tr>
+					<td><code>hyphens:</code></td>
+					<td><code>none;</code></td>
+					<td>- las palabras no se cortan;</td>
+				</tr>
+				<tr>
+					<td><code></code></td>
+					<td><code>manual;</code></td>
+					<td>- las palabras se cortan solo al nivel de los caracteres que sugieren la posibilidad de un corte.</td>
+				</tr>
+				<tr>
+					<td><code></code></td>
+					<td><code>auto;</code></td>
+					<td>- deja al navegador realizar los cortes donde considere más apropiado. Puede variar entre navegadores.</td>
+				</tr>
+			</table>
+		
+		<div class="ejemplo">
+		<p>Se puede ver el ejemplo (en Safari) <a href="html/guionesAutomaticos.html" tabindex="40" target="_blank" title="Ir a ejemplo de los guiones largos">aquí</a>.</p>
+		</div>
+		</article>
+		<div class="volverInicio">
+		<a href="#menu_principal" tabindex="41" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a>
+		</div>
+		<a id="apartado10"></a>	
+		<article>
+		<h2>Redimensionar un elemento</h2>
+		<p>La propiedad <code>resize</code> permite redimensionar un elemento.</p>
+		<p>La sintaxis es: 
+		<table class="tabla2">
+				<tr>
+					<td><code>resize:</code></td>
+					<td><code>none;</code></td>
+					<td>- el usuario no puede redimensionar el elemento;</td>
+				</tr>
+				<tr>
+					<td><code></code></td>
+					<td><code>both;</code></td>
+					<td>- el usuario puede modificar la altura y la anchura del elemento.</td>
+				</tr>
+				<tr>
+					<td><code></code></td>
+					<td><code>horizontal;</code></td>
+					<td>- el usuario puede modificar la anchura.</td>
+				</tr>
+				<tr>
+					<td><code></code></td>
+					<td><code>vertical;</code></td>
+					<td>- el usuario puede modificar la altura.</td>
+				</tr>
+			</table>
+		
+		<div class="ejemplo">
+		<p>Se puede ver el ejemplo <a href="html/redimensionar.html" tabindex="42" target="_blank" title="Ir a ejemplo de redimensionar">aquí</a>.</p>
+		</div>
+		</article>
+	
+		<article>
+		<div class="volverInicio">
+		<a href="#menu_principal" tabindex="43" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a>
+		</div>		
+		<a id="apartado11"></a>	
+		<h2>Ajustar la altura de los caracteres</h2>
+		<p>Tipos de letra distintos, a pesar de tener el mismo tamaño, pueden parecer más grandes o más pequeños que los vecinos.</p>
+		<p>La propiedad <code>font-size-adjust</code> permite obtener caracteres siempre del mismo tamaño, fijando un coeficiente de aspecto.</p>
+		<p>De momento, solo para Firefox.</p>
+				
+		<div class="ejemplo">
+		<p>Se puede ver el ejemplo (en Firefox) <a href="html/alturaLetra.html" tabindex="44" target="_blank" title="Ir a ejemplo de ajustar la altura de los caracteres">aquí</a>.</p>
+		</div>
+			
+		</article>
+				
+		<section>
+		
+		<div class="volverInicio">
+		<a href="#menu_principal" tabindex="45" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a>
+		</div>
+		
+		
+		<a id="apartado12"></a>	
+		<hr class="rosa">
+		<h1>Fondos</h1>
+		<section>
+		<article>
+			<h2>Fondos múltiples</h2>
+			<p>Es posible visualizar varias imágenes en un mismo plano de fondo. Además, permiten acumular valores en las propiedades <code>background-image, background-position</code> y <code>background-repeat</code></p>
+			
+			<div class="ejemplo">
+			<p>Se puede ver el ejemplo <a href="html/fondosMultiples.html" tabindex="46" target="_blank" title="Ir a ejemplo de los fondos múltiples">aquí</a>.</p>
+			</div>
+		</article>
+		<div class="volverInicio">
+		<a href="#menu_principal" tabindex="47" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a>
+		</div>
+		<a id="apartado13"></a>	
+			<h2>Degradados de color</h2>
+			<h3>Los degradados lineales</h3>
+			<h4>Para Webkit (versiones antiguas)</h4>
+			<p>Los degradados lineales, para los navegadores que utilicen el prefijo <code>-webkit-</code> se definen según la siguiente sintaxis:</p>
+			<table class="tabla2">
+				<tr>
+					<td><code>background: -webkit-gradient</code></td>
+					<td><code>linear;</code></td>
+					<td>- indica un degradado lineal;</td>
+				</tr>
+				<tr>
+					<td><code></code></td>
+					<td><code>origen;</code></td>
+					<td>- es el punto inicial del degradado. Está determinado por dos valores separados por un espacio. La sintaxis soporta números, porcentajes o las palabras clave <code>top, right, bottom</code> y <code>left</code>. Por ejemplo, <code>top left</code>.</td>
+				</tr>
+				<tr>
+					<td><code></code></td>
+					<td><code>fin;</code></td>
+					<td>- es el punto final del degradado. Está determinado por dos valores separados por un espacio. La sintaxis soporta número, porcentajes o las palabras clave <code>top, right, bottom</code> y <code>left</code>. Por ejemplo, <code>bottom right</code>.</td>
+				</tr>
+				<tr>
+					<td><code></code></td>
+					<td><code>from (color);</code></td>
+					<td>- el inicio del degradado.</td>
+				</tr>
+				<tr>
+					<td><code></code></td>
+					<td><code>to (color);</code></td>
+					<td>- el fin del degradado.</td>
+				</tr>
+			</table>
+		
+		<hr>
+			
+			<h4>Para el resto de navegadores</h4>
+			<p>La siguiente sintaxis:</p>
+			<table class="tabla2">
+				<tr>
+					<td><code>background: linear-gradient</code></td>
+					<td><code>punto de inicio;</code></td>
+					<td>- se determina con <code>top </code>(por defecto),<code> left, right o bottom</code>. Por ejemplo, <code>top </code>.</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><code>color de inicio;</code></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><code>color de fin;</code></td>
+				</tr>
+			</table>
+			
+			<p>Esta propiedad se utiliza con los prefijos <code>-webkit-, -moz- </code>o <code>-ms-</code></p>
+			<p>Por ejemplo: 
+			<pre>background: -webkit-linear-gradient (top;#555,#3383838);
+			</pre>
+			<p>Esta propiedad está reconocida por:<br />
+				<table class="tabla2">
+				<tr>
+					<td>- Internet Explorer 10+ </td>
+					<td>- con el prefijo -ms-.</td>
+				</tr>
+					<td>- Firefox 3.6+</td>
+					<td>- con el prefijo -moz-.</td>
+				</tr>
+				<tr>
+					<td>- Firefox 16+</td>
+					<td>- sin prefijo.</td>
+				</tr>
+				<tr>
+					<td>- Chrome 10+</td>
+					<td>- con el prefijo -webkit-.</td>
+				</tr>
+				<tr>
+					<td>- Safari 4+</td>
+					<td>- con el prefijo -webkit-.</td>
+				</tr>
+				<tr>
+					<td>- Opera 11.1+</td>
+					<td>- con el prefijo -o-.</td>
+				</tr>
+				<tr>
+					<td>- Opera 12.1+</td>
+					<td>- sin prefijo.</td>
+				</tr>
+				<tr>
+					<td>- iOS Safari 3.2+</td>
+					<td>- con el prefijo -webkit-.</td>
+				</tr>
+				<tr>
+					<td>- Android Brownser 2.1+</td>
+					<td>- con el prefijo -webkit-.</td>
+				</tr>
+			</table>
+			
+			<hr>
+			<p>Internet Explorer 8 y 9 no implementan la propiedad de estilo <code>gradient</code> y se basan en un filtro propietario de Microsoft cuya sintaxis es:</p>
+			<p><pre>filter:DXImageTransform.Microsoft.Gradient(StartColorStr='#00FF00', EndColorStr='#000000', GradientType=1);</pre></p>
+			
+			<p>Donde se aplica...<br />
+			- <code>StartColorStr</code> para el color de inicio;<br />
+			- <code>EndColorStr</code> para el color de fin;<br />
+			- <code>gradientType</code> con valor 0 para degradados verticales y con valor 1 para degradados horizontales.</p>
+			
+			<p>Los degradados también se pueden aplicar a las propiedades CSS que soportan una imagen como <code>background-image, border-image, list-style-image </code>o <code>content</code>.<p>
+			<p>La web ofrece generadores de degradados para visualizarlos y obtener el código fuente <a href="http://www.colorzilla.com/" tabindex="48" target="_blank" title="una referencia en el material">aquí</a> y<a href="http://www.css3factory.com/linear-gradients/" tabindex="49" target="_blank" title="una referencia en el material"> aquí.</a></p>
+			</div>
+			
+			<hr>
+						
+			<h4>Los degradados circulares</h4>
+			<p>La sintaxis para degradados circulares es:</p>
+			<table class="tabla2">
+				<tr>
+					<td><code>background: radial-gradient</code></td>
+					<td><code>posicion de inicio;</code></td>
+					<td>- es el punto central del degradado circular. Se determina con palabra clave a elegir entre <code>top, right, bottom, left, center</code> o un par de valores (separados por un espacio) elaborado a partir de <code>top, right, bottom </code>o <code> left</code>. Por ejemplo, <code>center </code>. Este punto de inicio también se puede expresar en porcentajes</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><code>forma;</code></td>
+					<td>determina la forma del degradado con las palabras clave <code>radial, circle</code> o <code>elipse</code>.
+				</tr>
+				<tr>
+					<td></td>
+					<td><code>color de inicio;</code></td>
+					<td>el color de inicio del degradado</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><code>color de fin;</code></td>
+					<td>el color de fin del degradado</td>
+				</tr>
+			</table>
+			
+			<p>Esta propiedad está reconocida por:<br />
+				<table class="tabla2">
+				<tr>
+					<td>- Internet Explorer 10+ </td>
+					<td>- con el prefijo -ms-.</td>
+				</tr>
+					<td>- Firefox 3.6+</td>
+					<td>- con el prefijo -moz-.</td>
+				</tr>
+				<tr>
+					<td>- Firefox 16+</td>
+					<td>- sin prefijo.</td>
+				</tr>
+				<tr>
+					<td>- Chrome 10+</td>
+					<td>- con el prefijo -webkit-.</td>
+				</tr>
+				<tr>
+					<td>- Safari 4+</td>
+					<td>- con el prefijo -webkit-.</td>
+				</tr>
+				<tr>
+					<td>- Opera 11.1+</td>
+					<td>- con el prefijo -o-.</td>
+				</tr>
+				<tr>
+					<td>- Opera 12.1+</td>
+					<td>- sin prefijo.</td>
+				</tr>
+				<tr>
+					<td>- iOS Safari 3.2+</td>
+					<td>- con el prefijo -webkit-.</td>
+				</tr>
+				<tr>
+					<td>- Android Brownser 2.1+</td>
+					<td>- con el prefijo -webkit-.</td>
+				</tr>
+			</table>
+			
+			
+			
+			<div class="ejemplo">
+			<p>Se puede ver el ejemplo de los diferentes degradados <a href="html/degradados.html" tabindex="50" target="_blank" title="Ir a ejemplo de los degradados">aquí</a>.</p>
+			</div>
+			
+			<div class="volverInicio">
+		<a href="#menu_principal" tabindex="51" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a>
+		</div>
+		<a id="apartado14"></a>	
+		<article>
+			<h2>Opacidad y transparencia</h2>
+			<p>Podemos variar la opacidad o la transparencia de un elemento.</p>
+			<p>La sintaxis es: 
+			<table class="tabla2">
+					<tr>
+					<td><code>opacity:</code></td>
+					<td>con un valor comprendido entre 1 y 0. Con el valor 1, la opacidad es completa y la transparencia nula. Con 0, la opacidad es nula y el elemento completamente transparente;</td>
+				</tr>
+			</table>
+		
+			<p>El resultado de <code>opacitiy</code> es similar a la notación de color RGBa. Sin embargo, <code>opacity</code> se aplica al elemento íntegro y a todos sus descendientes. RGBa solo al elemento seleccionado.</p>
+			<p>El elemento al que se aplica <code>opacity</code> es translúcido y deja entrever el elemento que haya debajo.</p>
+			<p>Para IE, hay que poner el filtro <code>alpha</code>, propietario de Microsoft, cuya sintaxis es:<br />
+			<code>filter:alpha(opacity=x)</code>, siendo <code>x</code> un valor comprendido entre 100 y 0.</p>
+			
+			<div class="ejemplo">
+			<p>Se puede ver el ejemplo de opacidad y transparencia <a href="html/opacidad.html" tabindex="52" target="_blank" title="Ir a ejemplo de opacidad y transparencia">aquí</a>.</p>
+			</div>
+			
+			</article>
+		</section>
+		
+		<section>
+		<div class="volverInicio">
+		<a href="#menu_principal" tabindex="53" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a>
+		</div>
+		
+		
+		<article>
+		<hr class="rosa">
+		<h1>Movimiento</h1>
+		<a id="apartado15"></a>	
+		
+		<h2>Transformaciones</h2>
+		<p>Para transformar elementos, la sintaxis es:<br />
+			<code>transform:<br />
+			- rotate(ángulo)<br />
+			- rotateX(ángulo)<br />
+			- rotateY(ángulo)<br />
+			- scale(número)<br />
+			- scaleX(número)<br />
+			- scaleY(número)<br />
+			- skew(ángulo)<br />
+			- skewX(ángulo)<br />
+			- skewY(ángulo)<br />
+			- translate(longitud)<br />
+			- translateX(longitud)<br />
+			- translateY(longitud)</code>
+		</p>
+		<p>Se pueden hacer las siguientes transformaciones.</p>
+			<article>
+			<h3>Rotación</h3>
+			<p>La rotación de un elemento se obtiene mediante el parámetro <code>rotate(ángulo)</code>, donde ángulo puede definirse en grados (deg), radianes (rad) o gradientes (grad). </p>
+			<p>Los valores positivos rotan el elemento en el sentido de las agujas del reloj; los negativos, en sentido inverso. Cuando se define un único valor se aplica a los ejes X e Y. Con dos valores, se aplican respectivamente al eje X y al eje Y.</p>
+			
+			<div class="ejemplo">
+			<p>Se puede ver el ejemplo de rotación <a href="html/rotacion.html" tabindex="54" target="_blank" title="Ir al ejemplo de rotación">aquí</a>.</p>
+			</div>
+			</article>
+			
+			<article>
+			<h3>Cambio de escala</h3>
+			<p>Para cambiar la escala de un elemento se utiliza el atributo <code>scale(número)</code> siendo el número un valor entero o decimal, positivo o negativo.</p>
+			<p>Los valores positivos realizan un zoom acercándose; y los negativo, un zoom alejándose. Un único valor se aplica a los ejes X e Y. Dos valores, se aplican respectivamente al eje X y al eje Y.</p>
+			
+			<div class="ejemplo">
+			<p>Se puede ver el ejemplo de cambio de escala <a href="html/escala.html" tabindex="55" target="_blank" title="Ir al ejemplo de cambio de escala">aquí</a>.</p>
+			</div>
+			</article>
+			
+			<article>
+			<h3>Deformación oblicua</h3>
+			<p>La deformación oblicua de un elemento se obtiene mediante el parámetro <code>skew(ángulo)</code>, donde ángulo puede definirse en grados (deg), radianes (rad) o gradientes (grad). 
+			<p>Los valores positivos rotan el elemento en el sentido de las agujas del reloj; los negativos, en sentido inverso. Cuando se define un único valor se aplica a los ejes X e Y. Con dos valores, se aplican respectivamente al eje X y al eje Y.</p>
+			
+			<div class="ejemplo">
+			<p>Se puede ver el ejemplo de cambio de deformación oblicua <a href="html/oblicua.html" tabindex="56" target="_blank" title="Ir al ejemplo de deformación oblicua">aquí</a>.</p>
+			</div>
+			</article>
+			
+			<article>
+			<h3>Desplazamiento</h3>
+			<p>El desplazamiento de un elemento se obtiene mediante el parámetro <code>translate(longitud)</code>, donde longitud puede definirse en px, %, em, in, mm o cm. </p>
+			<p>- Sobre el eje X, los valores positivos efectúan un desplazamiento hacia la derecha y los valores negativos hacia la izquierda.<br />
+			- Sobre el eje Y, los valores positivos efectúan un desplazamiento hacia abajo y los valores negativos hacia arriba.<br />
+			- Cuando se define un único valor se aplica a los ejes X e Y. Con dos valores, se aplican respectivamente al eje X y al eje Y.</p>
+			
+			<p>Se puede encontrar código fácil para transformaciones <a href="http://westciv.com/tools/transforms/index.html" target="_blank" title="Página para obtener código de transformaciones" tabindex="57">aquí</a>.</p>
+			</article>
+			
+			<div class="volverInicio">
+		<a href="#menu_principal" tabindex="58" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a>
+		</div>
+			
+			<article>
+			<a id="apartado16"></a>	
+			<h3>Transiciones</h3>
+			<p>Las animaciones se realizan principalmente en base a cuatro propiedades.</p>
+			<p>La sintaxis es:</p>
+			<table class="tabla2">
+				<tr>
+					<td><code>transition-property:</code></td>
+					<td>precisa las propiedades que se desea animar (como el color o la anchura) en una lista, separadas por comas. La palabra clave <code>all</code> es el valor por defecto y designa todas las propiedades del elemento.</td>
+				</tr>
+				<tr>
+					<td><code>transition-duration:</code></td>
+					<td>precisa la duración de la transición en "s" (segundos) o "ms" (milisegundos).</td>
+				</tr>
+				<tr>
+					<td><code>transition-timing-function:</code></td>
+					<td>determina la función de transición que se quiere utilizar. Puede ser:<br />
+						<code>- ease</code>, rápida al principio y más lenta al final;<br />
+						<code>- linear</code>, rapidez constante durante toda la animación;<br />
+						<code>- ease-in</code>, lento al principio y acelerado hacia el final;<br />
+						<code>- ease-out</code> rápido al principio y lento hacia el final;<br />
+						<code>-ease-in-out</code>, inicio y final más lento.</p>
+						<p><code>transition-delay:</code> indica el retardo del inicio de la transición, indicado en "s" o en "ms").</td>
+				</tr>
+			</table>
+			<div class="ejemplo">
+			<p>Se puede ver un ejemplo de transición en acordeón <a href="html/acordeon.html" tabindex="59" target="_blank" title="Ir al ejemplo del acordeon">aquí</a>.</p>
+			</div>
+			
+			<div class="ejemplo">
+			<p>Se puede ver un ejemplo de tarjeta en 3D <a href="html/tresD.html" tabindex="60" target="_blank" title="Ir al ejemplo de la tarjeta en 3D">aquí</a>.</p>
+			</div>
+			<div class="volverInicio">
+		<a href="#menu_principal" tabindex="61" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a>
+		</div>
+			</article>
+			<a id="apartado17"></a>	
+			<article>
+			<h3>Filtros gráficos</h3>
+			<p>La sintaxis es:</p>
+			<table class="tabla2">
+				<tr>
+					<td><code>webkit-filter:</code></td>
+					<td>filtre(valor);</td>
+				</tr>
+			</table>
+			
+			
+			<p>Los filtros (filtre) disponibles son:<br />
+			<table class="tabla2">
+				<tr>
+					<td><code>grayscale(valor)</code></td>
+					<td>, determina el nivel de gris con un número entre 0 y 1 o un porcentaje</td>
+				</tr>
+				<tr>
+					<td><code>sepia(valor)</code></td>
+					<td>, efecto sepia con valor entre 0 y 1 o un porcentaje;</td>
+				</tr>
+				<tr>
+					<td><code>saturate(valor)</code></td>
+					<td>, saturación, donde valor es un número entre 0 y 1 o un porcentaje;</td>
+				</tr>
+				<tr>
+					<td><code>hue-rotate(valor)</code></td>
+					<td>, el ángulo se expresa en grados;</td>
+				</tr>
+				<tr>
+					<td><code>invert(valor)</code></td>
+					<td>, efecto negativo, donde valor es un número entre 0 y 1 o un porcentaje;</td>
+				</tr>
+				<tr>
+					<td><code>opacity(valor)</code></td>
+					<td>, opacidad, donde valor es un número entre 0 y 1 o un porcentaje;</td>
+				</tr>
+				<tr>
+					<td><code>brightness(valor)</code></td>
+					<td>, luminosidad, donde valor es un número entre 0 y 1 o un porcentaje;</td>
+				</tr>
+				<tr>
+					<td><code>contrast(valor)</code></td>
+					<td>, contraste, donde valor es un número entre 0 y 1 o un porcentaje;</td>
+				</tr>
+				<tr>
+					<td><code>blur(valor)</code></td>
+					<td>, difuminar, donde valor se expresa en pixeles;</td>
+				</tr>
+				<tr>
+					<td><code>drop-shadow(sombra)</code></td>
+					<td>, sombra cuya sintaxis es <code>drop-shadow(6px 6px 20px black);</td>
+				</tr>
+			</table>
+						
+			<div class="ejemplo">
+			<p>Se puede ver un ejemplo de filtros gráficos <a href="html/filtros.html" tabindex="62" target="_blank" title="Ir al ejemplo de filtros gráficos">aquí</a>.</p>
+			</div>
+		
+			<div class="volverInicio">
+		<a href="#menu_principal" tabindex="63" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a>
+		</div>
+			</article>
+			<a id="apartado18"></a>	
+			<h3>Las máscaras</h3>
+			<p>Efecto solo implementado para el motor webkit, una máscara es una imagen png compuesta de píxeles y de transparencia que permite ocultar una parte de los elementos visuales.</p>
+			<p>La sintaxis es: </p>
+			<table class="tabla2">
+				<tr>
+					<td><code>webkit-mask:</code></td>
+					<td>url(nombre_de_la_mascara) no-repeat center center;</td>
+				</tr>
+			</table>
+			
+			
+			
+			<div class="ejemplo">
+			<p>Se puede ver un ejemplo de máscaras <a href="html/mascaras.html" tabindex="64" target="_blank" title="Ir al ejemplo de máscaras">aquí</a>.</p>
+			</div>
+			
+			<div class="volverInicio">
+		<a href="#menu_principal" tabindex="65" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a>
+		</div>
+			
+			<a id="apartado19"></a>	
+			<h3>El efecto reflejo o espejo</h3>
+			<p>Solo para el motor webkit, la propiedad <code>reflect</code> permite aplicar un efecto espejo o de reflejo.</p>
+			<p>La sintaxis es:<br />
+			<table class="tabla2">
+				<tr>
+					<td><code>-webkit-box-reflect:</code></td>
+					<td>direction;</td>
+					<td>determina la posición del efecto respecto al elemento original. Sus valores son <code>above</code> (arriba),<code> below</code> (abajo), <code>left</code> y <code>right</code>.</td>
+				</tr>
+				<tr>
+					<td><code>-webkit-box-reflect:</code></td>
+					<td>offset;</td>
+					<td>fija la distancia respecto al elemento original en unidades de longitud o en porcentaje. El valor por defecto es 0 y admite valores negativos.</td>
+				</tr>
+				<tr>
+					<td><code>-webkit-box-reflect:</code></td>
+					<td>masque;</td>
+					<td>aplica un efecto de máscara sobre el elemento reflejado.</td>
+				</tr>
+			</table>
+			
+			<div class="ejemplo">
+			<p>Se puede ver un ejemplo de espejo <a href="html/espejo.html" tabindex="66" target="_blank" title="Ir al ejemplo de espejo">aquí</a>.</p>
+			</div>
+			<div class="volverInicio">
+		<a href="#menu_principal" tabindex="67" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a>
+		</div>
+		<a id="apartado20"></a>	
+			<h3>Fusión de imágenes</h3>
+			<p>La propiedad <code>cross-fade</code> permite realizar fusiones de imágenes.</p>
+			<p>La sintaxis es: <code>background-image: -webkit-cross-fade(imagen1, imagen2, porcentaje);</code></p>
+			<p>El valor <code>porcentaje</code> es el porcentaje de opacidad aplicado a la segunda imagen de la fusión.</p>
+			
+			<div class="ejemplo">
+			<p>Se puede ver un ejemplo de fusión de imágenes <a href="html/fusion.html" tabindex="68" target="_blank" title="Ir al ejemplo de fusión de imágenes">aquí</a>.</p>
+			</div>
+			
+		</article>
+		</section>
+		
+		<div class="volverInicio">
+		<a href="#menu_principal" tabindex=69"" title="Con este enlace, se regresa al inicio de la página">Volver al inicio</a>
+		</div>
+	</div>
+	</main>
+	
+	
+</body>	
+	
+</html>

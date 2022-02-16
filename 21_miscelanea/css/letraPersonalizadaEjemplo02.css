@@ -1,0 +1,22 @@
+﻿@font-face {  font-family: 'rocker';
+				src: url('../tipografias/rocker.ttf') format('TrueType');  
+				} 
+.rocker { font: 40px 'rocker', Arial, sans-serif;
+			}  
+	
+@font-face {  font-family: 'fresita';
+				src: url('../tipografias/StrawberryBlossom.otf') format('OpenType');  
+			}
+.fresita {font: 40px 'fresita', Arial, sans-serif;} 
+
+/* la misma letra pero ttf */
+@font-face {  font-family: 'fresita';
+				src: url('../tipografias/StrawberryBlossom.ttf')  
+				 format('TrueType');} 
+.fresita2 {font: 40px 'fresita', Arial, sans-serif;} 
+
+@font-face {  font-family: 'blackSanta';
+				src: url('../tipografias/blackSanta.ttf')  
+				format('TrueType');} 
+.blackSanta {font: 40px 'blackSanta', Arial, sans-serif;
+} 

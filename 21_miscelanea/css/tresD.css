@@ -1,0 +1,53 @@
+﻿body { margin: 0px;
+	}
+	
+#box { 	width: 320px;
+		height: 356px; 
+		background-color: rgba(145,165,185, 0.5);
+       -webkit-perspective: 600;
+	}
+
+   
+#carta { position: absolute;
+         height: 300px;
+         width: 200px;
+         left: 60px;
+         top: 28px;	
+		 transform-style: preserve-3d;
+		 transition-property: transform;
+		 transition-duration: 1.5s;
+         -webkit-transform-style: preserve-3d;	
+         -webkit-transition-property: -webkit-transform;
+         -webkit-transition-duration: 1.5s;
+	}
+		 
+.carta.flipped { -webkit-transform: rotateY(180deg);
+				transform: rotateY(180deg);
+	}
+	
+.verso { position: absolute;
+         height: 300px;
+         width: 200px;
+		 border-radius: 10px;
+         -webkit-border-radius: 10px;
+         -webkit-box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.5);
+		 box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.5);
+         -webkit-backface-visibility: hidden;
+		 backface-visibility: hidden;
+	}
+		 
+.verso > p { margin-top: 36px;
+            margin-bottom: 0px;
+            text-align: center;
+            font-size: 36px;
+	}
+			 
+.recto { color: rgb(78,150,249);
+         background-color: rgb(34,65,108);
+	}
+		 
+.back { color: rgb(34,65,108);
+        background-color: rgba(78,150,249,0.5);
+		transform: rotateY(180deg);
+        -webkit-transform: rotateY(180deg);
+	}
