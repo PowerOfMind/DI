@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/styleAlquiler.css" />
+    <title>Alquiler de Cuerpos Celestes</title>
+  </head>
+  <body>
+      <!-- NavBar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="../index.html#miUniverso">MY UNIVERSE</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="../index.html#miUniverso">HOME</a></li>
+              <li><a href="../index.html#band">EQUIPO</a></li>
+              <li><a href="../index.html#tour">TIENDA</a></li>
+              <li><a href="../pages/alquiler.html">ALQUILER</a></li>
+              <li><a href="../pages/donde.html">DONDE ESTAMOS</a></li>
+              
+          </div>
+        </div>
+      </nav>
+
+<div class="container">
+      <div class="col-sm-12 justify-content-center">
+          <h4 class="text-center mb-3">Alquiler de Estrellas</h4>
+          <div class="card-body">
+            <form action="../index.html" method="post" id="form_id" class="form_class">
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <label for="estrella">Estrella</label>
+                  <input type="text" class="form-control" placeholder="Estrella" id="estrella" required>
+                </div>
+              </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="nombre">Nombre</label>
+                      <input type="text" class="form-control" placeholder="Nombre" id="nombre" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="inputPassword4">Apellidos</label>
+                      <input type="text" class="form-control" placeholder="Apellidos" id="apellidos" required>
+                    </div>
+                  </div>
+                  <div class="form-group col-md-12">
+                    <label for="direccion">Dirección</label>
+                    <input type="text" class="form-control" placeholder="Dirección" id="direccion" required>
+                  </div>
+                  <div class="form-row">
+                      <div class="form-group col-md-4">
+                      <label for="pais">País</label>
+                      <select class="form-control" id="pais" required>
+                        <option selected>-- Seleccione --</option>
+                        <option>España</option>
+                        <option>Francia</option>
+                        <option>Portugal</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="ciudad">Ciudad</label>
+                      <input type="text" class="form-control" id="ciudad" placeholder="Ciudad" required>
+                    </div>
+                    
+                    <div class="form-group col-md-2">
+                      <label for="cp">Código postal</label>
+                      <input type="number" class="form-control" id="cp" placeholder="Código postal" required>
+                    </div>
+                  </div>
+                  <div class="form-group col-md-6">
+                      <label for="pago">
+                          Pago
+                      </label>
+                      <div class="input-group">
+                      <input type="number" class="form-control" id="pago" placeholder="Pago" required>
+                      <div class="input-group-addon">€</div>
+                      </div>
+                  </div>
+                  <div class="input-group col-md-6">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">Fotocopia del DNI</span>
+                      </div>
+                      <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="dni" required>
+                        <label class="custom-file-label" for="dni">cargar documento</label>
+                      </div>
+                    </div>
+                  <div class="form-group col-md-6">
+                      <label for="pago">
+                          Bitcoin
+                      </label>
+                      <div class="input-group">
+                          <label class="radio-inline">
+                              <input type="radio" name="check" id="radio1" value="si"> Si
+                          </label>
+                          <label class="radio-inline">
+                              <input type="radio" name="check" id="radio2" value="no"> No
+                          </label>
+                          
+                      </div>
+                  </div>
+                  
+            <br/>
+            <br/>
+            <br/>
+              <div id="form_group-submit" class="form-group">
+                  <button class="btn btn-success" id="submit" name="submit" href="#">Alquilar</button>
+              </div>
+          </form>
+          </div>
+      </div>
+</div>
+
+    
+ <!-- Footer -->
+ <footer class="text-center">
+  <br><br>
+  <p>Web desarrollada por el Moderno Observatorio de Kauai (M.O.K.)</p> 
+</footer>
+  </body>
+</html>
